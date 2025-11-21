@@ -1,3 +1,8 @@
+resource "google_service_account" "crypto_streamer_sa" {
+  account_id   = "crypto-streamer-sa"
+  display_name = "Crypto Streamer Service Account"
+}
+
 resource "google_compute_instance" "vm" {
   name         = var.vm_name
   machine_type = var.machine_type
@@ -23,6 +28,14 @@ resource "google_compute_instance" "vm" {
   network_interface {
     network = "default"
     access_config {}
+  }
+
+  service_account {
+    email  = google_service_account.crypto_streamer_sa.email
+    scopes = [
+      "https://www.googleapis.com/auth/pubsub",
+      "https://www.googleapis.com/auth/cloud-platform",
+    ]
   }
 
   # Simple startup script that runs a container in background
@@ -65,4 +78,18 @@ logger -t startup-script "Startup script: end"
 EOT
 
   tags = ["big-data-crypto-vm"]
+}
+
+data "google_project" "project" {}
+
+resource "google_project_iam_member" "crypto_streamer_pubsub_publisher" {
+  project = data.google_project.project.project_id
+  role    = "roles/pubsub.publisher"
+  member  = "serviceAccount:${google_service_account.crypto_streamer_sa.email}"
+}
+
+resource "google_project_iam_member" "crypto_streamer_secret_accessor" {
+  project = data.google_project.project.project_id
+  role    = "roles/secretmanager.secretAccessor"
+  member  = "serviceAccount:${google_service_account.crypto_streamer_sa.email}"
 }

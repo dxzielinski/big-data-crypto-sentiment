@@ -25,3 +25,69 @@ To stop vm:
 ```bash
 gcloud compute instances stop big-data-crypto-vm --zone=europe-central2-a
 ```
+
+## Coincap API
+
+Price API call
+
+```bash
+curl -X 'GET' \
+  'https://rest.coincap.io/v3/price/bysymbol/BTC%2CETH%2CSOL%2CXRP%2CADA' \
+  -H 'accept: application/json' \
+  -H 'Authorization: Bearer API_KEY_HERE'
+```
+
+Gives example response:
+
+```json
+{
+  "timestamp": 1763753634750,
+  "data": [
+    "84739.050000000002910383",
+    "2770.139999999999872671",
+    "129.180000000000006821",
+    "1.959917727651328656",
+    "0.412200000000000011"
+  ]
+}
+```
+
+Technical Analysis API call (it works only for single asset at a time)
+
+```bash
+curl -X 'GET' \
+  'https://rest.coincap.io/v3/ta/bitcoin/allLatest?fetchInterval=h1' \
+  -H 'accept: */*' \
+  -H 'Authorization: Bearer API_KEY_HERE'
+```
+
+Gives example response:
+
+```json
+{
+  "ema": {
+    "ema": 84403.28849129402,
+    "time": 1763751608753,
+    "date": "2025-11-21T19:00:08.753Z"
+  },
+  "sma": {
+    "sma": 90822.12006855608,
+    "time": 1763751608753,
+    "date": "2025-11-21T19:00:08.753Z"
+  },
+  "rsi": {
+    "rsi": 55.31218060178186,
+    "time": 1763751608753,
+    "date": "2025-11-21T19:00:08.753Z"
+  },
+  "macd": {
+    "macd": -1170.068547606693,
+    "signal": -1473.022897999198,
+    "histogram": 302.954350392505,
+    "time": 1763751608753,
+    "date": "2025-11-21T19:00:08.753Z"
+  },
+  "vwap24": 84863.86987084257,
+  "timestamp": 1763753541354
+}
+```
