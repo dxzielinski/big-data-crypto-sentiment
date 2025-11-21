@@ -19,7 +19,7 @@ resource "google_compute_instance" "vm" {
   boot_disk {
     initialize_params {
       # OS image (NOT docker image)
-      image = data.google_compute_image.cos.self_link
+      image = "projects/ubuntu-os-cloud/global/images/family/ubuntu-2204-lts"
       size  = var.disk_size_gb
       type  = "pd-balanced"
     }
@@ -31,7 +31,7 @@ resource "google_compute_instance" "vm" {
   }
 
   service_account {
-    email  = google_service_account.crypto_streamer_sa.email
+    email = google_service_account.crypto_streamer_sa.email
     scopes = [
       "https://www.googleapis.com/auth/pubsub",
       "https://www.googleapis.com/auth/cloud-platform",
@@ -45,31 +45,71 @@ set -euo pipefail
 
 logger -t startup-script "Startup script: begin"
 
-IMAGE="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/dummy-app:latest"
+IMAGE="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/crypto-simulation:latest"
+REGISTRY_HOST="${var.region}-docker.pkg.dev"
 
 logger -t startup-script "Startup script: using image $IMAGE"
 
-# Check docker
+# -----------------------------
+# Ensure Docker is installed
+# -----------------------------
 if ! command -v docker >/dev/null 2>&1; then
-  logger -t startup-script "Docker not found on COS image"
+  logger -t startup-script "Docker not found on image, installing docker.io and dependencies"
+
+  export DEBIAN_FRONTEND=noninteractive
+  apt-get update
+  apt-get install -y docker.io python3 ca-certificates curl
+
+  systemctl enable docker
+  systemctl start docker
+
+  logger -t startup-script "Docker installed: $(docker --version)"
 else
   logger -t startup-script "Docker found: $(docker --version)"
 fi
 
-# Try to pull the image (will fail if you haven't pushed it yet)
+# Ensure python3 is present (for JSON parsing), just in case
+if ! command -v python3 >/dev/null 2>&1; then
+  logger -t startup-script "python3 not found, installing"
+  export DEBIAN_FRONTEND=noninteractive
+  apt-get update
+  apt-get install -y python3
+fi
+
+# -----------------------------
+# Authenticate to Artifact Registry using VM service account
+# -----------------------------
+logger -t startup-script "Fetching access token from metadata server"
+
+TOKEN=$(curl -s -H "Metadata-Flavor: Google" \
+  "http://metadata.google.internal/computeMetadata/v1/instance/service-accounts/default/token" \
+  | python3 -c "import sys, json; print(json.load(sys.stdin)['access_token'])")
+
+logger -t startup-script "Logging in to Artifact Registry at $REGISTRY_HOST"
+
+echo "$TOKEN" | docker login -u oauth2accesstoken --password-stdin "https://$REGISTRY_HOST" || {
+  logger -t startup-script "Docker login to Artifact Registry failed"
+  exit 1
+}
+
+# -----------------------------
+# Pull and run the container
+# -----------------------------
+logger -t startup-script "Pulling image $IMAGE"
+
 if docker pull "$IMAGE"; then
   logger -t startup-script "Pulled image $IMAGE"
 
   # Remove existing container if present
-  if docker ps -a --format '{{.Names}}' | grep -q '^dummy-app$'; then
-    logger -t startup-script "Removing existing container dummy-app"
-    docker rm -f dummy-app || true
+  if docker ps -a --format '{{.Names}}' | grep -q '^crypto-simulation$'; then
+    logger -t startup-script "Removing existing container crypto-simulation"
+    docker rm -f crypto-simulation || true
   fi
 
   # Run container
-  logger -t startup-script "Starting container dummy-app"
-  docker run -d --name dummy-app -p 8080:8080 "$IMAGE" || \
-    logger -t startup-script "Failed to start container dummy-app"
+  logger -t startup-script "Starting container crypto-simulation"
+  docker run -d --name crypto-simulation -p 8080:8080 "$IMAGE" || \
+    logger -t startup-script "Failed to start container crypto-simulation"
 else
   logger -t startup-script "Failed to pull image $IMAGE"
 fi
@@ -80,16 +120,20 @@ EOT
   tags = ["big-data-crypto-vm"]
 }
 
-data "google_project" "project" {}
-
 resource "google_project_iam_member" "crypto_streamer_pubsub_publisher" {
-  project = data.google_project.project.project_id
+  project = var.project_id
   role    = "roles/pubsub.publisher"
   member  = "serviceAccount:${google_service_account.crypto_streamer_sa.email}"
 }
 
 resource "google_project_iam_member" "crypto_streamer_secret_accessor" {
-  project = data.google_project.project.project_id
+  project = var.project_id
   role    = "roles/secretmanager.secretAccessor"
+  member  = "serviceAccount:${google_service_account.crypto_streamer_sa.email}"
+}
+
+resource "google_project_iam_member" "crypto_streamer_artifact_reader" {
+  project = var.project_id
+  role    = "roles/artifactregistry.reader"
   member  = "serviceAccount:${google_service_account.crypto_streamer_sa.email}"
 }

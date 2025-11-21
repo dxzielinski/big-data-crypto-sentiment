@@ -68,7 +68,7 @@ def generate_simulated_prices(base_prices, spread=0.05):
     Each call produces a new random price in that range.
     """
     simulated = {}
-    for symbol, base_price in base_prices.items():
+    for symbol, base_price in zip(SYMBOLS, base_prices):
         factor = random.uniform(1 - spread, 1 + spread)
         simulated[symbol] = base_price * factor
     return simulated

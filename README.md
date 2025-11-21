@@ -11,12 +11,25 @@ terraform validate
 terraform apply -var="project_id=<PROJECT_ID>"
 ```
 
+Pushing docker image to gcr workflow:
+
+```bash
+cd  ./big-data-crypto-sentiment/coincap
+docker build --no-cache -t europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/crypto-simulation .
+docker push europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/crypto-simulation
+```
+
 To access vm:
 
 ```bash
 gcloud compute ssh big-data-crypto-vm --zone=europe-central2-a
 # logs from startup script:
 sudo journalctl -u google-startup-scripts.service --no-pager | grep startup-script
+sudo docker logs crypto-simulation --tail 200
+# to re-run startup script:
+sudo systemctl restart google-startup-scripts.service
+# to stop docker manually:
+sudo docker stop crypto-simulation
 exit
 ```
 
