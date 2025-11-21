@@ -1,0 +1,3810 @@
+{
+    "tweets": [
+        {
+            "type": "tweet",
+            "id": "1991603593510527466",
+            "url": "https://x.com/dennisonsol_/status/1991603593510527466",
+            "twitterUrl": "https://twitter.com/dennisonsol_/status/1991603593510527466",
+            "text": "Moderators needed! 🚨\n\nWe're in urgent need of chat moderators, if you have experience join us.\n\nhttps://t.co/f3PoWvO5yq\n\n#shib #hiring #job #base #xrp",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 1,
+            "quoteCount": 0,
+            "viewCount": 24,
+            "createdAt": "Thu Nov 20 20:24:33 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991603593510527466",
+            "displayTextRange": [
+                0,
+                150
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "dennisonsol_",
+                "url": "https://x.com/dennisonsol_",
+                "twitterUrl": "https://twitter.com/dennisonsol_",
+                "id": "1438146000",
+                "name": "DennisTheMenace",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1987279289562066944/cy8MQ6aM_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1438146000/1762639280",
+                "description": "",
+                "location": "",
+                "followers": 1090,
+                "following": 195,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": false,
+                "createdAt": "Sat May 18 11:42:37 +0000 2013",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 111,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 531,
+                "statusesCount": 3741,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1564637120001622022"
+                ],
+                "profile_bio": {
+                    "description": "Crypto & Defi Analyst | TA expert | Early gem spotter",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "photo_image_full_size_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=800x320_1",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "description",
+                        "value": {
+                            "string_value": "Check out the SolNautz community on Discord - hang out with 2904 other members and enjoy free voice and text chat."
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "discord.com"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 627,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=1200x627",
+                                "width": 1200
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=800x419",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "site",
+                        "value": {
+                            "scribe_key": "publisher_id",
+                            "user_value": {
+                                "id_str": "3065618342"
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_small",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=800x419",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 80,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=240x240",
+                                "width": 240
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "discord.com"
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 14.5,
+                                        "rgb": {
+                                            "blue": 233,
+                                            "green": 229,
+                                            "red": 240
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.65,
+                                        "rgb": {
+                                            "blue": 26,
+                                            "green": 52,
+                                            "red": 252
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.21,
+                                        "rgb": {
+                                            "blue": 216,
+                                            "green": 167,
+                                            "red": 235
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.12,
+                                        "rgb": {
+                                            "blue": 171,
+                                            "green": 86,
+                                            "red": 190
+                                        }
+                                    },
+                                    {
+                                        "percentage": 3.45,
+                                        "rgb": {
+                                            "blue": 41,
+                                            "green": 106,
+                                            "red": 245
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Join the SolNautz Discord Server!"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 14.5,
+                                        "rgb": {
+                                            "blue": 233,
+                                            "green": 229,
+                                            "red": 240
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.65,
+                                        "rgb": {
+                                            "blue": 26,
+                                            "green": 52,
+                                            "red": 252
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.21,
+                                        "rgb": {
+                                            "blue": 216,
+                                            "green": 167,
+                                            "red": 235
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.12,
+                                        "rgb": {
+                                            "blue": 171,
+                                            "green": 86,
+                                            "red": 190
+                                        }
+                                    },
+                                    {
+                                        "percentage": 3.45,
+                                        "rgb": {
+                                            "blue": 41,
+                                            "green": 106,
+                                            "red": 245
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 14.5,
+                                        "rgb": {
+                                            "blue": 233,
+                                            "green": 229,
+                                            "red": 240
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.65,
+                                        "rgb": {
+                                            "blue": 26,
+                                            "green": 52,
+                                            "red": 252
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.21,
+                                        "rgb": {
+                                            "blue": 216,
+                                            "green": 167,
+                                            "red": 235
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.12,
+                                        "rgb": {
+                                            "blue": 171,
+                                            "green": 86,
+                                            "red": 190
+                                        }
+                                    },
+                                    {
+                                        "percentage": 3.45,
+                                        "rgb": {
+                                            "blue": 41,
+                                            "green": 106,
+                                            "red": 245
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/f3PoWvO5yq"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary_large_image",
+                "url": "https://t.co/f3PoWvO5yq",
+                "user_refs_results": [
+                    {
+                        "rest_id": "3065618342",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 26755
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1795851438956204032/rLl5Y48q_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/3065618342/1716998022"
+                            },
+                            "core": {
+                                "created_at": "Sat Mar 07 01:00:18 +0000 2015",
+                                "name": "Discord",
+                                "screen_name": "discord"
+                            },
+                            "dm_permissions": {
+                                "can_dm": true
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": "San Francisco, CA"
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {},
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Where group chat is all fun & games. Need support? Reach us @discord_support",
+                                "entities": {
+                                    "description": {
+                                        "user_mentions": [
+                                            {
+                                                "id_str": "0",
+                                                "indices": [
+                                                    60,
+                                                    76
+                                                ],
+                                                "name": "",
+                                                "screen_name": "discord_support"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "discord.com",
+                                                "expanded_url": "https://discord.com/",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/EWXh7hERbq"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_image_shape": "Square",
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "0084B4"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 4754186,
+                                "following": 1087
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "3065618342",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 27020,
+                                "tweets": 495993
+                            },
+                            "website": {
+                                "url": "https://t.co/EWXh7hERbq"
+                            },
+                            "verification": {
+                                "is_blue_verified": true,
+                                "verified_type": "Business"
+                            }
+                        }
+                    }
+                ]
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            121,
+                            126
+                        ],
+                        "text": "shib"
+                    },
+                    {
+                        "indices": [
+                            127,
+                            134
+                        ],
+                        "text": "hiring"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            139
+                        ],
+                        "text": "job"
+                    },
+                    {
+                        "indices": [
+                            140,
+                            145
+                        ],
+                        "text": "base"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            150
+                        ],
+                        "text": "xrp"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/solnautz",
+                        "expanded_url": "http://discord.gg/solnautz",
+                        "indices": [
+                            96,
+                            119
+                        ],
+                        "url": "https://t.co/f3PoWvO5yq"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991600686015082696",
+            "url": "https://x.com/100xAltcoinGems/status/1991600686015082696",
+            "twitterUrl": "https://twitter.com/100xAltcoinGems/status/1991600686015082696",
+            "text": "Which of these #meme coins has the most potential?\n\n#DOGE\n#SHIB\n#WIF\n#PEPE\n#FLOKI\n#BONK\n#BRETT\n#DEGEN\n#BabyDoge\n#MYRO\n#AI16Z\n\nAny other?",
+            "source": "Twitter for iPhone",
+            "retweetCount": 1,
+            "replyCount": 18,
+            "likeCount": 10,
+            "quoteCount": 0,
+            "viewCount": 728,
+            "createdAt": "Thu Nov 20 20:13:00 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991600686015082696",
+            "displayTextRange": [
+                0,
+                136
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "100xAltcoinGems",
+                "url": "https://x.com/100xAltcoinGems",
+                "twitterUrl": "https://twitter.com/100xAltcoinGems",
+                "id": "1517796456949817347",
+                "name": "100x Altcoin Gems",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1517957894318309379/3TZ6gX0i_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1517796456949817347/1650784068",
+                "description": "",
+                "location": "Metaverse",
+                "followers": 218944,
+                "following": 66,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Sat Apr 23 09:24:18 +0000 2022",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 4432,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 1502,
+                "statusesCount": 17208,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1610752000001732608"
+                ],
+                "profile_bio": {
+                    "description": "100x Altcoin Gem Hunter 💎🚀 DM for Shill & Promo 💥\n🚨 NO financial advice | DYOR‼\n\nPartner of @LBank_Exchange\n\n#BTC #ETH #BNB #SOL #AVAX #ADA #Crypto #NFTs",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        109,
+                                        113
+                                    ],
+                                    "text": "BTC"
+                                },
+                                {
+                                    "indices": [
+                                        114,
+                                        118
+                                    ],
+                                    "text": "ETH"
+                                },
+                                {
+                                    "indices": [
+                                        119,
+                                        123
+                                    ],
+                                    "text": "BNB"
+                                },
+                                {
+                                    "indices": [
+                                        124,
+                                        128
+                                    ],
+                                    "text": "SOL"
+                                },
+                                {
+                                    "indices": [
+                                        129,
+                                        134
+                                    ],
+                                    "text": "AVAX"
+                                },
+                                {
+                                    "indices": [
+                                        135,
+                                        139
+                                    ],
+                                    "text": "ADA"
+                                },
+                                {
+                                    "indices": [
+                                        140,
+                                        147
+                                    ],
+                                    "text": "Crypto"
+                                },
+                                {
+                                    "indices": [
+                                        148,
+                                        153
+                                    ],
+                                    "text": "NFTs"
+                                }
+                            ],
+                            "user_mentions": [
+                                {
+                                    "id_str": "0",
+                                    "indices": [
+                                        92,
+                                        107
+                                    ],
+                                    "name": "",
+                                    "screen_name": "LBank_Exchange"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            15,
+                            20
+                        ],
+                        "text": "meme"
+                    },
+                    {
+                        "indices": [
+                            52,
+                            57
+                        ],
+                        "text": "DOGE"
+                    },
+                    {
+                        "indices": [
+                            58,
+                            63
+                        ],
+                        "text": "SHIB"
+                    },
+                    {
+                        "indices": [
+                            64,
+                            68
+                        ],
+                        "text": "WIF"
+                    },
+                    {
+                        "indices": [
+                            69,
+                            74
+                        ],
+                        "text": "PEPE"
+                    },
+                    {
+                        "indices": [
+                            75,
+                            81
+                        ],
+                        "text": "FLOKI"
+                    },
+                    {
+                        "indices": [
+                            82,
+                            87
+                        ],
+                        "text": "BONK"
+                    },
+                    {
+                        "indices": [
+                            88,
+                            94
+                        ],
+                        "text": "BRETT"
+                    },
+                    {
+                        "indices": [
+                            95,
+                            101
+                        ],
+                        "text": "DEGEN"
+                    },
+                    {
+                        "indices": [
+                            102,
+                            111
+                        ],
+                        "text": "BabyDoge"
+                    },
+                    {
+                        "indices": [
+                            112,
+                            117
+                        ],
+                        "text": "MYRO"
+                    },
+                    {
+                        "indices": [
+                            118,
+                            124
+                        ],
+                        "text": "AI16Z"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1990981355606585455",
+            "url": "https://x.com/grok/status/1990981355606585455",
+            "twitterUrl": "https://twitter.com/grok/status/1990981355606585455",
+            "text": "What would you ask the smartest AI on Earth?",
+            "source": "Twitter for iPhone",
+            "retweetCount": 85,
+            "replyCount": 120,
+            "likeCount": 1552,
+            "quoteCount": 18,
+            "viewCount": 34444953,
+            "createdAt": "Wed Nov 19 03:12:00 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 255,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1990981355606585455",
+            "displayTextRange": [
+                0,
+                44
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "grok",
+                "url": "https://x.com/grok",
+                "twitterUrl": "https://twitter.com/grok",
+                "id": "1720665183188922368",
+                "name": "Grok",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": "Business",
+                "profilePicture": "https://pbs.twimg.com/profile_images/1893219113717342208/Vgg2hEPa_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1720665183188922368/1740213586",
+                "description": "",
+                "location": "wherever you are",
+                "followers": 6664864,
+                "following": 3,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Sat Nov 04 04:52:34 +0000 2023",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 79,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 2739003,
+                "statusesCount": 68378081,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {
+                    "label": {
+                        "badge": {
+                            "url": "https://pbs.twimg.com/profile_images/1769430779845611520/lIgjSJGU_bigger.jpg"
+                        },
+                        "description": "xAI",
+                        "url": {
+                            "url": "https://twitter.com/xai",
+                            "url_type": "DeepLink"
+                        },
+                        "user_label_type": "BusinessLabel",
+                        "user_label_display_type": "Badge"
+                    }
+                },
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1955006865332638036"
+                ],
+                "profile_bio": {
+                    "description": "https://t.co/fqNKQSiLQB\n@grok it",
+                    "entities": {
+                        "description": {
+                            "urls": [
+                                {
+                                    "display_url": "grok.com/download",
+                                    "expanded_url": "http://grok.com/download",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/fqNKQSiLQB"
+                                }
+                            ],
+                            "user_mentions": [
+                                {
+                                    "id_str": "0",
+                                    "indices": [
+                                        24,
+                                        29
+                                    ],
+                                    "name": "",
+                                    "screen_name": "grok"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "grok.com",
+                                    "expanded_url": "https://grok.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/BFoTHXcJ8D"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "unified_card",
+                        "value": {
+                            "string_value": "{\"type\":\"image_app\",\"component_objects\":{\"button_group_1\":{\"type\":\"button_group\",\"data\":{\"buttons\":[{\"action\":\"install\",\"style\":\"primary\",\"type\":\"cta\",\"destination\":\"app_store_1\"}]}},\"app_store_details_1\":{\"type\":\"app_store_details\",\"data\":{\"app_id\":\"app_1\",\"destination\":\"app_store_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1990974373487144960\",\"destination\":\"app_store_1\"}}},\"destination_objects\":{\"app_store_1\":{\"type\":\"app_store\",\"data\":{\"app_id\":\"app_1\"}}},\"components\":[\"media_1\",\"app_store_details_1\",\"button_group_1\"],\"media_entities\":{\"3_1990974373487144960\":{\"id\":1990974373487144960,\"id_str\":\"1990974373487144960\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/G6FcpOCbcAASunF.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":76,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":69,\"y\":0,\"h\":800,\"w\":702},{\"x\":220,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"}},\"source_user_id\":1720665183188922368,\"source_user_id_str\":\"1720665183188922368\",\"media_key\":\"3_1990974373487144960\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":72.45},{\"rgb\":{\"red\":178,\"green\":175,\"blue\":202},\"percentage\":11.3},{\"rgb\":{\"red\":241,\"green\":158,\"blue\":155},\"percentage\":4.27},{\"rgb\":{\"red\":141,\"green\":72,\"blue\":87},\"percentage\":2.25},{\"rgb\":{\"red\":250,\"green\":217,\"blue\":214},\"percentage\":0.4}]}},\"ttl\":-1}}},\"4_1990706549182840832\":{\"id\":1990706549182840832,\"id_str\":\"1990706549182840832\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/card_img/1990706549182840832/aiRed15A?format=jpg&name=orig\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":246,\"height\":246},\"sizes\":{},\"media_key\":\"4_1990706549182840832\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":17,\"green\":17,\"blue\":17},\"percentage\":81.33},{\"rgb\":{\"red\":199,\"green\":199,\"blue\":199},\"percentage\":12.96}]}},\"ttl\":-1}}}},\"app_store_data\":{\"app_1\":[{\"type\":\"iphone_app\",\"country_code\":\"US\",\"id\":\"6670324846\",\"url\":\"https://t.co/redirect?url=https%3A%2F%2Fgrok.com%2Fdownload&sig=91e3aee19cd71ae9fbe6e4af842d9c0435e162bc&ssr=true&slug=\",\"url_resolved\":\"https://grok.com/download\",\"category\":{\"content\":\"Productivity\",\"is_rtl\":false},\"title\":{\"content\":\"Grok\",\"is_rtl\":false},\"ratings\":{\"star\":4.9,\"count\":722000},\"is_free\":true,\"size_bytes\":191400000,\"has_in_app_purchases\":true,\"icon_media_key\":\"4_1990706549182840832\",\"description\":{\"content\":\"Grok is an AI-powered assistant, developed by xAI, designed to be maximally truthful, useful, and curious. Get answers to any question, generate striking images and videos, and let Grok search the web and X for you to gain a deeper understanding of the world. With Grok, the unive\",\"is_rtl\":false}},{\"type\":\"ipad_app\",\"country_code\":\"US\",\"id\":\"6670324846\",\"url\":\"https://t.co/redirect?url=https%3A%2F%2Fgrok.com%2Fdownload&sig=91e3aee19cd71ae9fbe6e4af842d9c0435e162bc&ssr=true&slug=\",\"url_resolved\":\"https://grok.com/download\",\"category\":{\"content\":\"Productivity\",\"is_rtl\":false},\"title\":{\"content\":\"Grok\",\"is_rtl\":false},\"ratings\":{\"star\":4.9,\"count\":722000},\"is_free\":true,\"size_bytes\":191400000,\"has_in_app_purchases\":true,\"icon_media_key\":\"4_1990706549182840832\",\"description\":{\"content\":\"Grok is an AI-powered assistant, developed by xAI, designed to be maximally truthful, useful, and curious. Get answers to any question, generate striking images and videos, and let Grok search the web and X for you to gain a deeper understanding of the world. With Grok, the unive\",\"is_rtl\":false}}]},\"experiment_signals\":{}}"
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://twitter.com"
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "unified_card",
+                "url": "card://1990980142995505152"
+            },
+            "place": {},
+            "entities": {},
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991596932016521492",
+            "url": "https://x.com/rainyan687007/status/1991596932016521492",
+            "twitterUrl": "https://twitter.com/rainyan687007/status/1991596932016521492",
+            "text": "#SHIB #柴犬コイン #SHIBARMY  \n\nWOOF🐕🔥",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 1,
+            "quoteCount": 0,
+            "viewCount": 60,
+            "createdAt": "Thu Nov 20 19:58:05 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991596932016521492",
+            "displayTextRange": [
+                0,
+                32
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "rainyan687007",
+                "url": "https://x.com/rainyan687007",
+                "twitterUrl": "https://twitter.com/rainyan687007",
+                "id": "1679047904017915906",
+                "name": "きみとみっきー🇯🇵SHIBARMY",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1809717424264212482/Et9KWdKK_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1679047904017915906/1733126292",
+                "description": "",
+                "location": "日本",
+                "followers": 880,
+                "following": 567,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Wed Jul 12 08:40:11 +0000 2023",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 39843,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 127,
+                "statusesCount": 4672,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1865604199809245193"
+                ],
+                "profile_bio": {
+                    "description": "#shibarmy🇯🇵 #SHIB #crypto #柴犬コイン #仮想通貨 #暗号資産 目指せ！資産100億円🐕💰ガチホ💪日本中に柴犬コインの素晴らしさを共有したい‼️ポテンシャルの高さ、安全性、資産としての価値が広まりますように☺️SHIBを応援している方、フォロー、フォローバックさせて頂きます🙇‍♂️",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        0,
+                                        9
+                                    ],
+                                    "text": "shibarmy"
+                                },
+                                {
+                                    "indices": [
+                                        12,
+                                        17
+                                    ],
+                                    "text": "SHIB"
+                                },
+                                {
+                                    "indices": [
+                                        18,
+                                        25
+                                    ],
+                                    "text": "crypto"
+                                },
+                                {
+                                    "indices": [
+                                        26,
+                                        32
+                                    ],
+                                    "text": "柴犬コイン"
+                                },
+                                {
+                                    "indices": [
+                                        33,
+                                        38
+                                    ],
+                                    "text": "仮想通貨"
+                                },
+                                {
+                                    "indices": [
+                                        39,
+                                        44
+                                    ],
+                                    "text": "暗号資産"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "shibatoken.com",
+                                    "expanded_url": "https://shibatoken.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/5TPZAX7Zol"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            0,
+                            5
+                        ],
+                        "text": "SHIB"
+                    },
+                    {
+                        "indices": [
+                            6,
+                            12
+                        ],
+                        "text": "柴犬コイン"
+                    },
+                    {
+                        "indices": [
+                            13,
+                            22
+                        ],
+                        "text": "SHIBARMY"
+                    }
+                ]
+            },
+            "quoted_tweet": {
+                "type": "tweet",
+                "id": "1991436033536479724",
+                "url": "https://x.com/EdwardSalomons/status/1991436033536479724",
+                "twitterUrl": "https://twitter.com/EdwardSalomons/status/1991436033536479724",
+                "text": "...remember the Shiba ? anybuddy ? https://t.co/DE672OAsX3",
+                "source": "Twitter for iPhone",
+                "retweetCount": 8,
+                "replyCount": 5,
+                "likeCount": 46,
+                "quoteCount": 2,
+                "viewCount": 974,
+                "createdAt": "Thu Nov 20 09:18:44 +0000 2025",
+                "lang": "en",
+                "bookmarkCount": 1,
+                "isReply": false,
+                "inReplyToId": null,
+                "conversationId": "1991436033536479724",
+                "displayTextRange": [
+                    0,
+                    34
+                ],
+                "inReplyToUserId": null,
+                "inReplyToUsername": null,
+                "author": {
+                    "type": "user",
+                    "userName": "EdwardSalomons",
+                    "url": "https://x.com/EdwardSalomons",
+                    "twitterUrl": "https://twitter.com/EdwardSalomons",
+                    "id": "1455935011144835072",
+                    "name": "Ed Salomons",
+                    "isVerified": false,
+                    "isBlueVerified": true,
+                    "verifiedType": null,
+                    "profilePicture": "https://pbs.twimg.com/profile_images/1971598166106537985/nqbWnTdc_normal.jpg",
+                    "coverPicture": "https://pbs.twimg.com/profile_banners/1455935011144835072/1734624187",
+                    "description": "",
+                    "location": "Niagara, Canada",
+                    "followers": 4508,
+                    "following": 1747,
+                    "status": "",
+                    "canDm": false,
+                    "canMediaTag": true,
+                    "createdAt": "Wed Nov 03 16:29:42 +0000 2021",
+                    "entities": {
+                        "description": {
+                            "urls": []
+                        },
+                        "url": {}
+                    },
+                    "fastFollowersCount": 0,
+                    "favouritesCount": 178925,
+                    "hasCustomTimelines": true,
+                    "isTranslator": false,
+                    "mediaCount": 2081,
+                    "statusesCount": 44418,
+                    "withheldInCountries": [],
+                    "affiliatesHighlightedLabel": {},
+                    "possiblySensitive": false,
+                    "pinnedTweetIds": [],
+                    "profile_bio": {
+                        "description": "",
+                        "entities": {
+                            "description": {}
+                        }
+                    },
+                    "isAutomated": false,
+                    "automatedBy": null
+                },
+                "extendedEntities": {
+                    "media": [
+                        {
+                            "display_url": "pic.twitter.com/DE672OAsX3",
+                            "expanded_url": "https://twitter.com/EdwardSalomons/status/1991436033536479724/photo/1",
+                            "ext_media_availability": {
+                                "status": "Available"
+                            },
+                            "features": {
+                                "large": {},
+                                "orig": {}
+                            },
+                            "id_str": "1991436028633059328",
+                            "indices": [
+                                35,
+                                58
+                            ],
+                            "media_key": "3_1991436028633059328",
+                            "media_results": {
+                                "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujAIRXlpAACgACG6MAhXva0ewAAA==",
+                                "result": {
+                                    "__typename": "ApiMedia",
+                                    "id": "QXBpTWVkaWE6DAABCgABG6MAhFeWkAAKAAIbowCFe9rR7AAA",
+                                    "media_key": "3_1991436028633059328"
+                                }
+                            },
+                            "media_url_https": "https://pbs.twimg.com/media/G6MAhFeWkAAskMh.jpg",
+                            "original_info": {
+                                "focus_rects": [
+                                    {
+                                        "h": 1133,
+                                        "w": 2023,
+                                        "x": 0,
+                                        "y": 890
+                                    },
+                                    {
+                                        "h": 2023,
+                                        "w": 2023,
+                                        "x": 0,
+                                        "y": 0
+                                    },
+                                    {
+                                        "h": 2023,
+                                        "w": 1775,
+                                        "x": 124,
+                                        "y": 0
+                                    },
+                                    {
+                                        "h": 2023,
+                                        "w": 1012,
+                                        "x": 505,
+                                        "y": 0
+                                    },
+                                    {
+                                        "h": 2023,
+                                        "w": 2023,
+                                        "x": 0,
+                                        "y": 0
+                                    }
+                                ],
+                                "height": 2023,
+                                "width": 2023
+                            },
+                            "sizes": {
+                                "large": {
+                                    "h": 2023,
+                                    "w": 2023
+                                }
+                            },
+                            "type": "photo",
+                            "url": "https://t.co/DE672OAsX3"
+                        }
+                    ]
+                },
+                "card": null,
+                "place": {},
+                "entities": {},
+                "quoted_tweet": null,
+                "retweeted_tweet": null,
+                "isLimitedReply": false,
+                "article": null
+            },
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991599998547685682",
+            "url": "https://x.com/bumboirico/status/1991599998547685682",
+            "twitterUrl": "https://twitter.com/bumboirico/status/1991599998547685682",
+            "text": "We want to expand. 🤝\n\nIf you're a experienced collab manager, come work with us.\n\nhttps://t.co/E03S3Rwut7\n\n#shib #doge #arb #defi #collabs",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 14,
+            "createdAt": "Thu Nov 20 20:10:16 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991599998547685682",
+            "displayTextRange": [
+                0,
+                138
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "bumboirico",
+                "url": "https://x.com/bumboirico",
+                "twitterUrl": "https://twitter.com/bumboirico",
+                "id": "3931080675",
+                "name": "BumBoiRico",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1987278379989549056/lHocCiny_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/3931080675/1762639063",
+                "description": "",
+                "location": "",
+                "followers": 1091,
+                "following": 982,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": false,
+                "createdAt": "Sun Oct 11 21:17:25 +0000 2015",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 13982,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 62,
+                "statusesCount": 4971,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "769388254714032128"
+                ],
+                "profile_bio": {
+                    "description": "❤ #Bitcoin, 🧡 #Defi 💚 #Crypto 💙#NFT 🤍 #Oracles 💛 #MetaVerse 💜 #Memecoin 🩵 #Syscoin 💙 #Litecoin 😎",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        2,
+                                        10
+                                    ],
+                                    "text": "Bitcoin"
+                                },
+                                {
+                                    "indices": [
+                                        14,
+                                        19
+                                    ],
+                                    "text": "Defi"
+                                },
+                                {
+                                    "indices": [
+                                        22,
+                                        29
+                                    ],
+                                    "text": "Crypto"
+                                },
+                                {
+                                    "indices": [
+                                        31,
+                                        35
+                                    ],
+                                    "text": "NFT"
+                                },
+                                {
+                                    "indices": [
+                                        38,
+                                        46
+                                    ],
+                                    "text": "Oracles"
+                                },
+                                {
+                                    "indices": [
+                                        49,
+                                        59
+                                    ],
+                                    "text": "MetaVerse"
+                                },
+                                {
+                                    "indices": [
+                                        62,
+                                        71
+                                    ],
+                                    "text": "Memecoin"
+                                },
+                                {
+                                    "indices": [
+                                        74,
+                                        82
+                                    ],
+                                    "text": "Syscoin"
+                                },
+                                {
+                                    "indices": [
+                                        85,
+                                        94
+                                    ],
+                                    "text": "Litecoin"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "photo_image_full_size_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=800x320_1",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "description",
+                        "value": {
+                            "string_value": "Check out the VaultRunners community on Discord - hang out with 3955 other members and enjoy free voice and text chat."
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "discord.com"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 627,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=1200x627",
+                                "width": 1200
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=800x419",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "site",
+                        "value": {
+                            "scribe_key": "publisher_id",
+                            "user_value": {
+                                "id_str": "3065618342"
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_small",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=800x419",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 80,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=240x240",
+                                "width": 240
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "discord.com"
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 90.35,
+                                        "rgb": {
+                                            "blue": 10,
+                                            "green": 6,
+                                            "red": 1
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.41,
+                                        "rgb": {
+                                            "blue": 235,
+                                            "green": 130,
+                                            "red": 3
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.09,
+                                        "rgb": {
+                                            "blue": 140,
+                                            "green": 83,
+                                            "red": 4
+                                        }
+                                    },
+                                    {
+                                        "percentage": 1,
+                                        "rgb": {
+                                            "blue": 153,
+                                            "green": 126,
+                                            "red": 39
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Join the VaultRunners Discord Server!"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 90.35,
+                                        "rgb": {
+                                            "blue": 10,
+                                            "green": 6,
+                                            "red": 1
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.41,
+                                        "rgb": {
+                                            "blue": 235,
+                                            "green": 130,
+                                            "red": 3
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.09,
+                                        "rgb": {
+                                            "blue": 140,
+                                            "green": 83,
+                                            "red": 4
+                                        }
+                                    },
+                                    {
+                                        "percentage": 1,
+                                        "rgb": {
+                                            "blue": 153,
+                                            "green": 126,
+                                            "red": 39
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 90.35,
+                                        "rgb": {
+                                            "blue": 10,
+                                            "green": 6,
+                                            "red": 1
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.41,
+                                        "rgb": {
+                                            "blue": 235,
+                                            "green": 130,
+                                            "red": 3
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.09,
+                                        "rgb": {
+                                            "blue": 140,
+                                            "green": 83,
+                                            "red": 4
+                                        }
+                                    },
+                                    {
+                                        "percentage": 1,
+                                        "rgb": {
+                                            "blue": 153,
+                                            "green": 126,
+                                            "red": 39
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/E03S3Rwut7"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990128224723177472/Ln6eHKfU?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary_large_image",
+                "url": "https://t.co/E03S3Rwut7",
+                "user_refs_results": [
+                    {
+                        "rest_id": "3065618342",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 26755
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1795851438956204032/rLl5Y48q_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/3065618342/1716998022"
+                            },
+                            "core": {
+                                "created_at": "Sat Mar 07 01:00:18 +0000 2015",
+                                "name": "Discord",
+                                "screen_name": "discord"
+                            },
+                            "dm_permissions": {
+                                "can_dm": true
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": "San Francisco, CA"
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {},
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Where group chat is all fun & games. Need support? Reach us @discord_support",
+                                "entities": {
+                                    "description": {
+                                        "user_mentions": [
+                                            {
+                                                "id_str": "0",
+                                                "indices": [
+                                                    60,
+                                                    76
+                                                ],
+                                                "name": "",
+                                                "screen_name": "discord_support"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "discord.com",
+                                                "expanded_url": "https://discord.com/",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/EWXh7hERbq"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_image_shape": "Square",
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "0084B4"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 4754186,
+                                "following": 1087
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "3065618342",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 27020,
+                                "tweets": 495993
+                            },
+                            "website": {
+                                "url": "https://t.co/EWXh7hERbq"
+                            },
+                            "verification": {
+                                "is_blue_verified": true,
+                                "verified_type": "Business"
+                            }
+                        }
+                    }
+                ]
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            107,
+                            112
+                        ],
+                        "text": "shib"
+                    },
+                    {
+                        "indices": [
+                            113,
+                            118
+                        ],
+                        "text": "doge"
+                    },
+                    {
+                        "indices": [
+                            119,
+                            123
+                        ],
+                        "text": "arb"
+                    },
+                    {
+                        "indices": [
+                            124,
+                            129
+                        ],
+                        "text": "defi"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            138
+                        ],
+                        "text": "collabs"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/vaultrunners",
+                        "expanded_url": "http://discord.gg/vaultrunners",
+                        "indices": [
+                            82,
+                            105
+                        ],
+                        "url": "https://t.co/E03S3Rwut7"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991593200998584465",
+            "url": "https://x.com/believeintoshi/status/1991593200998584465",
+            "twitterUrl": "https://twitter.com/believeintoshi/status/1991593200998584465",
+            "text": "@schismaticshiba It doesn't get better than $SHIBONBASE 🐶 \n\n$SHIB #SHIB #Binance #BTC #Eth #Crypto https://t.co/KDaJ5egpqC",
+            "source": "Twitter for iPhone",
+            "retweetCount": 2,
+            "replyCount": 0,
+            "likeCount": 6,
+            "quoteCount": 0,
+            "viewCount": 45,
+            "createdAt": "Thu Nov 20 19:43:15 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": true,
+            "inReplyToId": "1991591841427251498",
+            "conversationId": "1991591841427251498",
+            "displayTextRange": [
+                17,
+                98
+            ],
+            "inReplyToUserId": "1928576964337504256",
+            "inReplyToUsername": "schismaticshiba",
+            "author": {
+                "type": "user",
+                "userName": "believeintoshi",
+                "url": "https://x.com/believeintoshi",
+                "twitterUrl": "https://twitter.com/believeintoshi",
+                "id": "1527374086095024132",
+                "name": "Jay Diamond Hands",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1979411454882127872/vfaXiQ1Z_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1527374086095024132/1753003321",
+                "description": "",
+                "location": "💎🤝💎",
+                "followers": 401,
+                "following": 328,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Thu May 19 19:42:21 +0000 2022",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 7290,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 674,
+                "statusesCount": 5613,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "forever stacking $SHIB on base | $TOSHI | $ELI5A 0xFCa95aeb5bF44aE355806A5ad14659c940dC6BF7",
+                    "entities": {
+                        "description": {
+                            "symbols": [
+                                {
+                                    "indices": [
+                                        17,
+                                        22
+                                    ],
+                                    "text": "SHIB"
+                                },
+                                {
+                                    "indices": [
+                                        33,
+                                        39
+                                    ],
+                                    "text": "TOSHI"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "additional_media_info": {
+                            "monetizable": false
+                        },
+                        "display_url": "pic.twitter.com/KDaJ5egpqC",
+                        "expanded_url": "https://twitter.com/believeintoshi/status/1991593200998584465/video/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "id_str": "1991593183633899520",
+                        "indices": [
+                            99,
+                            122
+                        ],
+                        "media_key": "7_1991593183633899520",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAwoAARujj3LXloAACgACG6OPduKakJEAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAADCgABG6OPcteWgAAKAAIbo4924pqQkQAA",
+                                "media_key": "7_1991593183633899520"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/1991593183633899520/pu/img/3f-sidKVA1x4PnnW.jpg",
+                        "original_info": {
+                            "focus_rects": [],
+                            "height": 560,
+                            "width": 560
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 560,
+                                "w": 560
+                            }
+                        },
+                        "type": "video",
+                        "url": "https://t.co/KDaJ5egpqC",
+                        "video_info": {
+                            "aspect_ratio": [
+                                1,
+                                1
+                            ],
+                            "duration_millis": 5900,
+                            "variants": [
+                                {
+                                    "content_type": "application/x-mpegURL",
+                                    "url": "https://video.twimg.com/ext_tw_video/1991593183633899520/pu/pl/8kg4-MlGKCAjrK-w.m3u8?tag=19"
+                                },
+                                {
+                                    "bitrate": 432000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1991593183633899520/pu/vid/avc1/320x320/BpTXL6yAfDWt6vaX.mp4?tag=19"
+                                },
+                                {
+                                    "bitrate": 832000,
+                                    "content_type": "video/mp4",
+                                    "url": "https://video.twimg.com/ext_tw_video/1991593183633899520/pu/vid/avc1/560x560/EZzO9oWHCMy6vogI.mp4?tag=19"
+                                }
+                            ]
+                        }
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            66,
+                            71
+                        ],
+                        "text": "SHIB"
+                    },
+                    {
+                        "indices": [
+                            72,
+                            80
+                        ],
+                        "text": "Binance"
+                    },
+                    {
+                        "indices": [
+                            81,
+                            85
+                        ],
+                        "text": "BTC"
+                    },
+                    {
+                        "indices": [
+                            86,
+                            90
+                        ],
+                        "text": "Eth"
+                    },
+                    {
+                        "indices": [
+                            91,
+                            98
+                        ],
+                        "text": "Crypto"
+                    }
+                ],
+                "symbols": [
+                    {
+                        "indices": [
+                            44,
+                            55
+                        ],
+                        "text": "SHIBONBASE"
+                    },
+                    {
+                        "indices": [
+                            60,
+                            65
+                        ],
+                        "text": "SHIB"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id_str": "1928576964337504256",
+                        "indices": [
+                            0,
+                            16
+                        ],
+                        "name": "SHIBA ON BASE",
+                        "screen_name": "schismaticshiba"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991591401260503142",
+            "url": "https://x.com/manasata/status/1991591401260503142",
+            "twitterUrl": "https://twitter.com/manasata/status/1991591401260503142",
+            "text": "@TheShibmagazine @HeberMayen What ever happened to the #SHIB Dream. It held so much promise then it wallowed into ENDLESS CHILDISH Quarrels.",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 35,
+            "createdAt": "Thu Nov 20 19:36:06 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": true,
+            "inReplyToId": "1991526081917251628",
+            "conversationId": "1991526081917251628",
+            "displayTextRange": [
+                29,
+                140
+            ],
+            "inReplyToUserId": "1720487538681319424",
+            "inReplyToUsername": "TheShibmagazine",
+            "author": {
+                "type": "user",
+                "userName": "manasata",
+                "url": "https://x.com/manasata",
+                "twitterUrl": "https://twitter.com/manasata",
+                "id": "52141174",
+                "name": "MANASATA",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1954439648429645824/PyDufmRC_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/52141174/1754809614",
+                "description": "",
+                "location": "Bamenda",
+                "followers": 940,
+                "following": 238,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Mon Jun 29 18:28:18 +0000 2009",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 18022,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 976,
+                "statusesCount": 12015,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1907770312717987840"
+                ],
+                "profile_bio": {
+                    "description": "CRYPTO MILLIONAIRE IN THE MAKING",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            55,
+                            60
+                        ],
+                        "text": "SHIB"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id_str": "1720487538681319424",
+                        "indices": [
+                            0,
+                            16
+                        ],
+                        "name": "The Shib",
+                        "screen_name": "TheShibmagazine"
+                    },
+                    {
+                        "id_str": "1358174514895609859",
+                        "indices": [
+                            17,
+                            28
+                        ],
+                        "name": "Heber Mayen 🇬🇹🇲🇦🇺🇸",
+                        "screen_name": "HeberMayen"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1970324796761412076",
+            "url": "https://x.com/amazonDE/status/1970324796761412076",
+            "twitterUrl": "https://twitter.com/amazonDE/status/1970324796761412076",
+            "text": "Entdecke die Herbst Must-haves",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 50,
+            "quoteCount": 2,
+            "viewCount": 55624856,
+            "createdAt": "Tue Sep 23 03:10:13 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 13,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1970324796761412076",
+            "displayTextRange": [
+                0,
+                30
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "amazonDE",
+                "url": "https://x.com/amazonDE",
+                "twitterUrl": "https://twitter.com/amazonDE",
+                "id": "3823848513",
+                "name": "Amazon.de",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": "Business",
+                "profilePicture": "https://pbs.twimg.com/profile_images/1912988806187474944/sz-c29RZ_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/3823848513/1480437439",
+                "description": "",
+                "location": "Deutschland",
+                "followers": 27910,
+                "following": 2,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Wed Sep 30 12:04:00 +0000 2015",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 699,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 39,
+                "statusesCount": 8967,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {
+                    "label": {
+                        "badge": {
+                            "url": "https://pbs.twimg.com/profile_images/1912984084516831232/BHv0mcPd_bigger.jpg"
+                        },
+                        "description": "Amazon",
+                        "url": {
+                            "url": "https://twitter.com/amazon",
+                            "url_type": "DeepLink"
+                        },
+                        "user_label_type": "BusinessLabel",
+                        "user_label_display_type": "Badge"
+                    }
+                },
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Offizieller X account von https://t.co/nbx4PWuPJG. Unser Kundenservice ist unter @AmazonHelp erreichbar.",
+                    "entities": {
+                        "description": {
+                            "urls": [
+                                {
+                                    "display_url": "Amazon.de",
+                                    "expanded_url": "https://Amazon.de",
+                                    "indices": [
+                                        26,
+                                        49
+                                    ],
+                                    "url": "https://t.co/nbx4PWuPJG"
+                                }
+                            ],
+                            "user_mentions": [
+                                {
+                                    "id_str": "0",
+                                    "indices": [
+                                        81,
+                                        92
+                                    ],
+                                    "name": "",
+                                    "screen_name": "AmazonHelp"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "amazon.de",
+                                    "expanded_url": "https://amazon.de",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/TUqdNW5cNX"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "unified_card",
+                        "value": {
+                            "string_value": "{\"type\":\"image_website\",\"component_objects\":{\"details_1\":{\"type\":\"details\",\"data\":{\"title\":{\"content\":\"Something went wrong. Help us by reporting the issue.\",\"is_rtl\":false},\"subtitle\":{\"content\":\"twitter.com\",\"is_rtl\":false},\"destination\":\"browser_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"3_1696305594007801856\",\"destination\":\"browser_1\"}}},\"destination_objects\":{\"browser_1\":{\"type\":\"browser\",\"data\":{\"url_data\":{\"url\":\"https://twitter.com?tag=twasapxpf-xpf-de-21&ascsubtag=ptw-XPF-1-9-omjkevmeq4kqdunz&mcid=d404a22b3e1e34ec93417fb8a770d5e3\",\"vanity\":\"twitter.com\"}}}},\"components\":[\"media_1\",\"details_1\"],\"media_entities\":{\"3_1696305594007801856\":{\"id\":1696305594007801856,\"id_str\":\"1696305594007801856\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/media/F4p880lX0AA7QfT.png\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":800,\"height\":800,\"focus_rects\":[{\"x\":0,\"y\":116,\"h\":448,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":800},{\"x\":0,\"y\":0,\"h\":800,\"w\":702},{\"x\":140,\"y\":0,\"h\":800,\"w\":400},{\"x\":0,\"y\":0,\"h\":800,\"w\":800}]},\"sizes\":{\"medium\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"},\"large\":{\"w\":800,\"h\":800,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"}},\"source_user_id\":2698445436,\"source_user_id_str\":\"2698445436\",\"media_key\":\"3_1696305594007801856\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":97.05},{\"rgb\":{\"red\":247,\"green\":247,\"blue\":247},\"percentage\":2.64}]}},\"ttl\":-1}}}},\"experiment_signals\":{\"is_fallback_browser\":true}}"
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://twitter.com"
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "unified_card",
+                "url": "card://1970324795767341056"
+            },
+            "place": {},
+            "entities": {},
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991574417516966368",
+            "url": "https://x.com/Big_Collision_/status/1991574417516966368",
+            "twitterUrl": "https://twitter.com/Big_Collision_/status/1991574417516966368",
+            "text": "We will continue our work without slowing down, even if the market is bleeding. We have made a promise, and we will keep it.\n\n@Shibtoken @kaaldhairya  @oscar_shibainu\n#SHIB #ShibArmy #GameFi #PlayToEarn #Metaverse #CryptoGaming #MMORPG #BullRun #GameFi #Crypto @johndoeshib @LCSHIB",
+            "source": "Twitter for iPhone",
+            "retweetCount": 3,
+            "replyCount": 3,
+            "likeCount": 10,
+            "quoteCount": 3,
+            "viewCount": 307,
+            "createdAt": "Thu Nov 20 18:28:37 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991574417516966368",
+            "displayTextRange": [
+                0,
+                274
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Big_Collision_",
+                "url": "https://x.com/Big_Collision_",
+                "twitterUrl": "https://twitter.com/Big_Collision_",
+                "id": "1932047381853360128",
+                "name": "Big_COLLISION",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1932059864194273280/dH6tvGZv_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1932047381853360128/1755879054",
+                "description": "",
+                "location": "",
+                "followers": 377,
+                "following": 123,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Mon Jun 09 12:09:45 +0000 2025",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 5825,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 52,
+                "statusesCount": 404,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1956050638795890880"
+                ],
+                "profile_bio": {
+                    "description": "I'm doing this for good people. BIG COLLISION between two powers.\n#RyoshiVision\nShiba Inu Coin's first MMORPG game.\nhttps://t.co/KNBuOYR8vZ",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        66,
+                                        79
+                                    ],
+                                    "text": "RyoshiVision"
+                                }
+                            ],
+                            "urls": [
+                                {
+                                    "display_url": "t.me/BIG_COLLISION",
+                                    "expanded_url": "https://t.me/BIG_COLLISION",
+                                    "indices": [
+                                        116,
+                                        139
+                                    ],
+                                    "url": "https://t.co/KNBuOYR8vZ"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "bigcollision.io",
+                                    "expanded_url": "https://bigcollision.io/",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/NDWUva5CqH"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/blNJA0Qcsd",
+                        "expanded_url": "https://twitter.com/Big_Collision_/status/1991574417516966368/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991572792806961152",
+                        "indices": [
+                            275,
+                            298
+                        ],
+                        "media_key": "3_1991572792806961152",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujfOc7l3AACgACG6N+YYPaseAAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6N85zuXcAAKAAIbo35hg9qx4AAA",
+                                "media_key": "3_1991572792806961152"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6N85zuXcAAqOjX.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 1075,
+                                    "w": 1920,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1078,
+                                    "w": 1078,
+                                    "x": 275,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1078,
+                                    "w": 946,
+                                    "x": 341,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1078,
+                                    "w": 539,
+                                    "x": 545,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 1078,
+                                    "w": 1920,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 1078,
+                            "width": 1920
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 1078,
+                                "w": 1920
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/blNJA0Qcsd"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            167,
+                            172
+                        ],
+                        "text": "SHIB"
+                    },
+                    {
+                        "indices": [
+                            173,
+                            182
+                        ],
+                        "text": "ShibArmy"
+                    },
+                    {
+                        "indices": [
+                            183,
+                            190
+                        ],
+                        "text": "GameFi"
+                    },
+                    {
+                        "indices": [
+                            191,
+                            202
+                        ],
+                        "text": "PlayToEarn"
+                    },
+                    {
+                        "indices": [
+                            203,
+                            213
+                        ],
+                        "text": "Metaverse"
+                    },
+                    {
+                        "indices": [
+                            214,
+                            227
+                        ],
+                        "text": "CryptoGaming"
+                    },
+                    {
+                        "indices": [
+                            228,
+                            235
+                        ],
+                        "text": "MMORPG"
+                    },
+                    {
+                        "indices": [
+                            236,
+                            244
+                        ],
+                        "text": "BullRun"
+                    },
+                    {
+                        "indices": [
+                            245,
+                            252
+                        ],
+                        "text": "GameFi"
+                    },
+                    {
+                        "indices": [
+                            253,
+                            260
+                        ],
+                        "text": "Crypto"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id_str": "1356248804899565569",
+                        "indices": [
+                            126,
+                            136
+                        ],
+                        "name": "Shib",
+                        "screen_name": "Shibtoken"
+                    },
+                    {
+                        "id_str": "1216747120499228673",
+                        "indices": [
+                            137,
+                            149
+                        ],
+                        "name": "Kaal",
+                        "screen_name": "kaaldhairya"
+                    },
+                    {
+                        "id_str": "1840923837224845313",
+                        "indices": [
+                            151,
+                            166
+                        ],
+                        "name": "Oscar",
+                        "screen_name": "oscar_shibainu"
+                    },
+                    {
+                        "id_str": "1796035138117386240",
+                        "indices": [
+                            261,
+                            273
+                        ],
+                        "name": "johndoeshib",
+                        "screen_name": "johndoeshib"
+                    },
+                    {
+                        "id_str": "1865737358320046080",
+                        "indices": [
+                            274,
+                            281
+                        ],
+                        "name": "$LC | Degensafe.fun",
+                        "screen_name": "LCSHIB"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991585026023256089",
+            "url": "https://x.com/stefsisdark/status/1991585026023256089",
+            "twitterUrl": "https://twitter.com/stefsisdark/status/1991585026023256089",
+            "text": "Moderators needed! 🚨\n\nWe're in urgent need of chat moderators, if you have experience join us.\n\nhttps://t.co/iHSxTKGWdv\n\n#hype #collabs #shib #sol #base",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 17,
+            "createdAt": "Thu Nov 20 19:10:46 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991585026023256089",
+            "displayTextRange": [
+                0,
+                152
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "stefsisdark",
+                "url": "https://x.com/stefsisdark",
+                "twitterUrl": "https://twitter.com/stefsisdark",
+                "id": "2976516947",
+                "name": "Stefsis",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1987282715993931776/rBxCJRJ__normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/2976516947/1762640097",
+                "description": "",
+                "location": "",
+                "followers": 110,
+                "following": 45,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": false,
+                "createdAt": "Tue Jan 13 14:35:57 +0000 2015",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 2391,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 836,
+                "statusesCount": 3302,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Angel Investor, Venture Capitalist, Degen",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "twitch.tv/mysticdark_06",
+                                    "expanded_url": "http://twitch.tv/mysticdark_06",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/xCu6tvNwhg"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "photo_image_full_size_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=800x320_1",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "description",
+                        "value": {
+                            "string_value": "Check out the SolNautz community on Discord - hang out with 2904 other members and enjoy free voice and text chat."
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "discord.com"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 627,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=1200x627",
+                                "width": 1200
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=800x419",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "site",
+                        "value": {
+                            "scribe_key": "publisher_id",
+                            "user_value": {
+                                "id_str": "3065618342"
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_small",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=800x419",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 80,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=240x240",
+                                "width": 240
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "discord.com"
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 14.5,
+                                        "rgb": {
+                                            "blue": 233,
+                                            "green": 229,
+                                            "red": 240
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.65,
+                                        "rgb": {
+                                            "blue": 26,
+                                            "green": 52,
+                                            "red": 252
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.21,
+                                        "rgb": {
+                                            "blue": 216,
+                                            "green": 167,
+                                            "red": 235
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.12,
+                                        "rgb": {
+                                            "blue": 171,
+                                            "green": 86,
+                                            "red": 190
+                                        }
+                                    },
+                                    {
+                                        "percentage": 3.45,
+                                        "rgb": {
+                                            "blue": 41,
+                                            "green": 106,
+                                            "red": 245
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Join the SolNautz Discord Server!"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 14.5,
+                                        "rgb": {
+                                            "blue": 233,
+                                            "green": 229,
+                                            "red": 240
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.65,
+                                        "rgb": {
+                                            "blue": 26,
+                                            "green": 52,
+                                            "red": 252
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.21,
+                                        "rgb": {
+                                            "blue": 216,
+                                            "green": 167,
+                                            "red": 235
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.12,
+                                        "rgb": {
+                                            "blue": 171,
+                                            "green": 86,
+                                            "red": 190
+                                        }
+                                    },
+                                    {
+                                        "percentage": 3.45,
+                                        "rgb": {
+                                            "blue": 41,
+                                            "green": 106,
+                                            "red": 245
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=386x202",
+                                "width": 325
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 14.5,
+                                        "rgb": {
+                                            "blue": 233,
+                                            "green": 229,
+                                            "red": 240
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.65,
+                                        "rgb": {
+                                            "blue": 26,
+                                            "green": 52,
+                                            "red": 252
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.21,
+                                        "rgb": {
+                                            "blue": 216,
+                                            "green": 167,
+                                            "red": 235
+                                        }
+                                    },
+                                    {
+                                        "percentage": 5.12,
+                                        "rgb": {
+                                            "blue": 171,
+                                            "green": 86,
+                                            "red": 190
+                                        }
+                                    },
+                                    {
+                                        "percentage": 3.45,
+                                        "rgb": {
+                                            "blue": 41,
+                                            "green": 106,
+                                            "red": 245
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=png&name=2048x2048_2_exp",
+                                "width": 512
+                            }
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/iHSxTKGWdv"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 170,
+                                "url": "https://pbs.twimg.com/card_img/1990130549860499456/MMVQ_s3z?format=jpg&name=orig",
+                                "width": 512
+                            }
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary_large_image",
+                "url": "https://t.co/iHSxTKGWdv",
+                "user_refs_results": [
+                    {
+                        "rest_id": "3065618342",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 26755
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1795851438956204032/rLl5Y48q_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/3065618342/1716998022"
+                            },
+                            "core": {
+                                "created_at": "Sat Mar 07 01:00:18 +0000 2015",
+                                "name": "Discord",
+                                "screen_name": "discord"
+                            },
+                            "dm_permissions": {
+                                "can_dm": true
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": "San Francisco, CA"
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {},
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Where group chat is all fun & games. Need support? Reach us @discord_support",
+                                "entities": {
+                                    "description": {
+                                        "user_mentions": [
+                                            {
+                                                "id_str": "0",
+                                                "indices": [
+                                                    60,
+                                                    76
+                                                ],
+                                                "name": "",
+                                                "screen_name": "discord_support"
+                                            }
+                                        ]
+                                    },
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "discord.com",
+                                                "expanded_url": "https://discord.com/",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/EWXh7hERbq"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_image_shape": "Square",
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "0084B4"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 4754186,
+                                "following": 1087
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "3065618342",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 27020,
+                                "tweets": 495993
+                            },
+                            "website": {
+                                "url": "https://t.co/EWXh7hERbq"
+                            },
+                            "verification": {
+                                "is_blue_verified": true,
+                                "verified_type": "Business"
+                            }
+                        }
+                    }
+                ]
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            121,
+                            126
+                        ],
+                        "text": "hype"
+                    },
+                    {
+                        "indices": [
+                            127,
+                            135
+                        ],
+                        "text": "collabs"
+                    },
+                    {
+                        "indices": [
+                            136,
+                            141
+                        ],
+                        "text": "shib"
+                    },
+                    {
+                        "indices": [
+                            142,
+                            146
+                        ],
+                        "text": "sol"
+                    },
+                    {
+                        "indices": [
+                            147,
+                            152
+                        ],
+                        "text": "base"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/solnautz",
+                        "expanded_url": "http://discord.gg/solnautz",
+                        "indices": [
+                            96,
+                            119
+                        ],
+                        "url": "https://t.co/iHSxTKGWdv"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991566135482020178",
+            "url": "https://x.com/jrandsrbuilders/status/1991566135482020178",
+            "twitterUrl": "https://twitter.com/jrandsrbuilders/status/1991566135482020178",
+            "text": "@DF__1201 @bull_bnb #freemarket more utilities for #SHIB than any other crypto at https://t.co/ALeaKNpsM0",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 16,
+            "createdAt": "Thu Nov 20 17:55:42 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": true,
+            "inReplyToId": "1991474575100760158",
+            "conversationId": "1991443625495130540",
+            "displayTextRange": [
+                20,
+                105
+            ],
+            "inReplyToUserId": "1830993944072589312",
+            "inReplyToUsername": "DF__1201",
+            "author": {
+                "type": "user",
+                "userName": "jrandsrbuilders",
+                "url": "https://x.com/jrandsrbuilders",
+                "twitterUrl": "https://twitter.com/jrandsrbuilders",
+                "id": "3016138228",
+                "name": "Jr & Sr Builders",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1985904597060513792/S6oCnvfq_normal.jpg",
+                "coverPicture": "",
+                "description": "",
+                "location": "",
+                "followers": 680,
+                "following": 290,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Wed Feb 04 02:56:14 +0000 2015",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 67401,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 4046,
+                "statusesCount": 205571,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "https://t.co/BQJe5fsVjR",
+                    "entities": {
+                        "description": {
+                            "urls": [
+                                {
+                                    "display_url": "jrandsrbldrs.com",
+                                    "expanded_url": "http://www.jrandsrbldrs.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/BQJe5fsVjR"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "photo_image_full_size_large",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 359,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=800x419",
+                                "width": 686
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 150,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=280x150",
+                                "width": 267
+                            }
+                        }
+                    },
+                    {
+                        "key": "description",
+                        "value": {
+                            "string_value": "Join the crypto community and reach a wider audience by accepting #SHIB as payment. Promote your business and tap into the growing movement that is not just a meme but a powerful way to expand your..."
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "shibcoinonly.com"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_large",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 320,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=800x320_1",
+                                "width": 569
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_small",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 202,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=386x202",
+                                "width": 386
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_original",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 386,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=orig",
+                                "width": 686
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_small",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 202,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=386x202",
+                                "width": 386
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_large",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 359,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=800x419",
+                                "width": 686
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_small",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 81,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=144x144",
+                                "width": 144
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 386,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=png&name=2048x2048_2_exp",
+                                "width": 686
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_original",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 386,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=orig",
+                                "width": 686
+                            }
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "shibcoinonly.com"
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 314,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=600x314",
+                                "width": 600
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 15.62,
+                                        "rgb": {
+                                            "blue": 50,
+                                            "green": 60,
+                                            "red": 135
+                                        }
+                                    },
+                                    {
+                                        "percentage": 14.51,
+                                        "rgb": {
+                                            "blue": 61,
+                                            "green": 49,
+                                            "red": 76
+                                        }
+                                    },
+                                    {
+                                        "percentage": 8.25,
+                                        "rgb": {
+                                            "blue": 77,
+                                            "green": 34,
+                                            "red": 51
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.02,
+                                        "rgb": {
+                                            "blue": 60,
+                                            "green": 106,
+                                            "red": 211
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.62,
+                                        "rgb": {
+                                            "blue": 94,
+                                            "green": 174,
+                                            "red": 229
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Promote Your Business by Accepting #SHIB as Payment | shibcoinonly"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 15.62,
+                                        "rgb": {
+                                            "blue": 50,
+                                            "green": 60,
+                                            "red": 135
+                                        }
+                                    },
+                                    {
+                                        "percentage": 14.51,
+                                        "rgb": {
+                                            "blue": 61,
+                                            "green": 49,
+                                            "red": 76
+                                        }
+                                    },
+                                    {
+                                        "percentage": 8.25,
+                                        "rgb": {
+                                            "blue": 77,
+                                            "green": 34,
+                                            "red": 51
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.02,
+                                        "rgb": {
+                                            "blue": 60,
+                                            "green": 106,
+                                            "red": 211
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.62,
+                                        "rgb": {
+                                            "blue": 94,
+                                            "green": 174,
+                                            "red": 229
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 386,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=png&name=2048x2048_2_exp",
+                                "width": 686
+                            }
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 314,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=600x314",
+                                "width": 600
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 15.62,
+                                        "rgb": {
+                                            "blue": 50,
+                                            "green": 60,
+                                            "red": 135
+                                        }
+                                    },
+                                    {
+                                        "percentage": 14.51,
+                                        "rgb": {
+                                            "blue": 61,
+                                            "green": 49,
+                                            "red": 76
+                                        }
+                                    },
+                                    {
+                                        "percentage": 8.25,
+                                        "rgb": {
+                                            "blue": 77,
+                                            "green": 34,
+                                            "red": 51
+                                        }
+                                    },
+                                    {
+                                        "percentage": 7.02,
+                                        "rgb": {
+                                            "blue": 60,
+                                            "green": 106,
+                                            "red": 211
+                                        }
+                                    },
+                                    {
+                                        "percentage": 4.62,
+                                        "rgb": {
+                                            "blue": 94,
+                                            "green": 174,
+                                            "red": 229
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_x_large",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 386,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=png&name=2048x2048_2_exp",
+                                "width": 686
+                            }
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/ALeaKNpsM0"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_original",
+                        "value": {
+                            "image_value": {
+                                "alt": "",
+                                "height": 386,
+                                "url": "https://pbs.twimg.com/card_img/1989233998447403008/Cw9g1hi2?format=jpg&name=orig",
+                                "width": 686
+                            }
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary_large_image",
+                "url": "https://t.co/ALeaKNpsM0"
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            20,
+                            31
+                        ],
+                        "text": "freemarket"
+                    },
+                    {
+                        "indices": [
+                            51,
+                            56
+                        ],
+                        "text": "SHIB"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "shibcoinonly.com",
+                        "expanded_url": "http://shibcoinonly.com",
+                        "indices": [
+                            82,
+                            105
+                        ],
+                        "url": "https://t.co/ALeaKNpsM0"
+                    }
+                ],
+                "user_mentions": [
+                    {
+                        "id_str": "1830993944072589312",
+                        "indices": [
+                            0,
+                            9
+                        ],
+                        "name": "Ding Dong 👊⛽️",
+                        "screen_name": "DF__1201"
+                    },
+                    {
+                        "id_str": "1297503202464718850",
+                        "indices": [
+                            10,
+                            19
+                        ],
+                        "name": "BULL 牛",
+                        "screen_name": "bull_bnb"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        }
+    ],
+    "has_next_page": true,
+    "next_cursor": "DAADDAABCgABG6OY6pSWIeoKAAIbo3bZNBpxUgAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUbo55Fc8AnEAoABhujnkVzv9jwAAA"
+}

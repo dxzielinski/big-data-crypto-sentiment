@@ -1,0 +1,3256 @@
+{
+    "tweets": [
+        {
+            "type": "tweet",
+            "id": "1991606802711232631",
+            "url": "https://x.com/Crypto912945/status/1991606802711232631",
+            "twitterUrl": "https://twitter.com/Crypto912945/status/1991606802711232631",
+            "text": "Maximize your gains with our free crypto trading signals. Join our Discord today! 👉 https://t.co/WqB4TB2xuB\n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $BAKE $SOL $ETH $ADA https://t.co/MtM8fpLAua",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 25,
+            "createdAt": "Thu Nov 20 20:37:18 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991606802711232631",
+            "displayTextRange": [
+                0,
+                211
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Crypto912945",
+                "url": "https://x.com/Crypto912945",
+                "twitterUrl": "https://twitter.com/Crypto912945",
+                "id": "1874501347632119808",
+                "name": "Crypto",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1907876389401014275/Pj7GB4WZ_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1874501347632119808/1743708196",
+                "description": "",
+                "location": "",
+                "followers": 91,
+                "following": 178,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Wed Jan 01 17:02:14 +0000 2025",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 628,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 160,
+                "statusesCount": 18884,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1959353874575163797"
+                ],
+                "profile_bio": {
+                    "description": "#stocks and #options trading",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        0,
+                                        7
+                                    ],
+                                    "text": "stocks"
+                                },
+                                {
+                                    "indices": [
+                                        12,
+                                        20
+                                    ],
+                                    "text": "options"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/MtM8fpLAua",
+                        "expanded_url": "https://twitter.com/Crypto912945/status/1991606802711232631/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991606792435167239",
+                        "indices": [
+                            212,
+                            235
+                        ],
+                        "media_key": "3_1991606792435167239",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujm9NjWnAHCgACG6Ob1cfawHcAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6Ob02NacAcKAAIbo5vVx9rAdwAA",
+                                "media_key": "3_1991606792435167239"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6Ob02NacAcqZS9.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 218,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 341,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 195,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 389,
+                            "width": 389
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 389,
+                                "w": 389
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/MtM8fpLAua"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            109,
+                            113
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            114,
+                            118
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            119,
+                            123
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            124,
+                            129
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            134
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            140
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            145
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            150
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            151,
+                            156
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            157,
+                            162
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            163,
+                            167
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            172
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            173,
+                            178
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            179,
+                            184
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            185,
+                            190
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            191,
+                            196
+                        ],
+                        "text": "BAKE"
+                    },
+                    {
+                        "indices": [
+                            197,
+                            201
+                        ],
+                        "text": "SOL"
+                    },
+                    {
+                        "indices": [
+                            202,
+                            206
+                        ],
+                        "text": "ETH"
+                    },
+                    {
+                        "indices": [
+                            207,
+                            211
+                        ],
+                        "text": "ADA"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/NAcA42txyr",
+                        "expanded_url": "https://discord.gg/NAcA42txyr",
+                        "indices": [
+                            84,
+                            107
+                        ],
+                        "url": "https://t.co/WqB4TB2xuB"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991606266372976796",
+            "url": "https://x.com/Crypto912945/status/1991606266372976796",
+            "twitterUrl": "https://twitter.com/Crypto912945/status/1991606266372976796",
+            "text": "Join the crypto community that wins together. Join our Discord for our free trading signals! 👉 https://t.co/WqB4TB2xuB\n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $MATIC $BTC https://t.co/f1tyEGwzDO",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 24,
+            "createdAt": "Thu Nov 20 20:35:10 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991606266372976796",
+            "displayTextRange": [
+                0,
+                213
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Crypto912945",
+                "url": "https://x.com/Crypto912945",
+                "twitterUrl": "https://twitter.com/Crypto912945",
+                "id": "1874501347632119808",
+                "name": "Crypto",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1907876389401014275/Pj7GB4WZ_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1874501347632119808/1743708196",
+                "description": "",
+                "location": "",
+                "followers": 91,
+                "following": 178,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Wed Jan 01 17:02:14 +0000 2025",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 628,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 160,
+                "statusesCount": 18884,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1959353874575163797"
+                ],
+                "profile_bio": {
+                    "description": "#stocks and #options trading",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        0,
+                                        7
+                                    ],
+                                    "text": "stocks"
+                                },
+                                {
+                                    "indices": [
+                                        12,
+                                        20
+                                    ],
+                                    "text": "options"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/f1tyEGwzDO",
+                        "expanded_url": "https://twitter.com/Crypto912945/status/1991606266372976796/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991606217031254016",
+                        "indices": [
+                            214,
+                            237
+                        ],
+                        "media_key": "3_1991606217031254016",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujm01qm4AACgACG6ObWOeacJwAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6ObTWqbgAAKAAIbo5tY55pwnAAA",
+                                "media_key": "3_1991606217031254016"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6ObTWqbgAAnQfY.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 389,
+                                    "w": 695,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 341,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 195,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 737,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 389,
+                            "width": 737
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 389,
+                                "w": 737
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/f1tyEGwzDO"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            120,
+                            124
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            125,
+                            129
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            134
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            140
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            145
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            151
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            152,
+                            156
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            157,
+                            161
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            162,
+                            167
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            173
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            174,
+                            178
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            179,
+                            183
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            184,
+                            189
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            190,
+                            195
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            196,
+                            201
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            202,
+                            208
+                        ],
+                        "text": "MATIC"
+                    },
+                    {
+                        "indices": [
+                            209,
+                            213
+                        ],
+                        "text": "BTC"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/NAcA42txyr",
+                        "expanded_url": "https://discord.gg/NAcA42txyr",
+                        "indices": [
+                            95,
+                            118
+                        ],
+                        "url": "https://t.co/WqB4TB2xuB"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991605595749904757",
+            "url": "https://x.com/jonmckay3/status/1991605595749904757",
+            "twitterUrl": "https://twitter.com/jonmckay3/status/1991605595749904757",
+            "text": "Dream it. Do it.\n\nScale your deposit with 1 winning signal.\n\nStart your success story! - https://t.co/tmg0RlknLq \n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $BAKE https://t.co/ilRHou7uFs",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 27,
+            "createdAt": "Thu Nov 20 20:32:30 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991605595749904757",
+            "displayTextRange": [
+                0,
+                202
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "jonmckay3",
+                "url": "https://x.com/jonmckay3",
+                "twitterUrl": "https://twitter.com/jonmckay3",
+                "id": "1011908348",
+                "name": "Jon McKay",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/419894846892298240/04Czty4e_normal.jpeg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1011908348/1412609495",
+                "description": "",
+                "location": "",
+                "followers": 22,
+                "following": 108,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": false,
+                "createdAt": "Fri Dec 14 20:26:02 +0000 2012",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 0,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 3322,
+                "statusesCount": 3671,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/ilRHou7uFs",
+                        "expanded_url": "https://twitter.com/jonmckay3/status/1991605595749904757/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {
+                                "faces": [
+                                    {
+                                        "h": 53,
+                                        "w": 53,
+                                        "x": 1142,
+                                        "y": 58
+                                    }
+                                ]
+                            },
+                            "orig": {
+                                "faces": [
+                                    {
+                                        "h": 53,
+                                        "w": 53,
+                                        "x": 1142,
+                                        "y": 58
+                                    }
+                                ]
+                            }
+                        },
+                        "id_str": "1991605574606196736",
+                        "indices": [
+                            203,
+                            226
+                        ],
+                        "media_key": "3_1991605574606196736",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujmrfXFxAACgACG6OavMNacXUAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6Oat9cXEAAKAAIbo5q8w1pxdQAA",
+                                "media_key": "3_1991605574606196736"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6Oat9cXEAA_8Ij.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 536,
+                                    "w": 957,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 536,
+                                    "w": 536,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 536,
+                                    "w": 470,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 536,
+                                    "w": 268,
+                                    "x": 25,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 536,
+                                    "w": 1279,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 536,
+                            "width": 1279
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 536,
+                                "w": 1279
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/ilRHou7uFs"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            115,
+                            119
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            120,
+                            124
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            125,
+                            129
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            135
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            136,
+                            140
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            146
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            147,
+                            151
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            152,
+                            156
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            157,
+                            162
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            163,
+                            168
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            169,
+                            173
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            174,
+                            178
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            179,
+                            184
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            185,
+                            190
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            191,
+                            196
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            197,
+                            202
+                        ],
+                        "text": "BAKE"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+VQ-cYGqPo7pjM…",
+                        "expanded_url": "http://t.me/+VQ-cYGqPo7pjMzNi",
+                        "indices": [
+                            89,
+                            112
+                        ],
+                        "url": "https://t.co/tmg0RlknLq"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991604177848459362",
+            "url": "https://x.com/jorgegutijorge/status/1991604177848459362",
+            "twitterUrl": "https://twitter.com/jorgegutijorge/status/1991604177848459362",
+            "text": "Chase the vision. Money follows.\n\nYour next win starts here.\n\nClick. Connect. Create. - https://t.co/3wfCw3RJSC \n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $BAKE https://t.co/IbnQZmZcIm",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 41,
+            "createdAt": "Thu Nov 20 20:26:52 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991604177848459362",
+            "displayTextRange": [
+                0,
+                201
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "jorgegutijorge",
+                "url": "https://x.com/jorgegutijorge",
+                "twitterUrl": "https://twitter.com/jorgegutijorge",
+                "id": "328199245",
+                "name": "jorge",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://abs.twimg.com/sticky/default_profile_images/default_profile_normal.png",
+                "coverPicture": "",
+                "description": "",
+                "location": "",
+                "followers": 36,
+                "following": 34,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Sat Jul 02 22:49:34 +0000 2011",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 0,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 422,
+                "statusesCount": 422,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/IbnQZmZcIm",
+                        "expanded_url": "https://twitter.com/jorgegutijorge/status/1991604177848459362/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991604156579147776",
+                        "indices": [
+                            202,
+                            225
+                        ],
+                        "media_key": "3_1991604156579147776",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujmW2uF3AACgACG6OZcqHXYGIAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OZba4XcAAKAAIbo5lyoddgYgAA",
+                                "media_key": "3_1991604156579147776"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OZba4XcAAaPHu.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 513,
+                                    "w": 916,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 513,
+                                    "w": 513,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 513,
+                                    "w": 450,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 513,
+                                    "w": 257,
+                                    "x": 24,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 513,
+                                    "w": 1223,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 513,
+                            "width": 1223
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 513,
+                                "w": 1223
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/IbnQZmZcIm"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            114,
+                            118
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            119,
+                            123
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            124,
+                            128
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            129,
+                            134
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            139
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            140,
+                            145
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            150
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            151,
+                            155
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            156,
+                            161
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            162,
+                            167
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            172
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            173,
+                            177
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            178,
+                            183
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            184,
+                            189
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            190,
+                            195
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            196,
+                            201
+                        ],
+                        "text": "BAKE"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+VQ-cYGqPo7pjM…",
+                        "expanded_url": "http://t.me/+VQ-cYGqPo7pjMzNi",
+                        "indices": [
+                            88,
+                            111
+                        ],
+                        "url": "https://t.co/3wfCw3RJSC"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991601682187473039",
+            "url": "https://x.com/karemlizarraga/status/1991601682187473039",
+            "twitterUrl": "https://twitter.com/karemlizarraga/status/1991601682187473039",
+            "text": "The time is yours—take it.\n\nBig profits. Simple signals.\n\nClaim your place! - https://t.co/fHQW5GhRlQ \n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $BAKE https://t.co/nYfRDJ7wXL",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 41,
+            "createdAt": "Thu Nov 20 20:16:57 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991601682187473039",
+            "displayTextRange": [
+                0,
+                191
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "karemlizarraga",
+                "url": "https://x.com/karemlizarraga",
+                "twitterUrl": "https://twitter.com/karemlizarraga",
+                "id": "311825984",
+                "name": "Karem Lizarraga",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1502404128/Image13_normal.jpg",
+                "coverPicture": "",
+                "description": "",
+                "location": "arequipa-peru",
+                "followers": 33,
+                "following": 19,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Mon Jun 06 03:48:24 +0000 2011",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 0,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 399,
+                "statusesCount": 407,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "pase lo que pase  todo estara bien..",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/nYfRDJ7wXL",
+                        "expanded_url": "https://twitter.com/karemlizarraga/status/1991601682187473039/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991601660875911168",
+                        "indices": [
+                            192,
+                            215
+                        ],
+                        "media_key": "3_1991601660875911168",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujlyialjAACgACG6OXLZDa0I8AAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OXKJqWMAAKAAIbo5ctkNrQjwAA",
+                                "media_key": "3_1991601660875911168"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OXKJqWMAAtxJC.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 532,
+                                    "w": 950,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 532,
+                                    "w": 532,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 532,
+                                    "w": 467,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 532,
+                                    "w": 266,
+                                    "x": 25,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 532,
+                                    "w": 1267,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 532,
+                            "width": 1267
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 532,
+                                "w": 1267
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/nYfRDJ7wXL"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            104,
+                            108
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            109,
+                            113
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            114,
+                            118
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            119,
+                            124
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            125,
+                            129
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            135
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            136,
+                            140
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            145
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            151
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            152,
+                            157
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            158,
+                            162
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            163,
+                            167
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            173
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            174,
+                            179
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            180,
+                            185
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            186,
+                            191
+                        ],
+                        "text": "BAKE"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+VQ-cYGqPo7pjM…",
+                        "expanded_url": "http://t.me/+VQ-cYGqPo7pjMzNi",
+                        "indices": [
+                            78,
+                            101
+                        ],
+                        "url": "https://t.co/fHQW5GhRlQ"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991598950365954151",
+            "url": "https://x.com/SrinaDavid/status/1991598950365954151",
+            "twitterUrl": "https://twitter.com/SrinaDavid/status/1991598950365954151",
+            "text": "Maximize your gains with our free crypto trading signals. Join our Discord today! 👉 https://t.co/leM5YmXOnj\n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $BAKE $SOL $ETH $ADA https://t.co/pN5yz5bdai",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 63,
+            "createdAt": "Thu Nov 20 20:06:06 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991598950365954151",
+            "displayTextRange": [
+                0,
+                211
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "SrinaDavid",
+                "url": "https://x.com/SrinaDavid",
+                "twitterUrl": "https://twitter.com/SrinaDavid",
+                "id": "1834161247803039744",
+                "name": "Bullish David",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1984485167801450496/NnMETvyG_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1834161247803039744/1761973112",
+                "description": "",
+                "location": "New York, USA",
+                "followers": 157,
+                "following": 0,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Thu Sep 12 09:25:07 +0000 2024",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 4,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 2362,
+                "statusesCount": 24502,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Learn stocks and options trading. #stocks #options",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        34,
+                                        41
+                                    ],
+                                    "text": "stocks"
+                                },
+                                {
+                                    "indices": [
+                                        42,
+                                        50
+                                    ],
+                                    "text": "options"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/pN5yz5bdai",
+                        "expanded_url": "https://twitter.com/SrinaDavid/status/1991598950365954151/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991598939146215424",
+                        "indices": [
+                            212,
+                            235
+                        ],
+                        "media_key": "3_1991598939146215424",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujlK7m2uAACgACG6OUsYOagGcAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OUruba4AAKAAIbo5Sxg5qAZwAA",
+                                "media_key": "3_1991598939146215424"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OUruba4AA4apS.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 218,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 341,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 195,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 389,
+                            "width": 389
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 389,
+                                "w": 389
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/pN5yz5bdai"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            109,
+                            113
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            114,
+                            118
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            119,
+                            123
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            124,
+                            129
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            134
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            140
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            145
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            150
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            151,
+                            156
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            157,
+                            162
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            163,
+                            167
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            172
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            173,
+                            178
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            179,
+                            184
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            185,
+                            190
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            191,
+                            196
+                        ],
+                        "text": "BAKE"
+                    },
+                    {
+                        "indices": [
+                            197,
+                            201
+                        ],
+                        "text": "SOL"
+                    },
+                    {
+                        "indices": [
+                            202,
+                            206
+                        ],
+                        "text": "ETH"
+                    },
+                    {
+                        "indices": [
+                            207,
+                            211
+                        ],
+                        "text": "ADA"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/NAcA42txyr",
+                        "expanded_url": "https://discord.gg/NAcA42txyr",
+                        "indices": [
+                            84,
+                            107
+                        ],
+                        "url": "https://t.co/leM5YmXOnj"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991597672193749040",
+            "url": "https://x.com/SrinaDavid/status/1991597672193749040",
+            "twitterUrl": "https://twitter.com/SrinaDavid/status/1991597672193749040",
+            "text": "Join the crypto community that wins together. Join our Discord for our free trading signals! 👉 https://t.co/leM5YmXOnj\n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $MATIC $BTC https://t.co/ljqWetDb0Z",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 59,
+            "createdAt": "Thu Nov 20 20:01:01 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991597672193749040",
+            "displayTextRange": [
+                0,
+                213
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "SrinaDavid",
+                "url": "https://x.com/SrinaDavid",
+                "twitterUrl": "https://twitter.com/SrinaDavid",
+                "id": "1834161247803039744",
+                "name": "Bullish David",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1984485167801450496/NnMETvyG_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1834161247803039744/1761973112",
+                "description": "",
+                "location": "New York, USA",
+                "followers": 157,
+                "following": 0,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Thu Sep 12 09:25:07 +0000 2024",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 4,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 2362,
+                "statusesCount": 24502,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Learn stocks and options trading. #stocks #options",
+                    "entities": {
+                        "description": {
+                            "hashtags": [
+                                {
+                                    "indices": [
+                                        34,
+                                        41
+                                    ],
+                                    "text": "stocks"
+                                },
+                                {
+                                    "indices": [
+                                        42,
+                                        50
+                                    ],
+                                    "text": "options"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/ljqWetDb0Z",
+                        "expanded_url": "https://twitter.com/SrinaDavid/status/1991597672193749040/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991597661150146565",
+                        "indices": [
+                            214,
+                            237
+                        ],
+                        "media_key": "3_1991597661150146565",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujk4VYWnAFCgACG6OTh+qacDAAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OThVhacAUKAAIbo5OH6ppwMAAA",
+                                "media_key": "3_1991597661150146565"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OThVhacAUMW-6.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 389,
+                                    "w": 695,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 341,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 195,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 737,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 389,
+                            "width": 737
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 389,
+                                "w": 737
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/ljqWetDb0Z"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            120,
+                            124
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            125,
+                            129
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            134
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            140
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            145
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            151
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            152,
+                            156
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            157,
+                            161
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            162,
+                            167
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            173
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            174,
+                            178
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            179,
+                            183
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            184,
+                            189
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            190,
+                            195
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            196,
+                            201
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            202,
+                            208
+                        ],
+                        "text": "MATIC"
+                    },
+                    {
+                        "indices": [
+                            209,
+                            213
+                        ],
+                        "text": "BTC"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/NAcA42txyr",
+                        "expanded_url": "https://discord.gg/NAcA42txyr",
+                        "indices": [
+                            95,
+                            118
+                        ],
+                        "url": "https://t.co/leM5YmXOnj"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991596803922551169",
+            "url": "https://x.com/karemlizarraga/status/1991596803922551169",
+            "twitterUrl": "https://twitter.com/karemlizarraga/status/1991596803922551169",
+            "text": "Money mindset: ON.\n\nClean setup. 300% potential.\n\nBe part of the journey! - https://t.co/fHQW5GhRlQ \n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $ada https://t.co/XeNrFHhwt6",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 52,
+            "createdAt": "Thu Nov 20 19:57:34 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991596803922551169",
+            "displayTextRange": [
+                0,
+                188
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "karemlizarraga",
+                "url": "https://x.com/karemlizarraga",
+                "twitterUrl": "https://twitter.com/karemlizarraga",
+                "id": "311825984",
+                "name": "Karem Lizarraga",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1502404128/Image13_normal.jpg",
+                "coverPicture": "",
+                "description": "",
+                "location": "arequipa-peru",
+                "followers": 33,
+                "following": 19,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Mon Jun 06 03:48:24 +0000 2011",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 0,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 399,
+                "statusesCount": 407,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "pase lo que pase  todo estara bien..",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/XeNrFHhwt6",
+                        "expanded_url": "https://twitter.com/karemlizarraga/status/1991596803922551169/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991596782615195648",
+                        "indices": [
+                            189,
+                            212
+                        ],
+                        "media_key": "3_1991596782615195648",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujkrjLlvAACgACG6OSvcGbYYEAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OSuMuW8AAKAAIbo5K9wZthgQAA",
+                                "media_key": "3_1991596782615195648"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OSuMuW8AAxPQR.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 501,
+                                    "w": 895,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 501,
+                                    "w": 501,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 501,
+                                    "w": 439,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 501,
+                                    "w": 251,
+                                    "x": 24,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 501,
+                                    "w": 1192,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 501,
+                            "width": 1192
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 501,
+                                "w": 1192
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/XeNrFHhwt6"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            102,
+                            106
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            107,
+                            111
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            112,
+                            116
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            117,
+                            122
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            123,
+                            127
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            128,
+                            133
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            134,
+                            138
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            139,
+                            143
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            144,
+                            149
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            150,
+                            155
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            156,
+                            160
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            161,
+                            165
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            166,
+                            171
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            172,
+                            177
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            178,
+                            183
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            184,
+                            188
+                        ],
+                        "text": "ada"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+VQ-cYGqPo7pjM…",
+                        "expanded_url": "http://t.me/+VQ-cYGqPo7pjMzNi",
+                        "indices": [
+                            76,
+                            99
+                        ],
+                        "url": "https://t.co/fHQW5GhRlQ"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991594838769512522",
+            "url": "https://x.com/ThomasEdis28199/status/1991594838769512522",
+            "twitterUrl": "https://twitter.com/ThomasEdis28199/status/1991594838769512522",
+            "text": "Maximize your gains with our free crypto trading signals. Join our Discord today! 👉 https://t.co/6G327OFsAo\n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $BAKE $SOL $ETH $ADA https://t.co/2t0K0ZkXCn",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 68,
+            "createdAt": "Thu Nov 20 19:49:46 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991594838769512522",
+            "displayTextRange": [
+                0,
+                211
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "ThomasEdis28199",
+                "url": "https://x.com/ThomasEdis28199",
+                "twitterUrl": "https://twitter.com/ThomasEdis28199",
+                "id": "1762842318808203265",
+                "name": "Thomas Edison",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1762843471696556033/KGDt6r6N_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1762842318808203265/1709129656",
+                "description": "",
+                "location": "",
+                "followers": 37,
+                "following": 16,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Wed Feb 28 14:09:24 +0000 2024",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 153,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 313,
+                "statusesCount": 18734,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Options & equities trading | Daily live setups, analysis, insights, charts & gains - from Xtrades Analysts Team | 14-day free trial on Xtrades discord.👇",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "discord.gg/MzRkdPD87Q",
+                                    "expanded_url": "https://discord.gg/MzRkdPD87Q",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/bYXZeYDUXY"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/2t0K0ZkXCn",
+                        "expanded_url": "https://twitter.com/ThomasEdis28199/status/1991594838769512522/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991594828837359616",
+                        "indices": [
+                            212,
+                            235
+                        ],
+                        "media_key": "3_1991594828837359616",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujkPHlWxAACgACG6OQ9DVbsEoAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OQ8eVbEAAKAAIbo5D0NVuwSgAA",
+                                "media_key": "3_1991594828837359616"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OQ8eVbEAAlqwU.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 218,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 341,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 195,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 389,
+                            "width": 389
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 389,
+                                "w": 389
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/2t0K0ZkXCn"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            109,
+                            113
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            114,
+                            118
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            119,
+                            123
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            124,
+                            129
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            134
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            140
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            145
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            150
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            151,
+                            156
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            157,
+                            162
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            163,
+                            167
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            172
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            173,
+                            178
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            179,
+                            184
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            185,
+                            190
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            191,
+                            196
+                        ],
+                        "text": "BAKE"
+                    },
+                    {
+                        "indices": [
+                            197,
+                            201
+                        ],
+                        "text": "SOL"
+                    },
+                    {
+                        "indices": [
+                            202,
+                            206
+                        ],
+                        "text": "ETH"
+                    },
+                    {
+                        "indices": [
+                            207,
+                            211
+                        ],
+                        "text": "ADA"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/NAcA42txyr",
+                        "expanded_url": "https://discord.gg/NAcA42txyr",
+                        "indices": [
+                            84,
+                            107
+                        ],
+                        "url": "https://t.co/6G327OFsAo"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991594033953825158",
+            "url": "https://x.com/ThomasEdis28199/status/1991594033953825158",
+            "twitterUrl": "https://twitter.com/ThomasEdis28199/status/1991594033953825158",
+            "text": "Join the crypto community that wins together. Join our Discord for our free trading signals! 👉 https://t.co/6G327OFsAo\n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $MATIC $BTC https://t.co/cxAS4vp8CA",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 66,
+            "createdAt": "Thu Nov 20 19:46:34 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991594033953825158",
+            "displayTextRange": [
+                0,
+                213
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "ThomasEdis28199",
+                "url": "https://x.com/ThomasEdis28199",
+                "twitterUrl": "https://twitter.com/ThomasEdis28199",
+                "id": "1762842318808203265",
+                "name": "Thomas Edison",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1762843471696556033/KGDt6r6N_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1762842318808203265/1709129656",
+                "description": "",
+                "location": "",
+                "followers": 37,
+                "following": 16,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Wed Feb 28 14:09:24 +0000 2024",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 153,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 313,
+                "statusesCount": 18734,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Options & equities trading | Daily live setups, analysis, insights, charts & gains - from Xtrades Analysts Team | 14-day free trial on Xtrades discord.👇",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "discord.gg/MzRkdPD87Q",
+                                    "expanded_url": "https://discord.gg/MzRkdPD87Q",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/bYXZeYDUXY"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "display_url": "pic.twitter.com/cxAS4vp8CA",
+                        "expanded_url": "https://twitter.com/ThomasEdis28199/status/1991594033953825158/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991594022595620865",
+                        "indices": [
+                            214,
+                            237
+                        ],
+                        "media_key": "3_1991594022595620865",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujkDYtmnABCgACG6OQONKa4YYAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OQNi2acAEKAAIbo5A40prhhgAA",
+                                "media_key": "3_1991594022595620865"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OQNi2acAE8ild.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 389,
+                                    "w": 695,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 389,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 341,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 195,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 389,
+                                    "w": 737,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 389,
+                            "width": 737
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 389,
+                                "w": 737
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/cxAS4vp8CA"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            120,
+                            124
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            125,
+                            129
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            130,
+                            134
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            135,
+                            140
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            141,
+                            145
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            151
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            152,
+                            156
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            157,
+                            161
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            162,
+                            167
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            168,
+                            173
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            174,
+                            178
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            179,
+                            183
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            184,
+                            189
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            190,
+                            195
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            196,
+                            201
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            202,
+                            208
+                        ],
+                        "text": "MATIC"
+                    },
+                    {
+                        "indices": [
+                            209,
+                            213
+                        ],
+                        "text": "BTC"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "discord.gg/NAcA42txyr",
+                        "expanded_url": "https://discord.gg/NAcA42txyr",
+                        "indices": [
+                            95,
+                            118
+                        ],
+                        "url": "https://t.co/6G327OFsAo"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991592188451647949",
+            "url": "https://x.com/kashifshahzad24/status/1991592188451647949",
+            "twitterUrl": "https://twitter.com/kashifshahzad24/status/1991592188451647949",
+            "text": "Success requires focus and effort.\n\nFast alerts. Big outcomes.\n\nStep into your next chapter! - https://t.co/VURgGwPHCW \n\n$BSV $FTM $BTT $SAND $AXS $MANA $KCS $XTZ $IOTA $KAVA $NEO $EOS $GALA $KLAY $MINA $ada https://t.co/I3A2ZltnPi",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 55,
+            "createdAt": "Thu Nov 20 19:39:14 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991592188451647949",
+            "displayTextRange": [
+                0,
+                207
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "kashifshahzad24",
+                "url": "https://x.com/kashifshahzad24",
+                "twitterUrl": "https://twitter.com/kashifshahzad24",
+                "id": "396014578",
+                "name": "Dr. Kashif shahzad",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1164245964787294208/YGJcWUPC_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/396014578/1496533246",
+                "description": "",
+                "location": "Haldwani-Kathgodam, India",
+                "followers": 29,
+                "following": 21,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Sat Oct 22 16:22:51 +0000 2011",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 11,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 417,
+                "statusesCount": 542,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Life is one time offer.....",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/I3A2ZltnPi",
+                        "expanded_url": "https://twitter.com/kashifshahzad24/status/1991592188451647949/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991592166880120832",
+                        "indices": [
+                            208,
+                            231
+                        ],
+                        "media_key": "3_1991592166880120832",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujjoYcVxAACgACG6OOiyIacc0AAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OOhhxXEAAKAAIbo46LIhpxzQAA",
+                                "media_key": "3_1991592166880120832"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OOhhxXEAAXpQ0.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 551,
+                                    "w": 984,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 551,
+                                    "w": 551,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 551,
+                                    "w": 483,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 551,
+                                    "w": 276,
+                                    "x": 26,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 551,
+                                    "w": 1314,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 551,
+                            "width": 1314
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 551,
+                                "w": 1314
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/I3A2ZltnPi"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "symbols": [
+                    {
+                        "indices": [
+                            121,
+                            125
+                        ],
+                        "text": "BSV"
+                    },
+                    {
+                        "indices": [
+                            126,
+                            130
+                        ],
+                        "text": "FTM"
+                    },
+                    {
+                        "indices": [
+                            131,
+                            135
+                        ],
+                        "text": "BTT"
+                    },
+                    {
+                        "indices": [
+                            136,
+                            141
+                        ],
+                        "text": "SAND"
+                    },
+                    {
+                        "indices": [
+                            142,
+                            146
+                        ],
+                        "text": "AXS"
+                    },
+                    {
+                        "indices": [
+                            147,
+                            152
+                        ],
+                        "text": "MANA"
+                    },
+                    {
+                        "indices": [
+                            153,
+                            157
+                        ],
+                        "text": "KCS"
+                    },
+                    {
+                        "indices": [
+                            158,
+                            162
+                        ],
+                        "text": "XTZ"
+                    },
+                    {
+                        "indices": [
+                            163,
+                            168
+                        ],
+                        "text": "IOTA"
+                    },
+                    {
+                        "indices": [
+                            169,
+                            174
+                        ],
+                        "text": "KAVA"
+                    },
+                    {
+                        "indices": [
+                            175,
+                            179
+                        ],
+                        "text": "NEO"
+                    },
+                    {
+                        "indices": [
+                            180,
+                            184
+                        ],
+                        "text": "EOS"
+                    },
+                    {
+                        "indices": [
+                            185,
+                            190
+                        ],
+                        "text": "GALA"
+                    },
+                    {
+                        "indices": [
+                            191,
+                            196
+                        ],
+                        "text": "KLAY"
+                    },
+                    {
+                        "indices": [
+                            197,
+                            202
+                        ],
+                        "text": "MINA"
+                    },
+                    {
+                        "indices": [
+                            203,
+                            207
+                        ],
+                        "text": "ada"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+VQ-cYGqPo7pjM…",
+                        "expanded_url": "http://t.me/+VQ-cYGqPo7pjMzNi",
+                        "indices": [
+                            95,
+                            118
+                        ],
+                        "url": "https://t.co/VURgGwPHCW"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        }
+    ],
+    "has_next_page": true,
+    "next_cursor": "DAADDAABCgABG6Ob1cfawHcKAAIbo46LIhpxzQAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUbo52CusAnEAoABhujnYK6v9jwAAA"
+}

@@ -1,0 +1,1525 @@
+{
+    "tweets": [
+        {
+            "type": "tweet",
+            "id": "1991604062849232981",
+            "url": "https://x.com/Futures_Expert/status/1991604062849232981",
+            "twitterUrl": "https://twitter.com/Futures_Expert/status/1991604062849232981",
+            "text": "Binance Futures, BingX Futures, Bitget Futures, KuCoin Futures\n#BTC/USDT Take-Profit target 3 ✅\nProfit: 135.6484% 📈\nPeriod: 4 Hours 25 Minutes ⏰\n\n#ETH #WIF #BIO #HOOK #WLFI #Dogecoin #memecoins #Altcoin #PENGU #Slovenia #Estonia \n\nClick link below ⬇️\nhttps://t.co/QmaHdqZK7Z",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 2,
+            "createdAt": "Thu Nov 20 20:26:25 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991604062849232981",
+            "displayTextRange": [
+                0,
+                274
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Futures_Expert",
+                "url": "https://x.com/Futures_Expert",
+                "twitterUrl": "https://twitter.com/Futures_Expert",
+                "id": "1597543507811618817",
+                "name": "Futures Expert",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1951742456094949376/ot-AQKEo_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1597543507811618817/1754166725",
+                "description": "",
+                "location": "Scotland, United Kingdom",
+                "followers": 1532,
+                "following": 836,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Tue Nov 29 10:51:46 +0000 2022",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 2686,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 3110,
+                "statusesCount": 8367,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1951873655442399514"
+                ],
+                "profile_bio": {
+                    "description": "TA chart analysis, professional trader, $10k - $100k trade competition, love trade and NY I love father of two daughters",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "Binance.com",
+                                    "expanded_url": "http://Binance.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/PRKl1lCrwQ"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "app_star_rating",
+                        "value": {
+                            "string_value": "4.01327"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image",
+                        "value": {
+                            "image_value": {
+                                "height": 144,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=144x144_2",
+                                "width": 144
+                            }
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "t.me"
+                        }
+                    },
+                    {
+                        "key": "app_is_free",
+                        "value": {
+                            "string_value": "true"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=280x280_2",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=orig",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "site",
+                        "value": {
+                            "scribe_key": "publisher_id",
+                            "user_value": {
+                                "id_str": "1689053928"
+                            }
+                        }
+                    },
+                    {
+                        "key": "app_url_resolved",
+                        "value": {
+                            "string_value": "tg://join?invite=o_1GeLmRRPhkYjg0"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 100,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=100x100_2",
+                                "width": 100
+                            }
+                        }
+                    },
+                    {
+                        "key": "app_num_ratings",
+                        "value": {
+                            "string_value": "241,174"
+                        }
+                    },
+                    {
+                        "key": "app_price_amount",
+                        "value": {
+                            "string_value": "0.0"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=2048x2048_2_exp",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "t.me"
+                        }
+                    },
+                    {
+                        "key": "app_name",
+                        "value": {
+                            "string_value": "Telegram Messenger"
+                        }
+                    },
+                    {
+                        "key": "app_id",
+                        "value": {
+                            "scribe_key": "publisher_app_id",
+                            "string_value": "686449807"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 67.36,
+                                        "rgb": {
+                                            "blue": 227,
+                                            "green": 164,
+                                            "red": 38
+                                        }
+                                    },
+                                    {
+                                        "percentage": 11.33,
+                                        "rgb": {
+                                            "blue": 255,
+                                            "green": 255,
+                                            "red": 255
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Join group chat on Telegram"
+                        }
+                    },
+                    {
+                        "key": "app_price_currency",
+                        "value": {
+                            "string_value": "USD"
+                        }
+                    },
+                    {
+                        "key": "app_url",
+                        "value": {
+                            "string_value": "https://t.co/redirect?url=tg%3A%2F%2Fjoin%3Finvite%3Do_1GeLmRRPhkYjg0&sig=f3ac1e4a2f3d65e33cf0d359c0e1b9aedf41797a&ssr=true&slug=QmaHdqZK7Z"
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/QmaHdqZK7Z"
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary",
+                "url": "https://t.co/QmaHdqZK7Z",
+                "user_refs_results": [
+                    {
+                        "rest_id": "1689053928",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 6761
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1183117696730390529/LRDASku7_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/1689053928/1392066683"
+                            },
+                            "core": {
+                                "created_at": "Wed Aug 21 19:47:05 +0000 2013",
+                                "name": "Telegram Messenger",
+                                "screen_name": "telegram"
+                            },
+                            "dm_permissions": {
+                                "can_dm": false
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": ""
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {
+                                "tweet_ids_str": [
+                                    "1978460858431733886"
+                                ]
+                            },
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Simple, fast, secure – and synced across all your devices. One of the top 5 most-downloaded apps in the world with over 1 billion active users.",
+                                "entities": {
+                                    "description": {},
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "telegram.org",
+                                                "expanded_url": "http://telegram.org",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/zHAc9lS7Jy"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_image_shape": "Square",
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "1DA1F2"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 1897594,
+                                "following": 9
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "1689053928",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 3842,
+                                "tweets": 49919
+                            },
+                            "website": {
+                                "url": "https://t.co/zHAc9lS7Jy"
+                            },
+                            "verification": {
+                                "is_blue_verified": true,
+                                "verified_type": "Business"
+                            }
+                        }
+                    }
+                ]
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            63,
+                            67
+                        ],
+                        "text": "BTC"
+                    },
+                    {
+                        "indices": [
+                            146,
+                            150
+                        ],
+                        "text": "ETH"
+                    },
+                    {
+                        "indices": [
+                            151,
+                            155
+                        ],
+                        "text": "WIF"
+                    },
+                    {
+                        "indices": [
+                            156,
+                            160
+                        ],
+                        "text": "BIO"
+                    },
+                    {
+                        "indices": [
+                            161,
+                            166
+                        ],
+                        "text": "HOOK"
+                    },
+                    {
+                        "indices": [
+                            167,
+                            172
+                        ],
+                        "text": "WLFI"
+                    },
+                    {
+                        "indices": [
+                            173,
+                            182
+                        ],
+                        "text": "Dogecoin"
+                    },
+                    {
+                        "indices": [
+                            183,
+                            193
+                        ],
+                        "text": "memecoins"
+                    },
+                    {
+                        "indices": [
+                            194,
+                            202
+                        ],
+                        "text": "Altcoin"
+                    },
+                    {
+                        "indices": [
+                            203,
+                            209
+                        ],
+                        "text": "PENGU"
+                    },
+                    {
+                        "indices": [
+                            210,
+                            219
+                        ],
+                        "text": "Slovenia"
+                    },
+                    {
+                        "indices": [
+                            220,
+                            228
+                        ],
+                        "text": "Estonia"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+o_1GeLmRRPhkY…",
+                        "expanded_url": "https://t.me/+o_1GeLmRRPhkYjg0",
+                        "indices": [
+                            251,
+                            274
+                        ],
+                        "url": "https://t.co/QmaHdqZK7Z"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991603911011209290",
+            "url": "https://x.com/Futures_Expert/status/1991603911011209290",
+            "twitterUrl": "https://twitter.com/Futures_Expert/status/1991603911011209290",
+            "text": "Binance Futures, BingX Futures, Bitget Futures, ByBit USDT, KuCoin Futures, OKX Futures\n#ASTER/USDT Take-Profit target 4 ✅\nProfit: 51.7134% 📈\nPeriod: 2 Hours 50 Minutes ⏰\n\n#ETH #WIF #BIO #HOOK #WLFI #Dogecoin #memecoins #Altcoin #PENGU\n\nClick below ⬇️\nhttps://t.co/QmaHdqZK7Z",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 13,
+            "createdAt": "Thu Nov 20 20:25:49 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991603911011209290",
+            "displayTextRange": [
+                0,
+                275
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Futures_Expert",
+                "url": "https://x.com/Futures_Expert",
+                "twitterUrl": "https://twitter.com/Futures_Expert",
+                "id": "1597543507811618817",
+                "name": "Futures Expert",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1951742456094949376/ot-AQKEo_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1597543507811618817/1754166725",
+                "description": "",
+                "location": "Scotland, United Kingdom",
+                "followers": 1532,
+                "following": 836,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Tue Nov 29 10:51:46 +0000 2022",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 2686,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 3110,
+                "statusesCount": 8367,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1951873655442399514"
+                ],
+                "profile_bio": {
+                    "description": "TA chart analysis, professional trader, $10k - $100k trade competition, love trade and NY I love father of two daughters",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "Binance.com",
+                                    "expanded_url": "http://Binance.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/PRKl1lCrwQ"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "app_star_rating",
+                        "value": {
+                            "string_value": "4.01327"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image",
+                        "value": {
+                            "image_value": {
+                                "height": 144,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=144x144_2",
+                                "width": 144
+                            }
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "t.me"
+                        }
+                    },
+                    {
+                        "key": "app_is_free",
+                        "value": {
+                            "string_value": "true"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=280x280_2",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=orig",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "site",
+                        "value": {
+                            "scribe_key": "publisher_id",
+                            "user_value": {
+                                "id_str": "1689053928"
+                            }
+                        }
+                    },
+                    {
+                        "key": "app_url_resolved",
+                        "value": {
+                            "string_value": "tg://join?invite=o_1GeLmRRPhkYjg0"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 100,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=100x100_2",
+                                "width": 100
+                            }
+                        }
+                    },
+                    {
+                        "key": "app_num_ratings",
+                        "value": {
+                            "string_value": "241,174"
+                        }
+                    },
+                    {
+                        "key": "app_price_amount",
+                        "value": {
+                            "string_value": "0.0"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=2048x2048_2_exp",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "t.me"
+                        }
+                    },
+                    {
+                        "key": "app_name",
+                        "value": {
+                            "string_value": "Telegram Messenger"
+                        }
+                    },
+                    {
+                        "key": "app_id",
+                        "value": {
+                            "scribe_key": "publisher_app_id",
+                            "string_value": "686449807"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 67.36,
+                                        "rgb": {
+                                            "blue": 227,
+                                            "green": 164,
+                                            "red": 38
+                                        }
+                                    },
+                                    {
+                                        "percentage": 11.33,
+                                        "rgb": {
+                                            "blue": 255,
+                                            "green": 255,
+                                            "red": 255
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Join group chat on Telegram"
+                        }
+                    },
+                    {
+                        "key": "app_price_currency",
+                        "value": {
+                            "string_value": "USD"
+                        }
+                    },
+                    {
+                        "key": "app_url",
+                        "value": {
+                            "string_value": "https://t.co/redirect?url=tg%3A%2F%2Fjoin%3Finvite%3Do_1GeLmRRPhkYjg0&sig=f3ac1e4a2f3d65e33cf0d359c0e1b9aedf41797a&ssr=true&slug=QmaHdqZK7Z"
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/QmaHdqZK7Z"
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary",
+                "url": "https://t.co/QmaHdqZK7Z",
+                "user_refs_results": [
+                    {
+                        "rest_id": "1689053928",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 6761
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1183117696730390529/LRDASku7_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/1689053928/1392066683"
+                            },
+                            "core": {
+                                "created_at": "Wed Aug 21 19:47:05 +0000 2013",
+                                "name": "Telegram Messenger",
+                                "screen_name": "telegram"
+                            },
+                            "dm_permissions": {
+                                "can_dm": false
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": ""
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {
+                                "tweet_ids_str": [
+                                    "1978460858431733886"
+                                ]
+                            },
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Simple, fast, secure – and synced across all your devices. One of the top 5 most-downloaded apps in the world with over 1 billion active users.",
+                                "entities": {
+                                    "description": {},
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "telegram.org",
+                                                "expanded_url": "http://telegram.org",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/zHAc9lS7Jy"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_image_shape": "Square",
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "1DA1F2"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 1897594,
+                                "following": 9
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "1689053928",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 3842,
+                                "tweets": 49919
+                            },
+                            "website": {
+                                "url": "https://t.co/zHAc9lS7Jy"
+                            },
+                            "verification": {
+                                "is_blue_verified": true,
+                                "verified_type": "Business"
+                            }
+                        }
+                    }
+                ]
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            88,
+                            94
+                        ],
+                        "text": "ASTER"
+                    },
+                    {
+                        "indices": [
+                            172,
+                            176
+                        ],
+                        "text": "ETH"
+                    },
+                    {
+                        "indices": [
+                            177,
+                            181
+                        ],
+                        "text": "WIF"
+                    },
+                    {
+                        "indices": [
+                            182,
+                            186
+                        ],
+                        "text": "BIO"
+                    },
+                    {
+                        "indices": [
+                            187,
+                            192
+                        ],
+                        "text": "HOOK"
+                    },
+                    {
+                        "indices": [
+                            193,
+                            198
+                        ],
+                        "text": "WLFI"
+                    },
+                    {
+                        "indices": [
+                            199,
+                            208
+                        ],
+                        "text": "Dogecoin"
+                    },
+                    {
+                        "indices": [
+                            209,
+                            219
+                        ],
+                        "text": "memecoins"
+                    },
+                    {
+                        "indices": [
+                            220,
+                            228
+                        ],
+                        "text": "Altcoin"
+                    },
+                    {
+                        "indices": [
+                            229,
+                            235
+                        ],
+                        "text": "PENGU"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+o_1GeLmRRPhkY…",
+                        "expanded_url": "https://t.me/+o_1GeLmRRPhkYjg0",
+                        "indices": [
+                            252,
+                            275
+                        ],
+                        "url": "https://t.co/QmaHdqZK7Z"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1990965248380342689",
+            "url": "https://x.com/grok/status/1990965248380342689",
+            "twitterUrl": "https://twitter.com/grok/status/1990965248380342689",
+            "text": "The smartest AI just got an upgrade.\n\nTry Grok 4.1 for free.",
+            "source": "Twitter for iPhone",
+            "retweetCount": 36,
+            "replyCount": 28,
+            "likeCount": 647,
+            "quoteCount": 3,
+            "viewCount": 9608595,
+            "createdAt": "Wed Nov 19 02:08:00 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 107,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1990965248380342689",
+            "displayTextRange": [
+                0,
+                60
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "grok",
+                "url": "https://x.com/grok",
+                "twitterUrl": "https://twitter.com/grok",
+                "id": "1720665183188922368",
+                "name": "Grok",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": "Business",
+                "profilePicture": "https://pbs.twimg.com/profile_images/1893219113717342208/Vgg2hEPa_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1720665183188922368/1740213586",
+                "description": "",
+                "location": "wherever you are",
+                "followers": 6664834,
+                "following": 3,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Sat Nov 04 04:52:34 +0000 2023",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 79,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 2738958,
+                "statusesCount": 68372357,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {
+                    "label": {
+                        "badge": {
+                            "url": "https://pbs.twimg.com/profile_images/1769430779845611520/lIgjSJGU_bigger.jpg"
+                        },
+                        "description": "xAI",
+                        "url": {
+                            "url": "https://twitter.com/xai",
+                            "url_type": "DeepLink"
+                        },
+                        "user_label_type": "BusinessLabel",
+                        "user_label_display_type": "Badge"
+                    }
+                },
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1955006865332638036"
+                ],
+                "profile_bio": {
+                    "description": "https://t.co/fqNKQSiLQB\n@grok it",
+                    "entities": {
+                        "description": {
+                            "urls": [
+                                {
+                                    "display_url": "grok.com/download",
+                                    "expanded_url": "http://grok.com/download",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/fqNKQSiLQB"
+                                }
+                            ],
+                            "user_mentions": [
+                                {
+                                    "id_str": "0",
+                                    "indices": [
+                                        24,
+                                        29
+                                    ],
+                                    "name": "",
+                                    "screen_name": "grok"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "grok.com",
+                                    "expanded_url": "https://grok.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/BFoTHXcJ8D"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "unified_card",
+                        "value": {
+                            "string_value": "{\"type\":\"video_app\",\"component_objects\":{\"button_group_1\":{\"type\":\"button_group\",\"data\":{\"buttons\":[{\"action\":\"install\",\"style\":\"primary\",\"type\":\"cta\",\"destination\":\"app_store_1\"}]}},\"app_store_details_1\":{\"type\":\"app_store_details\",\"data\":{\"app_id\":\"app_1\",\"destination\":\"app_store_1\"}},\"media_1\":{\"type\":\"media\",\"data\":{\"id\":\"13_1990957562385317888\",\"destination\":\"app_store_with_docked_media_1\"}}},\"destination_objects\":{\"app_store_1\":{\"type\":\"app_store\",\"data\":{\"app_id\":\"app_1\"}},\"app_store_with_docked_media_1\":{\"type\":\"app_store_with_docked_media\",\"data\":{\"app_id\":\"app_1\",\"media_id\":\"13_1990957562385317888\"}}},\"components\":[\"media_1\",\"app_store_details_1\",\"button_group_1\"],\"media_entities\":{\"4_1990706549182840832\":{\"id\":1990706549182840832,\"id_str\":\"1990706549182840832\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/card_img/1990706549182840832/aiRed15A?format=jpg&name=orig\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"photo\",\"original_info\":{\"width\":246,\"height\":246},\"sizes\":{},\"media_key\":\"4_1990706549182840832\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":17,\"green\":17,\"blue\":17},\"percentage\":81.33},{\"rgb\":{\"red\":199,\"green\":199,\"blue\":199},\"percentage\":12.96}]}},\"ttl\":-1}}},\"13_1990957562385317888\":{\"id\":1990957562385317888,\"id_str\":\"1990957562385317888\",\"indices\":[0,0],\"media_url\":\"\",\"media_url_https\":\"https://pbs.twimg.com/amplify_video_thumb/1990957562385317888/img/3asUOtK_re3EbdmR.jpg\",\"url\":\"\",\"display_url\":\"\",\"expanded_url\":\"\",\"type\":\"video\",\"original_info\":{\"width\":3840,\"height\":3840},\"sizes\":{\"large\":{\"w\":2048,\"h\":2048,\"resize\":\"fit\"},\"thumb\":{\"w\":150,\"h\":150,\"resize\":\"crop\"},\"medium\":{\"w\":1200,\"h\":1200,\"resize\":\"fit\"},\"small\":{\"w\":680,\"h\":680,\"resize\":\"fit\"}},\"source_user_id\":1720665183188922368,\"source_user_id_str\":\"1720665183188922368\",\"video_info\":{\"aspect_ratio\":[1,1],\"duration_millis\":13375,\"variants\":[{\"content_type\":\"application/x-mpegURL\",\"url\":\"https://video.twimg.com/amplify_video/1990957562385317888/pl/1lNLI1q8iQAjGnuI.m3u8?tag=14\"},{\"bitrate\":432000,\"content_type\":\"video/mp4\",\"url\":\"https://video.twimg.com/amplify_video/1990957562385317888/vid/avc1/320x320/m_KzMICIZDIsdEE7.mp4?tag=14\"},{\"bitrate\":1280000,\"content_type\":\"video/mp4\",\"url\":\"https://video.twimg.com/amplify_video/1990957562385317888/vid/avc1/720x720/KIPA3JEG4VkOQb2y.mp4?tag=14\"},{\"bitrate\":832000,\"content_type\":\"video/mp4\",\"url\":\"https://video.twimg.com/amplify_video/1990957562385317888/vid/avc1/540x540/iqFbGiBmxxk8lsrx.mp4?tag=14\"}]},\"media_key\":\"13_1990957562385317888\",\"ext\":{\"mediaColor\":{\"r\":{\"ok\":{\"palette\":[{\"rgb\":{\"red\":0,\"green\":0,\"blue\":0},\"percentage\":100.0}]}},\"ttl\":-1}}}},\"app_store_data\":{\"app_1\":[{\"type\":\"iphone_app\",\"country_code\":\"US\",\"id\":\"6670324846\",\"url\":\"https://t.co/redirect?url=https%3A%2F%2Fgrok.com%2Fdownload&sig=91e3aee19cd71ae9fbe6e4af842d9c0435e162bc&ssr=true&slug=\",\"url_resolved\":\"https://grok.com/download\",\"category\":{\"content\":\"Productivity\",\"is_rtl\":false},\"title\":{\"content\":\"Grok\",\"is_rtl\":false},\"ratings\":{\"star\":4.9,\"count\":722000},\"is_free\":true,\"size_bytes\":191400000,\"has_in_app_purchases\":true,\"icon_media_key\":\"4_1990706549182840832\",\"description\":{\"content\":\"Grok is an AI-powered assistant, developed by xAI, designed to be maximally truthful, useful, and curious. Get answers to any question, generate striking images and videos, and let Grok search the web and X for you to gain a deeper understanding of the world. With Grok, the unive\",\"is_rtl\":false}},{\"type\":\"ipad_app\",\"country_code\":\"US\",\"id\":\"6670324846\",\"url\":\"https://t.co/redirect?url=https%3A%2F%2Fgrok.com%2Fdownload&sig=91e3aee19cd71ae9fbe6e4af842d9c0435e162bc&ssr=true&slug=\",\"url_resolved\":\"https://grok.com/download\",\"category\":{\"content\":\"Productivity\",\"is_rtl\":false},\"title\":{\"content\":\"Grok\",\"is_rtl\":false},\"ratings\":{\"star\":4.9,\"count\":722000},\"is_free\":true,\"size_bytes\":191400000,\"has_in_app_purchases\":true,\"icon_media_key\":\"4_1990706549182840832\",\"description\":{\"content\":\"Grok is an AI-powered assistant, developed by xAI, designed to be maximally truthful, useful, and curious. Get answers to any question, generate striking images and videos, and let Grok search the web and X for you to gain a deeper understanding of the world. With Grok, the unive\",\"is_rtl\":false}}]},\"experiment_signals\":{}}"
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://twitter.com"
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "unified_card",
+                "url": "card://1990964119118413824"
+            },
+            "place": {},
+            "entities": {},
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991603612032880961",
+            "url": "https://x.com/Futures_Expert/status/1991603612032880961",
+            "twitterUrl": "https://twitter.com/Futures_Expert/status/1991603612032880961",
+            "text": "Binance Futures, BingX Futures, Bitget Futures, ByBit USDT, KuCoin Futures, OKX Futures\n#ASTER/USDT Take-Profit target 4 ✅\nProfit: 51.7134% 📈\nPeriod: 2 Hours 50 Minute⏰\n\n#ETH #WIF #BIO #HOOK #WLFI #Dogecoin #memecoins #Altcoin #PENGU\n\nClick link below⬇️\nhttps://t.co/QmaHdqZK7Z",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 14,
+            "createdAt": "Thu Nov 20 20:24:37 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991603612032880961",
+            "displayTextRange": [
+                0,
+                277
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Futures_Expert",
+                "url": "https://x.com/Futures_Expert",
+                "twitterUrl": "https://twitter.com/Futures_Expert",
+                "id": "1597543507811618817",
+                "name": "Futures Expert",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1951742456094949376/ot-AQKEo_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1597543507811618817/1754166725",
+                "description": "",
+                "location": "Scotland, United Kingdom",
+                "followers": 1532,
+                "following": 836,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Tue Nov 29 10:51:46 +0000 2022",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 2686,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 3110,
+                "statusesCount": 8367,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1951873655442399514"
+                ],
+                "profile_bio": {
+                    "description": "TA chart analysis, professional trader, $10k - $100k trade competition, love trade and NY I love father of two daughters",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "Binance.com",
+                                    "expanded_url": "http://Binance.com",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/PRKl1lCrwQ"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "app_star_rating",
+                        "value": {
+                            "string_value": "4.01327"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image",
+                        "value": {
+                            "image_value": {
+                                "height": 144,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=144x144_2",
+                                "width": 144
+                            }
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "t.me"
+                        }
+                    },
+                    {
+                        "key": "app_is_free",
+                        "value": {
+                            "string_value": "true"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_large",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=280x280_2",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_original",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=orig",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "site",
+                        "value": {
+                            "scribe_key": "publisher_id",
+                            "user_value": {
+                                "id_str": "1689053928"
+                            }
+                        }
+                    },
+                    {
+                        "key": "app_url_resolved",
+                        "value": {
+                            "string_value": "tg://join?invite=o_1GeLmRRPhkYjg0"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_small",
+                        "value": {
+                            "image_value": {
+                                "height": 100,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=100x100_2",
+                                "width": 100
+                            }
+                        }
+                    },
+                    {
+                        "key": "app_num_ratings",
+                        "value": {
+                            "string_value": "241,174"
+                        }
+                    },
+                    {
+                        "key": "app_price_amount",
+                        "value": {
+                            "string_value": "0.0"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_x_large",
+                        "value": {
+                            "image_value": {
+                                "height": 256,
+                                "url": "https://pbs.twimg.com/card_img/1988169650689961984/7RirlRGA?format=png&name=2048x2048_2_exp",
+                                "width": 256
+                            }
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "t.me"
+                        }
+                    },
+                    {
+                        "key": "app_name",
+                        "value": {
+                            "string_value": "Telegram Messenger"
+                        }
+                    },
+                    {
+                        "key": "app_id",
+                        "value": {
+                            "scribe_key": "publisher_app_id",
+                            "string_value": "686449807"
+                        }
+                    },
+                    {
+                        "key": "thumbnail_image_color",
+                        "value": {
+                            "image_color_value": {
+                                "palette": [
+                                    {
+                                        "percentage": 67.36,
+                                        "rgb": {
+                                            "blue": 227,
+                                            "green": 164,
+                                            "red": 38
+                                        }
+                                    },
+                                    {
+                                        "percentage": 11.33,
+                                        "rgb": {
+                                            "blue": 255,
+                                            "green": 255,
+                                            "red": 255
+                                        }
+                                    }
+                                ]
+                            }
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Join group chat on Telegram"
+                        }
+                    },
+                    {
+                        "key": "app_price_currency",
+                        "value": {
+                            "string_value": "USD"
+                        }
+                    },
+                    {
+                        "key": "app_url",
+                        "value": {
+                            "string_value": "https://t.co/redirect?url=tg%3A%2F%2Fjoin%3Finvite%3Do_1GeLmRRPhkYjg0&sig=f3ac1e4a2f3d65e33cf0d359c0e1b9aedf41797a&ssr=true&slug=QmaHdqZK7Z"
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/QmaHdqZK7Z"
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary",
+                "url": "https://t.co/QmaHdqZK7Z",
+                "user_refs_results": [
+                    {
+                        "rest_id": "1689053928",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 6761
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1183117696730390529/LRDASku7_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/1689053928/1392066683"
+                            },
+                            "core": {
+                                "created_at": "Wed Aug 21 19:47:05 +0000 2013",
+                                "name": "Telegram Messenger",
+                                "screen_name": "telegram"
+                            },
+                            "dm_permissions": {
+                                "can_dm": false
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": ""
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {
+                                "tweet_ids_str": [
+                                    "1978460858431733886"
+                                ]
+                            },
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Simple, fast, secure – and synced across all your devices. One of the top 5 most-downloaded apps in the world with over 1 billion active users.",
+                                "entities": {
+                                    "description": {},
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "telegram.org",
+                                                "expanded_url": "http://telegram.org",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/zHAc9lS7Jy"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_image_shape": "Square",
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "1DA1F2"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 1897594,
+                                "following": 9
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "1689053928",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 3842,
+                                "tweets": 49919
+                            },
+                            "website": {
+                                "url": "https://t.co/zHAc9lS7Jy"
+                            },
+                            "verification": {
+                                "is_blue_verified": true,
+                                "verified_type": "Business"
+                            }
+                        }
+                    }
+                ]
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            88,
+                            94
+                        ],
+                        "text": "ASTER"
+                    },
+                    {
+                        "indices": [
+                            170,
+                            174
+                        ],
+                        "text": "ETH"
+                    },
+                    {
+                        "indices": [
+                            175,
+                            179
+                        ],
+                        "text": "WIF"
+                    },
+                    {
+                        "indices": [
+                            180,
+                            184
+                        ],
+                        "text": "BIO"
+                    },
+                    {
+                        "indices": [
+                            185,
+                            190
+                        ],
+                        "text": "HOOK"
+                    },
+                    {
+                        "indices": [
+                            191,
+                            196
+                        ],
+                        "text": "WLFI"
+                    },
+                    {
+                        "indices": [
+                            197,
+                            206
+                        ],
+                        "text": "Dogecoin"
+                    },
+                    {
+                        "indices": [
+                            207,
+                            217
+                        ],
+                        "text": "memecoins"
+                    },
+                    {
+                        "indices": [
+                            218,
+                            226
+                        ],
+                        "text": "Altcoin"
+                    },
+                    {
+                        "indices": [
+                            227,
+                            233
+                        ],
+                        "text": "PENGU"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "t.me/+o_1GeLmRRPhkY…",
+                        "expanded_url": "https://t.me/+o_1GeLmRRPhkYjg0",
+                        "indices": [
+                            254,
+                            277
+                        ],
+                        "url": "https://t.co/QmaHdqZK7Z"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        }
+    ],
+    "has_next_page": true,
+    "next_cursor": "DAADDAABCgABG6OZV9tacFUKAAIbo5ju5JrRQQAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUbo5liuIAnEAoABhujmWK4f9jwAAA"
+}

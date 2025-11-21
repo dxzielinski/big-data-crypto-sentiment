@@ -1,0 +1,1427 @@
+{
+    "tweets": [
+        {
+            "type": "tweet",
+            "id": "1991607917775339771",
+            "url": "https://x.com/AlishaW3B/status/1991607917775339771",
+            "twitterUrl": "https://twitter.com/AlishaW3B/status/1991607917775339771",
+            "text": "GM fam, just found my “secure crypto wallet setup” at work…\nApparently all I have to do is break the glass and unplug half the internet 💀\nShould I try withdrawing my $SOL or will HR withdraw me instead? \n\n#Solana #sol #cryptocurrencynews https://t.co/CVrpzqZvls",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 5,
+            "createdAt": "Thu Nov 20 20:41:44 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991607917775339771",
+            "displayTextRange": [
+                0,
+                237
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "AlishaW3B",
+                "url": "https://x.com/AlishaW3B",
+                "twitterUrl": "https://twitter.com/AlishaW3B",
+                "id": "198894665",
+                "name": "AlishaVerse_W3B",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1986375086815715328/Cmoks2bv_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/198894665/1762442514",
+                "description": "",
+                "location": "",
+                "followers": 558,
+                "following": 196,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Tue Oct 05 14:35:21 +0000 2010",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 62969,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 87,
+                "statusesCount": 2253,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "🔍 Watching the metaverse evolve — quietly early.",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/CVrpzqZvls",
+                        "expanded_url": "https://twitter.com/AlishaW3B/status/1991607917775339771/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991607797855789056",
+                        "indices": [
+                            238,
+                            261
+                        ],
+                        "media_key": "3_1991607797855789056",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujnL17F6AACgACG6Oc2WbawPsAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OcvXsXoAAKAAIbo5zZZtrA+wAA",
+                                "media_key": "3_1991607797855789056"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OcvXsXoAAmCsf.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 179,
+                                    "w": 320,
+                                    "x": 0,
+                                    "y": 31
+                                },
+                                {
+                                    "h": 273,
+                                    "w": 273,
+                                    "x": 32,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 273,
+                                    "w": 239,
+                                    "x": 49,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 273,
+                                    "w": 137,
+                                    "x": 100,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 273,
+                                    "w": 320,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 273,
+                            "width": 320
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 273,
+                                "w": 320
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/CVrpzqZvls"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            205,
+                            212
+                        ],
+                        "text": "Solana"
+                    },
+                    {
+                        "indices": [
+                            213,
+                            217
+                        ],
+                        "text": "sol"
+                    },
+                    {
+                        "indices": [
+                            218,
+                            237
+                        ],
+                        "text": "cryptocurrencynews"
+                    }
+                ],
+                "symbols": [
+                    {
+                        "indices": [
+                            166,
+                            170
+                        ],
+                        "text": "SOL"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991607146451173745",
+            "url": "https://x.com/Chartflowz/status/1991607146451173745",
+            "twitterUrl": "https://twitter.com/Chartflowz/status/1991607146451173745",
+            "text": "This is just easy profit, Seeing some retracement but will look for another entry. \n\n#Sol #XRP #PEPE https://t.co/YcyAnznEmU",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 5,
+            "createdAt": "Thu Nov 20 20:38:40 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991607146451173745",
+            "displayTextRange": [
+                0,
+                100
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "Chartflowz",
+                "url": "https://x.com/Chartflowz",
+                "twitterUrl": "https://twitter.com/Chartflowz",
+                "id": "2853826384",
+                "name": "Chart Flow",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1447223585408315399/0cMWU6SE_normal.jpg",
+                "coverPicture": "",
+                "description": "",
+                "location": "",
+                "followers": 11,
+                "following": 18,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Fri Oct 31 20:58:03 +0000 2014",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 72,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 3,
+                "statusesCount": 7,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Win",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/YcyAnznEmU",
+                        "expanded_url": "https://twitter.com/Chartflowz/status/1991607146451173745/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991606915890376704",
+                        "indices": [
+                            101,
+                            124
+                        ],
+                        "media_key": "3_1991606915890376704",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujm/Ah23AACgACG6OcJdBaAXEAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6Ob8CHbcAAKAAIbo5wl0FoBcQAA",
+                                "media_key": "3_1991606915890376704"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6Ob8CHbcAA051t.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 191,
+                                    "w": 341,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 191,
+                                    "w": 191,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 191,
+                                    "w": 168,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 191,
+                                    "w": 96,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 191,
+                                    "w": 356,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 191,
+                            "width": 356
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 191,
+                                "w": 356
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/YcyAnznEmU"
+                    },
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/YcyAnznEmU",
+                        "expanded_url": "https://twitter.com/Chartflowz/status/1991607146451173745/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991606929475653632",
+                        "indices": [
+                            101,
+                            124
+                        ],
+                        "media_key": "3_1991606929475653632",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujm/NLmlAACgACG6OcJdBaAXEAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6Ob80uaUAAKAAIbo5wl0FoBcQAA",
+                                "media_key": "3_1991606929475653632"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6Ob80uaUAAaaB4.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 189,
+                                    "w": 338,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 189,
+                                    "w": 189,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 189,
+                                    "w": 166,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 189,
+                                    "w": 95,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 189,
+                                    "w": 361,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 189,
+                            "width": 361
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 189,
+                                "w": 361
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/YcyAnznEmU"
+                    },
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/YcyAnznEmU",
+                        "expanded_url": "https://twitter.com/Chartflowz/status/1991607146451173745/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {},
+                            "orig": {}
+                        },
+                        "id_str": "1991606942570278912",
+                        "indices": [
+                            101,
+                            124
+                        ],
+                        "media_key": "3_1991606942570278912",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujm/ZYGnAACgACG6OcJdBaAXEAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6Ob9lgacAAKAAIbo5wl0FoBcQAA",
+                                "media_key": "3_1991606942570278912"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6Ob9lgacAAGNsM.png",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 167,
+                                    "w": 298,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 167,
+                                    "w": 167,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 167,
+                                    "w": 146,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 167,
+                                    "w": 84,
+                                    "x": 19,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 167,
+                                    "w": 355,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 167,
+                            "width": 355
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 167,
+                                "w": 355
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/YcyAnznEmU"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            85,
+                            89
+                        ],
+                        "text": "Sol"
+                    },
+                    {
+                        "indices": [
+                            90,
+                            94
+                        ],
+                        "text": "XRP"
+                    },
+                    {
+                        "indices": [
+                            95,
+                            100
+                        ],
+                        "text": "PEPE"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991605790197895470",
+            "url": "https://x.com/PumpbergTrmnl/status/1991605790197895470",
+            "twitterUrl": "https://twitter.com/PumpbergTrmnl/status/1991605790197895470",
+            "text": "⚡ A proposed bill could let Americans pay the IRS in BTC as Trump’s CFTC pick clears a key hurdle. A Bitcoin whale dumps $1.3B after 14 years, XRP draws big bets, DeFi lending hits a record, and SOL ETF inflows surge — but liquidity stays thin. #Crypto #BTC #SOL #XRP",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 3,
+            "quoteCount": 0,
+            "viewCount": 34,
+            "createdAt": "Thu Nov 20 20:33:17 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991605790197895470",
+            "displayTextRange": [
+                0,
+                267
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "PumpbergTrmnl",
+                "url": "https://x.com/PumpbergTrmnl",
+                "twitterUrl": "https://twitter.com/PumpbergTrmnl",
+                "id": "157384804",
+                "name": "Pumpberg",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1975100524614541312/om2aU-pH_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/157384804/1759735636",
+                "description": "",
+                "location": "",
+                "followers": 53,
+                "following": 275,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Sat Jun 19 17:03:24 +0000 2010",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 423,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 0,
+                "statusesCount": 201,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [
+                    "1771287794318442523"
+                ],
+                "profile_bio": {
+                    "description": "Your one-stop source for everything crypto.",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "t.me/pumpberg_termi…",
+                                    "expanded_url": "https://t.me/pumpberg_terminal",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/jkaeCsuLD6"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            245,
+                            252
+                        ],
+                        "text": "Crypto"
+                    },
+                    {
+                        "indices": [
+                            253,
+                            257
+                        ],
+                        "text": "BTC"
+                    },
+                    {
+                        "indices": [
+                            258,
+                            262
+                        ],
+                        "text": "SOL"
+                    },
+                    {
+                        "indices": [
+                            263,
+                            267
+                        ],
+                        "text": "XRP"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991605273778352400",
+            "url": "https://x.com/1FourthQuarter/status/1991605273778352400",
+            "twitterUrl": "https://twitter.com/1FourthQuarter/status/1991605273778352400",
+            "text": "#BTC  &amp; #SOL crashing! We're going back to our 9-5 \n\n8rmhfUdTiStpsobBzjNct4qKFaAWeXodmJyiyS7gpQCS",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 1,
+            "quoteCount": 0,
+            "viewCount": 11,
+            "createdAt": "Thu Nov 20 20:31:14 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991605273778352400",
+            "displayTextRange": [
+                0,
+                101
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "1FourthQuarter",
+                "url": "https://x.com/1FourthQuarter",
+                "twitterUrl": "https://twitter.com/1FourthQuarter",
+                "id": "1428665003054411777",
+                "name": "Q4",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1838172629422817280/vcqxoMGE_normal.jpg",
+                "coverPicture": "",
+                "description": "",
+                "location": "",
+                "followers": 155,
+                "following": 157,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Fri Aug 20 10:28:02 +0000 2021",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 845,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 976,
+                "statusesCount": 3727,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "A master of comebacks",
+                    "entities": {
+                        "description": {}
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            0,
+                            4
+                        ],
+                        "text": "BTC"
+                    },
+                    {
+                        "indices": [
+                            12,
+                            16
+                        ],
+                        "text": "SOL"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991605270934409485",
+            "url": "https://x.com/LiquifyMarkets/status/1991605270934409485",
+            "twitterUrl": "https://twitter.com/LiquifyMarkets/status/1991605270934409485",
+            "text": "TRENDING NOW: $SOL\n +0.0% (24h)\n Volume: 925.0M\n Range: $131.048000 - $144.713000\n Current: $134.237000\n https://t.co/qMKvMeHve1\n\n#Trending #SOL #Crypto #Markets",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 5,
+            "createdAt": "Thu Nov 20 20:31:13 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991605270934409485",
+            "displayTextRange": [
+                0,
+                161
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "LiquifyMarkets",
+                "url": "https://x.com/LiquifyMarkets",
+                "twitterUrl": "https://twitter.com/LiquifyMarkets",
+                "id": "1972714023058812928",
+                "name": "Liquify",
+                "isVerified": false,
+                "isBlueVerified": false,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1972723315287678976/1KAZNj6x_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1972714023058812928/1759169455",
+                "description": "",
+                "location": "The Moon",
+                "followers": 21,
+                "following": 76,
+                "status": "",
+                "canDm": false,
+                "canMediaTag": true,
+                "createdAt": "Mon Sep 29 17:26:47 +0000 2025",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 4,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 4,
+                "statusesCount": 592,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Professional flow, without the CEX choke chain.",
+                    "entities": {
+                        "description": {},
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "liquify.markets",
+                                    "expanded_url": "https://www.liquify.markets/",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/t7yf0N73Fv"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {},
+            "card": {
+                "binding_values": [
+                    {
+                        "key": "description",
+                        "value": {
+                            "string_value": "Advanced perpetual DEX trading with leverage, real-time market scanning & institutional-grade analytics. Professional Solana perp trading! ⚡📊"
+                        }
+                    },
+                    {
+                        "key": "domain",
+                        "value": {
+                            "string_value": "www.liquify.markets"
+                        }
+                    },
+                    {
+                        "key": "site",
+                        "value": {
+                            "scribe_key": "publisher_id",
+                            "user_value": {
+                                "id_str": "1972714023058812928"
+                            }
+                        }
+                    },
+                    {
+                        "key": "creator",
+                        "value": {
+                            "user_value": {
+                                "id_str": "1972714023058812928"
+                            }
+                        }
+                    },
+                    {
+                        "key": "photo_image_full_size_alt_text",
+                        "value": {
+                            "string_value": "Liquify Markets DEX Trading Platform"
+                        }
+                    },
+                    {
+                        "key": "vanity_url",
+                        "value": {
+                            "scribe_key": "vanity_url",
+                            "string_value": "liquify.markets"
+                        }
+                    },
+                    {
+                        "key": "summary_photo_image_alt_text",
+                        "value": {
+                            "string_value": "Liquify Markets DEX Trading Platform"
+                        }
+                    },
+                    {
+                        "key": "title",
+                        "value": {
+                            "string_value": "Liquify Markets - Professional Perpetual DEX Trading"
+                        }
+                    },
+                    {
+                        "key": "card_url",
+                        "value": {
+                            "scribe_key": "card_url",
+                            "string_value": "https://t.co/qMKvMeHve1"
+                        }
+                    }
+                ],
+                "card_platform": {
+                    "platform": {
+                        "audience": {
+                            "name": "production"
+                        },
+                        "device": {
+                            "name": "iPhone",
+                            "version": "13"
+                        }
+                    }
+                },
+                "name": "summary_large_image",
+                "url": "https://t.co/qMKvMeHve1",
+                "user_refs_results": [
+                    {
+                        "rest_id": "1972714023058812928",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 4
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1972723315287678976/1KAZNj6x_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/1972714023058812928/1759169455"
+                            },
+                            "core": {
+                                "created_at": "Mon Sep 29 17:26:47 +0000 2025",
+                                "name": "Liquify",
+                                "screen_name": "LiquifyMarkets"
+                            },
+                            "dm_permissions": {
+                                "can_dm": false
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": "The Moon"
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {},
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Professional flow, without the CEX choke chain.",
+                                "entities": {
+                                    "description": {},
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "liquify.markets",
+                                                "expanded_url": "https://www.liquify.markets/",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/t7yf0N73Fv"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "1DA1F2"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 21,
+                                "following": 76
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "1972714023058812928",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 4,
+                                "tweets": 592
+                            },
+                            "website": {
+                                "url": "https://t.co/t7yf0N73Fv"
+                            },
+                            "verification": {
+                                "is_blue_verified": false
+                            }
+                        }
+                    },
+                    {
+                        "rest_id": "1972714023058812928",
+                        "result": {
+                            "__typename": "User",
+                            "action_counts": {
+                                "favorites_count": 4
+                            },
+                            "avatar": {
+                                "image_url": "https://pbs.twimg.com/profile_images/1972723315287678976/1KAZNj6x_normal.jpg"
+                            },
+                            "banner": {
+                                "image_url": "https://pbs.twimg.com/profile_banners/1972714023058812928/1759169455"
+                            },
+                            "core": {
+                                "created_at": "Mon Sep 29 17:26:47 +0000 2025",
+                                "name": "Liquify",
+                                "screen_name": "LiquifyMarkets"
+                            },
+                            "dm_permissions": {
+                                "can_dm": false
+                            },
+                            "exclusive_tweet_following": false,
+                            "identity_profile_labels_highlighted_label": {},
+                            "location": {
+                                "location": "The Moon"
+                            },
+                            "media_permissions": {
+                                "can_media_tag": true
+                            },
+                            "notifications_settings": {},
+                            "pinned_items": {},
+                            "privacy": {},
+                            "private_super_following": false,
+                            "profile_bio": {
+                                "description": "Professional flow, without the CEX choke chain.",
+                                "entities": {
+                                    "description": {},
+                                    "url": {
+                                        "urls": [
+                                            {
+                                                "display_url": "liquify.markets",
+                                                "expanded_url": "https://www.liquify.markets/",
+                                                "indices": [
+                                                    0,
+                                                    23
+                                                ],
+                                                "url": "https://t.co/t7yf0N73Fv"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            "profile_metadata": {
+                                "profile_interstitial_type": "",
+                                "profile_link_color": "1DA1F2"
+                            },
+                            "profile_translation": {
+                                "translator_type_enum": "None"
+                            },
+                            "properties": {
+                                "has_extended_profile": true
+                            },
+                            "relationship_counts": {
+                                "followers": 21,
+                                "following": 76
+                            },
+                            "relationship_perspectives": {},
+                            "rest_id": "1972714023058812928",
+                            "super_follow_eligible": false,
+                            "super_followed_by": false,
+                            "super_following": false,
+                            "tweet_counts": {
+                                "media_tweets": 4,
+                                "tweets": 592
+                            },
+                            "website": {
+                                "url": "https://t.co/t7yf0N73Fv"
+                            },
+                            "verification": {
+                                "is_blue_verified": false
+                            }
+                        }
+                    }
+                ]
+            },
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            130,
+                            139
+                        ],
+                        "text": "Trending"
+                    },
+                    {
+                        "indices": [
+                            140,
+                            144
+                        ],
+                        "text": "SOL"
+                    },
+                    {
+                        "indices": [
+                            145,
+                            152
+                        ],
+                        "text": "Crypto"
+                    },
+                    {
+                        "indices": [
+                            153,
+                            161
+                        ],
+                        "text": "Markets"
+                    }
+                ],
+                "symbols": [
+                    {
+                        "indices": [
+                            14,
+                            18
+                        ],
+                        "text": "SOL"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "liquify.markets",
+                        "expanded_url": "http://liquify.markets",
+                        "indices": [
+                            105,
+                            128
+                        ],
+                        "url": "https://t.co/qMKvMeHve1"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        },
+        {
+            "type": "tweet",
+            "id": "1991605249547653254",
+            "url": "https://x.com/kew20na/status/1991605249547653254",
+            "twitterUrl": "https://twitter.com/kew20na/status/1991605249547653254",
+            "text": "Solana Game Pass: Season 1 🥯 | Free NFT Mint is Live on MagicEden 🐆\n\n⚪ Mint NFT here (~$2 fees) : https://t.co/wx37agKios\n\n🏆 Never Miss Any Airdrop Again, Join Me on TG : https://t.co/KyoEHIVZId\n\n#Binance #SOL #Airdrop #Rewards #ETH #Bitcoin #Luckydraw #DeFi #Crypto #AI #DePIN #Alpha",
+            "source": "Twitter for iPhone",
+            "retweetCount": 0,
+            "replyCount": 0,
+            "likeCount": 0,
+            "quoteCount": 0,
+            "viewCount": 27,
+            "createdAt": "Thu Nov 20 20:31:08 +0000 2025",
+            "lang": "en",
+            "bookmarkCount": 0,
+            "isReply": false,
+            "inReplyToId": null,
+            "conversationId": "1991605249547653254",
+            "displayTextRange": [
+                0,
+                271
+            ],
+            "inReplyToUserId": null,
+            "inReplyToUsername": null,
+            "author": {
+                "type": "user",
+                "userName": "kew20na",
+                "url": "https://x.com/kew20na",
+                "twitterUrl": "https://twitter.com/kew20na",
+                "id": "1592540840483774464",
+                "name": "kew20na | Airdrop Hunter 🪂",
+                "isVerified": false,
+                "isBlueVerified": true,
+                "verifiedType": null,
+                "profilePicture": "https://pbs.twimg.com/profile_images/1983470060527034368/8AELNUGz_normal.jpg",
+                "coverPicture": "https://pbs.twimg.com/profile_banners/1592540840483774464/1745531219",
+                "description": "",
+                "location": "Web3",
+                "followers": 90,
+                "following": 493,
+                "status": "",
+                "canDm": true,
+                "canMediaTag": true,
+                "createdAt": "Tue Nov 15 15:31:59 +0000 2022",
+                "entities": {
+                    "description": {
+                        "urls": []
+                    },
+                    "url": {}
+                },
+                "fastFollowersCount": 0,
+                "favouritesCount": 116,
+                "hasCustomTimelines": true,
+                "isTranslator": false,
+                "mediaCount": 965,
+                "statusesCount": 1247,
+                "withheldInCountries": [],
+                "affiliatesHighlightedLabel": {},
+                "possiblySensitive": false,
+                "pinnedTweetIds": [],
+                "profile_bio": {
+                    "description": "Crypto Influencer & Web3 Enthusiast 🔥\nFind the best alpha to farm web3's biggest drops here : https://t.co/v5zmjf0aDs",
+                    "entities": {
+                        "description": {
+                            "urls": [
+                                {
+                                    "display_url": "t.me/kew20na",
+                                    "expanded_url": "https://t.me/kew20na",
+                                    "indices": [
+                                        94,
+                                        117
+                                    ],
+                                    "url": "https://t.co/v5zmjf0aDs"
+                                }
+                            ]
+                        },
+                        "url": {
+                            "urls": [
+                                {
+                                    "display_url": "t.me/kew20na",
+                                    "expanded_url": "https://t.me/kew20na",
+                                    "indices": [
+                                        0,
+                                        23
+                                    ],
+                                    "url": "https://t.co/v5zmjf0aDs"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "isAutomated": false,
+                "automatedBy": null
+            },
+            "extendedEntities": {
+                "media": [
+                    {
+                        "allow_download_status": {
+                            "allow_download": true
+                        },
+                        "display_url": "pic.twitter.com/FrebnJalJY",
+                        "expanded_url": "https://twitter.com/kew20na/status/1991605249547653254/photo/1",
+                        "ext_media_availability": {
+                            "status": "Available"
+                        },
+                        "features": {
+                            "large": {
+                                "faces": [
+                                    {
+                                        "h": 428,
+                                        "w": 428,
+                                        "x": 108,
+                                        "y": 66
+                                    }
+                                ]
+                            },
+                            "orig": {
+                                "faces": [
+                                    {
+                                        "h": 428,
+                                        "w": 428,
+                                        "x": 108,
+                                        "y": 66
+                                    }
+                                ]
+                            }
+                        },
+                        "id_str": "1991605233647046656",
+                        "indices": [
+                            272,
+                            295
+                        ],
+                        "media_key": "3_1991605233647046656",
+                        "media_results": {
+                            "id": "QXBpTWVkaWFSZXN1bHRzOgwAAQoAARujmmh0V1AACgACG6OabCgXUIYAAA==",
+                            "result": {
+                                "__typename": "ApiMedia",
+                                "id": "QXBpTWVkaWE6DAABCgABG6OaaHRXUAAKAAIbo5psKBdQhgAA",
+                                "media_key": "3_1991605233647046656"
+                            }
+                        },
+                        "media_url_https": "https://pbs.twimg.com/media/G6OaaHRXUAA8pdn.jpg",
+                        "original_info": {
+                            "focus_rects": [
+                                {
+                                    "h": 560,
+                                    "w": 1000,
+                                    "x": 0,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 560,
+                                    "w": 560,
+                                    "x": 18,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 560,
+                                    "w": 491,
+                                    "x": 53,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 560,
+                                    "w": 280,
+                                    "x": 158,
+                                    "y": 0
+                                },
+                                {
+                                    "h": 560,
+                                    "w": 1088,
+                                    "x": 0,
+                                    "y": 0
+                                }
+                            ],
+                            "height": 560,
+                            "width": 1088
+                        },
+                        "sizes": {
+                            "large": {
+                                "h": 560,
+                                "w": 1088
+                            }
+                        },
+                        "type": "photo",
+                        "url": "https://t.co/FrebnJalJY"
+                    }
+                ]
+            },
+            "card": null,
+            "place": {},
+            "entities": {
+                "hashtags": [
+                    {
+                        "indices": [
+                            196,
+                            204
+                        ],
+                        "text": "Binance"
+                    },
+                    {
+                        "indices": [
+                            205,
+                            209
+                        ],
+                        "text": "SOL"
+                    },
+                    {
+                        "indices": [
+                            210,
+                            218
+                        ],
+                        "text": "Airdrop"
+                    },
+                    {
+                        "indices": [
+                            219,
+                            227
+                        ],
+                        "text": "Rewards"
+                    },
+                    {
+                        "indices": [
+                            228,
+                            232
+                        ],
+                        "text": "ETH"
+                    },
+                    {
+                        "indices": [
+                            233,
+                            241
+                        ],
+                        "text": "Bitcoin"
+                    },
+                    {
+                        "indices": [
+                            242,
+                            252
+                        ],
+                        "text": "Luckydraw"
+                    },
+                    {
+                        "indices": [
+                            253,
+                            258
+                        ],
+                        "text": "DeFi"
+                    },
+                    {
+                        "indices": [
+                            259,
+                            266
+                        ],
+                        "text": "Crypto"
+                    },
+                    {
+                        "indices": [
+                            267,
+                            270
+                        ],
+                        "text": "AI"
+                    },
+                    {
+                        "indices": [
+                            271,
+                            277
+                        ],
+                        "text": "DePIN"
+                    },
+                    {
+                        "indices": [
+                            278,
+                            284
+                        ],
+                        "text": "Alpha"
+                    }
+                ],
+                "urls": [
+                    {
+                        "display_url": "da.gd/uFsN2p",
+                        "expanded_url": "https://da.gd/uFsN2p",
+                        "indices": [
+                            98,
+                            121
+                        ],
+                        "url": "https://t.co/wx37agKios"
+                    },
+                    {
+                        "display_url": "da.gd/mpLo",
+                        "expanded_url": "https://da.gd/mpLo",
+                        "indices": [
+                            171,
+                            194
+                        ],
+                        "url": "https://t.co/KyoEHIVZId"
+                    }
+                ]
+            },
+            "quoted_tweet": null,
+            "retweeted_tweet": null,
+            "isLimitedReply": false,
+            "article": null
+        }
+    ],
+    "has_next_page": true,
+    "next_cursor": "DAADDAABCgABG6Oc2WbawPsKAAIbo5psKBdQhgAIAAIAAAACCAADAAAAAAgABAAAAAAKAAUbo50PzMAnEAoABhujnQ_Mv9jwAAA"
+}
