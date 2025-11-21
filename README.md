@@ -11,12 +11,16 @@ terraform validate
 terraform apply -var="project_id=<PROJECT_ID>"
 ```
 
-Pushing docker image to gcr workflow:
+Pushing docker image to gcr:
 
 ```bash
 cd  ./big-data-crypto-sentiment/coincap
 docker build --no-cache -t europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/crypto-simulation .
 docker push europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/crypto-simulation
+
+cd  ./big-data-crypto-sentiment/twitter
+docker build --no-cache -t europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/twitter-simulation .
+docker push europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/twitter-simulation
 ```
 
 To access vm:
