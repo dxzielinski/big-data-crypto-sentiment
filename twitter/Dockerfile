@@ -14,9 +14,9 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copy application code
 COPY . .
 
-# Set environment variables (mo¿esz je nadpisaæ przy docker run)
 ENV PROJECT_ID="big-data-crypto-sentiment"
 ENV TOPIC_ID="TwitterTopic"
+# ENV SYMBOLS="SHIB,ETH,SOL,FTM"
 
 # Entry point
 CMD ["python", "stream_simulator_continuous.py"]
