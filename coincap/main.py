@@ -2,6 +2,8 @@ import json
 import time
 import datetime
 import requests
+from concurrent.futures import ThreadPoolExecutor, as_completed
+import threading
 from google.cloud import pubsub_v1,secretmanager
 
 client = secretmanager.SecretManagerServiceClient()
@@ -17,6 +19,9 @@ SLUGS = ["ethereum", "solana", "shiba-inu"]
 publisher = pubsub_v1.PublisherClient()
 topic_price_path = publisher.topic_path(PROJECT_ID, TOPIC_PRICE_ID)
 topic_ta_path = publisher.topic_path(PROJECT_ID, TOPIC_TA_ID)
+PRICE_INTERVAL_SECONDS = 15
+TA_INTERVAL_SECONDS = 15
+
 
 def get_real_prices():
     """
@@ -86,7 +91,7 @@ def get_real_ta_for_slug(slug: str, symbol: str, fetch_interval: str = "h1") -> 
     macd = float(payload["macd"]["macd"])
     macd_signal = float(payload["macd"]["signal"])
     macd_hist = float(payload["macd"]["histogram"])
-    time = payload["sma"]["time"]
+    time_ms = payload["sma"]["time"]
     vwap = float(payload["vwap24"])
 
     return {
@@ -98,16 +103,9 @@ def get_real_ta_for_slug(slug: str, symbol: str, fetch_interval: str = "h1") -> 
         "macd_signal": macd_signal,
         "macd_hist": macd_hist,
         "vwap24": vwap,
-        "time": time,
+        "time": time_ms,
         "date": iso,
     }
-
-def get_real_ta(fetch_interval: str = "h1"):
-    """
-    Yield one TA message per symbol/slug pair.
-    """
-    for symbol, slug in zip(SYMBOLS, SLUGS):
-        yield get_real_ta_for_slug(slug=slug, symbol=symbol, fetch_interval=fetch_interval)
 
 def publish_ta_message(ta_message: dict):
     data_bytes = json.dumps(ta_message).encode("utf-8")
@@ -141,13 +139,43 @@ def run_ta_parallel(fetch_interval: str = "h1"):
                 print(f"[{datetime.datetime.utcnow().isoformat()}Z] "
                       f"Error fetching/publishing TA for {symbol}: {e}")
 
+def ta_loop(stop_event: threading.Event):
+    """
+    Background loop for TA so price loop isn't blocked.
+    """
+    print(f"[{datetime.datetime.utcnow().isoformat()}Z] TA loop: started")
+    while not stop_event.is_set():
+        run_ta_parallel(fetch_interval="h1")
+        # Wait before next TA batch
+        for _ in range(TA_INTERVAL_SECONDS):
+            if stop_event.is_set():
+                break
+            time.sleep(1)
+    print(f"[{datetime.datetime.utcnow().isoformat()}Z] TA loop: stopping")
+
 def main():
-    while True:
-        price_message = get_real_prices()
-        publish_price_message(price_message)
-        for ta_message in get_real_ta(fetch_interval="h1"):
-            publish_ta_message(ta_message)
-        time.sleep(15)
+    stop_event = threading.Event()
+    ta_thread = threading.Thread(target=ta_loop, args=(stop_event,), daemon=True)
+    ta_thread.start()
+    print(f"[{datetime.datetime.utcnow().isoformat()}Z] Price loop: started")
+    try:
+        while True:
+            start = time.time()
+            try:
+                price_message = get_real_prices()
+                publish_price_message(price_message)
+            except Exception as e:
+                print(f"[{datetime.datetime.utcnow().isoformat()}Z] "
+                      f"Error fetching/publishing PRICES: {e}")
+
+            elapsed = time.time() - start
+            sleep_time = max(0, PRICE_INTERVAL_SECONDS - elapsed)
+            time.sleep(sleep_time)
+    except KeyboardInterrupt:
+        print("Received KeyboardInterrupt, shutting down...")
+        stop_event.set()
+        ta_thread.join(timeout=10)
+
 
 if __name__ == "__main__":
     main()
