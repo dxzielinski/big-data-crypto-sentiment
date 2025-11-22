@@ -14,11 +14,15 @@ terraform apply -var="project_id=<PROJECT_ID>"
 Pushing docker image to gcr:
 
 ```bash
-cd  ./big-data-crypto-sentiment/coincap
+cd  ~/big-data-crypto-sentiment/coincap-simulation
 docker build --no-cache -t europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/crypto-simulation .
 docker push europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/crypto-simulation
 
-cd  ./big-data-crypto-sentiment/twitter
+cd  ~/big-data-crypto-sentiment/coincap
+docker build --no-cache -t europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/coincap .
+docker push europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/coincap
+
+cd  ~/big-data-crypto-sentiment/twitter
 docker build --no-cache -t europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/twitter-simulation .
 docker push europe-central2-docker.pkg.dev/big-data-crypto-sentiment/big-data-crypto-sentiment-repo/twitter-simulation
 ```
@@ -107,4 +111,34 @@ Gives example response:
   "vwap24": 84863.86987084257,
   "timestamp": 1763753541354
 }
+```
+
+But the app gives slightly transformed results.
+
+For price:
+
+```json
+    {
+      "timestamp": ms,
+      "ETH": float,
+      "SOL": float,
+      "SHIB": float
+    }
+```
+
+For TA:
+
+```json
+    {
+        "timestamp": ms,
+        "symbol": "ETH",
+        "sma": float,
+        "rsi": float,
+        "macd": float,
+        "macd_signal": float,
+        "macd_hist": float,
+        "vwap24": float,
+        "time": ms,
+        "date": "ISO8601 UTC"
+    }
 ```

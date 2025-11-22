@@ -1,209 +1,153 @@
-import os
-import random
 import json
 import time
 import datetime
-from google.cloud import pubsub_v1
+import requests
+from google.cloud import pubsub_v1,secretmanager
 
+client = secretmanager.SecretManagerServiceClient()
+name = "projects/big-data-crypto-sentiment/secrets/COINCAP_API_KEY/versions/latest"
+resp = client.access_secret_version(request={"name": name})
+COINCAP_API_KEY = resp.payload.data.decode("utf-8")
 PROJECT_ID = "big-data-crypto-sentiment"
-TOPIC_PRICE_ID = "CoinCapPriceStreamSimulated"
-TOPIC_TA_ID = "CoinCapTAStreamSimulated"
-
+TOPIC_PRICE_ID = "CoinCapPriceStream"
+TOPIC_TA_ID = "CoinCapTAStream"
 COINCAP_BASE_URL = "https://rest.coincap.io/v3"
-COINCAP_API_KEY = os.getenv("COINCAP_API_KEY")
-SYMBOLS = ["ETH", "SOL", "FTM", "SHIB"]
-SLUGS = ["ethereum", "solana", "fantom", "shiba-inu"]
-
+SYMBOLS = ["ETH", "SOL", "SHIB"]
+SLUGS = ["ethereum", "solana", "shiba-inu"]
 publisher = pubsub_v1.PublisherClient()
 topic_price_path = publisher.topic_path(PROJECT_ID, TOPIC_PRICE_ID)
 topic_ta_path = publisher.topic_path(PROJECT_ID, TOPIC_TA_ID)
-real_prices = [
-    2735.391034999999646971,
-    127.530000000000001137,
-    0.108200000000000003,
-    0.000007810000000000,
-]
-real_ema = [
-    2757.7870101656194,
-    128.2927647443417,
-    0.10588926400193995,
-    0.000007878602253280224,
-]
-real_sma = [
-    3001.137233928096,
-    136.42378790808945,
-    0.11972547918237494,
-    0.000008597684091627225,
-]
-real_rsi = [43.07941169909985, 45.27223199737072, 43.10689947082265, 35.40015464980758]
-real_macd = [
-    -37.591591243286345,
-    -1.9322619158150673,
-    -0.003097579927973009,
-    -1.3896534889595627e-7,
-]
-real_macd_signal = [
-    -49.08549646354389,
-    -2.3879750225057736,
-    -0.0032616956468224842,
-    -1.531006499115531e-7,
-]
-real_macd_hist = [
-    11.493905220257545,
-    0.4557131066907061,
-    0.00016411571884947528,
-    1.4135301015596835e-8,
-]
-real_vwap24 = [
-    2775.7097698014663,
-    129.78452069267738,
-    0.10916873787174941,
-    0.0000080309604145788,
-]
 
-
-def generate_simulated_prices(base_prices, spread=0.05):
+def get_real_prices():
     """
-    Generate simulated prices within ±spread (default 5%) of the base prices.
-    Each call produces a new random price in that range.
-    """
-    simulated = {}
-    for symbol, base_price in zip(SYMBOLS, base_prices):
-        factor = random.uniform(1 - spread, 1 + spread)
-        simulated[symbol] = base_price * factor
-    return simulated
-
-
-def publish_price_message(simulated_prices):
-    """
-    Publish a message to Pub/Sub with structure:
+    Call CoinCap price API and return:
     {
-      "timestamp": 1763753634750,
-      "BTC": 84739.05,
-      "ETH": 2770.14,
-      "SOL": 129.18,
-      "XRP": 1.96,
-      "ADA": 0.41,
+      "timestamp": 1763818013693,
+      "ETH": 2716.829999999999927240,
+      "SOL": 125.677077839999995490,
+      "SHIB": 0.000007612000000000
     }
     """
-    message = {
-        "timestamp": int(time.time() * 1000),  # ms
-    }
-    for symbol, price in simulated_prices.items():
-        message[symbol] = price
-    data_bytes = json.dumps(message).encode("utf-8")
+    symbols_str = ",".join(SYMBOLS)
+    # Encode "ETH,SOL,SHIB" -> "ETH%2CSOL%2CSHIB"
+    encoded_symbols = requests.utils.quote(symbols_str, safe="")
+    url = f"{COINCAP_BASE_URL}/price/bysymbol/{encoded_symbols}"
+    headers = {"accept": "application/json"}
+    if COINCAP_API_KEY:
+        headers["Authorization"] = f"Bearer {COINCAP_API_KEY}"
+    resp = requests.get(url, headers=headers, timeout=10)
+    resp.raise_for_status()
+    payload = resp.json()
+    timestamp = payload["timestamp"]
+    raw_prices = payload["data"]  # list of strings in same order as SYMBOLS
+    result = {"timestamp": timestamp}
+    for symbol, price_str in zip(SYMBOLS, raw_prices):
+        result[symbol] = float(price_str)
+    return result
+
+
+def publish_price_message(price_message: dict):
+    data_bytes = json.dumps(price_message).encode("utf-8")
     future = publisher.publish(topic_price_path, data=data_bytes)
     message_id = future.result()
-    print(
-        f"[{datetime.datetime.utcnow().isoformat()}Z] "
-        f"Published simulated prices (message_id={message_id}): {message}"
-    )
+    print(f"[{datetime.datetime.utcnow().isoformat()}Z] "
+          f"Published REAL prices (message_id={message_id}): {price_message}")
 
 
-def generate_simulated_ta(spread=0.05):
+def get_real_ta_for_slug(slug: str, symbol: str, fetch_interval: str = "h1") -> dict:
     """
-    Generate simulated TA values within ±spread (default 5%) of the base values.
+    Fetch real TA from CoinCap for a single slug and return a normalized message:
 
     {
-      "timestamp": 1763753634750,
-      "BTC": {
-        "sma": ...,
-        "rsi": ...,
-        "macd": ...,
-        "macd_signal": ...,
-        "macd_hist": ...,
-        "vwap24": ...,
-        "time": ...,
-        "date": "2025-11-21T19:00:08.753Z"
-      },
-      "ETH": { ... },
-      ...
+        "timestamp": ms,
+        "symbol": "ETH",
+        "sma": float,
+        "rsi": float,
+        "macd": float,
+        "macd_signal": float,
+        "macd_hist": float,
+        "vwap24": float,
+        "time": ms,
+        "date": "ISO8601 UTC"
     }
     """
-    if not all(
-        len(lst) == len(SYMBOLS)
-        for lst in [
-            real_sma,
-            real_rsi,
-            real_macd,
-            real_macd_signal,
-            real_macd_hist,
-            real_vwap24,
-        ]
-    ):
-        raise ValueError("All TA base lists must be the same length as SYMBOLS")
-    timestamp_ms = int(time.time() * 1000)
-    iso = datetime.datetime.utcnow().isoformat() + "Z"
-    message = {"timestamp": timestamp_ms}
-    for (
-        symbol,
-        base_sma,
-        base_rsi,
-        base_macd,
-        base_macd_signal,
-        base_macd_hist,
-        base_vwap,
-    ) in zip(
-        SYMBOLS,
-        real_sma,
-        real_rsi,
-        real_macd,
-        real_macd_signal,
-        real_macd_hist,
-        real_vwap24,
-    ):
+    url = f"{COINCAP_BASE_URL}/ta/{slug}/allLatest"
+    params = {"fetchInterval": fetch_interval}
+    headers = {"accept": "*/*"}
+    if COINCAP_API_KEY:
+        headers["Authorization"] = f"Bearer {COINCAP_API_KEY}"
+    resp = requests.get(url, headers=headers, params=params, timeout=20)
+    resp.raise_for_status()
+    payload = resp.json()
+    timestamp_ms = payload["timestamp"]
+    iso = datetime.datetime.utcfromtimestamp(timestamp_ms / 1000.0).isoformat() + "Z"
+    sma = float(payload["sma"]["sma"])
+    rsi = float(payload["rsi"]["rsi"])
+    macd = float(payload["macd"]["macd"])
+    macd_signal = float(payload["macd"]["signal"])
+    macd_hist = float(payload["macd"]["histogram"])
+    time = payload["sma"]["time"]
+    vwap = float(payload["vwap24"])
 
-        def jitter(value, clamp=None):
-            val = value * random.uniform(1 - spread, 1 + spread)
-            if clamp is not None:
-                lo, hi = clamp
-                val = max(lo, min(hi, val))
-            return val
+    return {
+        "timestamp": timestamp_ms,
+        "symbol": symbol,
+        "sma": sma,
+        "rsi": rsi,
+        "macd": macd,
+        "macd_signal": macd_signal,
+        "macd_hist": macd_hist,
+        "vwap24": vwap,
+        "time": time,
+        "date": iso,
+    }
 
-        sma = jitter(base_sma)
-        rsi = jitter(base_rsi, clamp=(0.0, 100.0))  # RSI should stay in [0, 100]
-        macd = jitter(base_macd)
-        macd_signal = jitter(base_macd_signal)
-        macd_hist = jitter(base_macd_hist)
-        vwap = jitter(base_vwap)
-        message[symbol] = {
-            "sma": sma,
-            "rsi": rsi,
-            "macd": macd,
-            "macd_signal": macd_signal,
-            "macd_hist": macd_hist,
-            "vwap24": vwap,
-            "time": timestamp_ms,
-            "date": iso,
-        }
-    return message
-
-
-def publish_ta_message(simulated_ta_message):
+def get_real_ta(fetch_interval: str = "h1"):
     """
-    Publish TA message to Pub/Sub.
+    Yield one TA message per symbol/slug pair.
     """
-    data_bytes = json.dumps(simulated_ta_message).encode("utf-8")
+    for symbol, slug in zip(SYMBOLS, SLUGS):
+        yield get_real_ta_for_slug(slug=slug, symbol=symbol, fetch_interval=fetch_interval)
+
+def publish_ta_message(ta_message: dict):
+    data_bytes = json.dumps(ta_message).encode("utf-8")
     future = publisher.publish(topic_ta_path, data=data_bytes)
     message_id = future.result()
-
     print(
         f"[{datetime.datetime.utcnow().isoformat()}Z] "
-        f"Published simulated TA (message_id={message_id}): {simulated_ta_message}"
+        f"Published REAL TA (message_id={message_id}): {ta_message}"
     )
 
+def run_ta_parallel(fetch_interval: str = "h1"):
+    """
+    Fetch TA for all symbols in parallel and publish each message
+    as soon as it is ready.
+    """
+    with ThreadPoolExecutor(max_workers=len(SLUGS)) as executor:
+        future_to_symbol = {
+            executor.submit(get_real_ta_for_slug, slug, symbol, fetch_interval): symbol
+            for symbol, slug in zip(SYMBOLS, SLUGS)
+        }
+
+        for future in as_completed(future_to_symbol):
+            symbol = future_to_symbol[future]
+            try:
+                ta_message = future.result()
+                publish_ta_message(ta_message)
+            except requests.exceptions.Timeout:
+                print(f"[{datetime.datetime.utcnow().isoformat()}Z] "
+                      f"TA request timed out for symbol {symbol}")
+            except Exception as e:
+                print(f"[{datetime.datetime.utcnow().isoformat()}Z] "
+                      f"Error fetching/publishing TA for {symbol}: {e}")
 
 def main():
-    print(f"Base prices from CoinCap: {real_prices}")
-    print("Starting simulated PRICE + TA stream...")
-
     while True:
-        simulated_prices = generate_simulated_prices(real_prices, spread=0.05)
-        simulated_ta = generate_simulated_ta(spread=0.05)
-        publish_price_message(simulated_prices)
-        publish_ta_message(simulated_ta)
+        price_message = get_real_prices()
+        publish_price_message(price_message)
+        for ta_message in get_real_ta(fetch_interval="h1"):
+            publish_ta_message(ta_message)
         time.sleep(15)
-
 
 if __name__ == "__main__":
     main()
