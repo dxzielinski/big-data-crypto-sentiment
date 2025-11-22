@@ -5,7 +5,6 @@ resource "google_artifact_registry_repository" "docker_repo" {
   format        = "DOCKER"
   depends_on = [
     google_project_service.compute,
-    google_project_service.artifact_registry,
-    google_artifact_registry_repository.docker_repo,
+    google_project_service.artifact_registry
   ]
 }
