@@ -44,7 +44,7 @@ variable "pubsub_topics" {
   type = map(object({
     topic_name   = string
     retention    = optional(string, "604800s") # Default 7 days
-    ack_deadline = optional(number, 20)
+    ack_deadline = optional(number, 60)
   }))
 
   default = {

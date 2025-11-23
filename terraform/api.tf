@@ -24,3 +24,28 @@ resource "google_project_service" "artifact_registry" {
   disable_dependent_services = false
   disable_on_destroy         = false
 }
+
+resource "google_project_service" "storage" {
+  project            = var.project_id
+  service            = "storage-component.googleapis.com"
+  disable_on_destroy = false
+}
+
+# Enable BigQuery API
+resource "google_project_service" "bigquery" {
+  project            = var.project_id
+  service            = "bigquery.googleapis.com"
+  disable_on_destroy = false
+}
+
+resource "google_project_service" "logging" {
+  project            = var.project_id
+  service            = "logging.googleapis.com"
+  disable_on_destroy = false
+}
+
+resource "google_project_service" "dataflow" {
+  project            = var.project_id
+  service            = "dataflow.googleapis.com"
+  disable_on_destroy = false
+}

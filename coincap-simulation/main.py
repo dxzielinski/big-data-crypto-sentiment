@@ -2,17 +2,22 @@ import os
 import random
 import json
 import time
-import datetime
-from google.cloud import pubsub_v1
+from datetime import datetime, timezone
+from google.cloud import pubsub_v1, secretmanager
 
-PROJECT_ID = "big-data-crypto-sentiment"
-TOPIC_PRICE_ID = "CoinCapPriceStreamSimulated"
-TOPIC_TA_ID = "CoinCapTAStreamSimulated"
+
+PROJECT_ID = "big-data-crypto-sentiment-test"
+TOPIC_PRICE_ID = "crypto-prices-stream"
+TOPIC_TA_ID = "crypto-ta-indicators"
 
 COINCAP_BASE_URL = "https://rest.coincap.io/v3"
-COINCAP_API_KEY = os.getenv("COINCAP_API_KEY")
 SYMBOLS = ["ETH", "SOL", "FTM", "SHIB"]
 SLUGS = ["ethereum", "solana", "fantom", "shiba-inu"]
+
+client = secretmanager.SecretManagerServiceClient()
+name = "projects/big-data-crypto-sentiment-test/secrets/COINCAP_API_KEY/versions/latest"
+resp = client.access_secret_version(request={"name": name})
+COINCAP_API_KEY = resp.payload.data.decode("utf-8")
 
 publisher = pubsub_v1.PublisherClient()
 topic_price_path = publisher.topic_path(PROJECT_ID, TOPIC_PRICE_ID)
@@ -92,13 +97,12 @@ def publish_price_message(simulated_prices):
     for symbol, price in simulated_prices.items():
         message[symbol] = price
     data_bytes = json.dumps(message).encode("utf-8")
-    future = publisher.publish(topic_price_path, data=data_bytes)
-    message_id = future.result()
-    print(
-        f"[{datetime.datetime.utcnow().isoformat()}Z] "
-        f"Published simulated prices (message_id={message_id}): {message}"
-    )
+    attributes = {
+        "event_timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    }
 
+    future = publisher.publish(topic_price_path, data=data_bytes, **attributes)
+    message_id = future.result()
 
 def generate_simulated_ta(spread=0.05):
     """
@@ -133,7 +137,7 @@ def generate_simulated_ta(spread=0.05):
         raise ValueError("All TA base lists must be the same length as SYMBOLS")
 
     timestamp_ms = int(time.time() * 1000)
-    iso = datetime.datetime.utcnow().isoformat() + "Z"
+    iso = datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
 
     for (
         symbol,
@@ -182,13 +186,12 @@ def publish_ta_message(simulated_ta_message):
     Publish TA message to Pub/Sub.
     """
     data_bytes = json.dumps(simulated_ta_message).encode("utf-8")
-    future = publisher.publish(topic_ta_path, data=data_bytes)
-    message_id = future.result()
+    attributes = {
+        "event_timestamp": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z")
+    }
 
-    print(
-        f"[{datetime.datetime.utcnow().isoformat()}Z] "
-        f"Published simulated TA (message_id={message_id}): {simulated_ta_message}"
-    )
+    future = publisher.publish(topic_ta_path, data=data_bytes, **attributes)
+    message_id = future.result()
 
 
 def main():
@@ -200,6 +203,7 @@ def main():
         publish_price_message(simulated_prices)
         for ta_message in generate_simulated_ta(spread=0.05):
             publish_ta_message(ta_message)
+        print(f"Published data batch at {datetime.now(timezone.utc).isoformat()}")
         time.sleep(15)
 
 
