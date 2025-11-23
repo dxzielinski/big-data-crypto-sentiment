@@ -92,6 +92,8 @@ echo "$TOKEN" | docker login -u oauth2accesstoken --password-stdin "https://$REG
   exit 1
 }
 
+gcloud auth configure-docker europe-central2-docker.pkg.dev
+
 # -----------------------------
 # Pull and run the container
 # -----------------------------
