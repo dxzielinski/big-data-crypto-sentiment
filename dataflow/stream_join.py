@@ -12,7 +12,9 @@ SUBSCRIPTION_TWEETS = f"projects/{PROJECT_ID}/subscriptions/crypto-tweets-stream
 SUBSCRIPTION_PRICES = f"projects/{PROJECT_ID}/subscriptions/crypto-prices-stream-sub"
 
 
-BQ_TABLE_SPEC = f"{PROJECT_ID}:crypto_analysis.crypto_prices_with_tweets"
+BQ_TABLE_ANALYSIS = f"{PROJECT_ID}:crypto_analysis.crypto_prices_with_tweets"
+BQ_RAW_TWEETS = f"{PROJECT_ID}:crypto_analysis.raw_tweets"
+BQ_RAW_PRICES = f"{PROJECT_ID}:crypto_analysis.raw_prices"
 
 class ParseTweetFn(beam.DoFn):
     """
@@ -89,36 +91,73 @@ def run():
 
     with beam.Pipeline(options=pipeline_options) as p:
 
-        tweets = (
+        # --- BRANCH 1: TWEETS ---
+        tweets_kv = (
             p 
             | "ReadTweets" >> beam.io.ReadFromPubSub(
                 subscription=SUBSCRIPTION_TWEETS,
                 timestamp_attribute="event_timestamp"
             )
             | "ParseTweets" >> beam.ParDo(ParseTweetFn())
+        )
+
+        # Path A: Write Raw Archive
+        # We extract just the Dict (record) from the Tuple (Symbol, Record)
+        (
+            tweets_kv 
+            | "ExtractTweetRecord" >> beam.Map(lambda x: x[1]) 
+            | "WriteRawTweets" >> beam.io.WriteToBigQuery(
+                BQ_RAW_TWEETS,
+                # No Schema needed -> Terraform manages it
+                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
+                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
+                method="STREAMING_INSERTS"
+            )
+        )
+
+        # Path B: Window for Analysis
+        windowed_tweets = (
+            tweets_kv
             | "WindowTweets" >> beam.WindowInto(window.FixedWindows(30))
         )
 
-        prices = (
+        # --- BRANCH 2: PRICES ---
+        prices_kv = (
             p
             | "ReadPrices" >> beam.io.ReadFromPubSub(
                 subscription=SUBSCRIPTION_PRICES,
                 timestamp_attribute="event_timestamp"
             )
             | "ExplodePrices" >> beam.ParDo(ParseAndExplodePriceFn())
+        )
+
+
+        (
+            prices_kv 
+            | "FlattenPriceRecord" >> beam.Map(lambda x: {"symbol": x[0], **x[1]})
+            | "WriteRawPrices" >> beam.io.WriteToBigQuery(
+                BQ_RAW_PRICES,
+                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
+                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
+                method="STREAMING_INSERTS"
+            )
+        )
+
+        windowed_prices = (
+            prices_kv
             | "WindowPrices" >> beam.WindowInto(window.FixedWindows(30))
         )
 
         joined_data = (
-            {'tweets': tweets, 'prices': prices}
+            {'tweets': windowed_tweets, 'prices': windowed_prices}
             | "JoinStreams" >> beam.CoGroupByKey()
             | "Analyze" >> beam.ParDo(AnalyzeBatchFn())
         )
 
         (
             joined_data
-            | "WriteToBQ" >> beam.io.WriteToBigQuery(
-                BQ_TABLE_SPEC,
+            | "WriteAnalysisToBQ" >> beam.io.WriteToBigQuery(
+                BQ_TABLE_ANALYSIS,
                 create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
                 write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
                 method="STREAMING_INSERTS"
