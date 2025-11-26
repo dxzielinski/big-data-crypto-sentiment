@@ -1,4 +1,5 @@
 resource "google_service_account" "crypto_streamer_sa" {
+  project = var.project_id
   account_id   = "crypto-streamer-sa"
   display_name = "Crypto Streamer Service Account"
 }
