@@ -1,5 +1,13 @@
 resource "google_storage_bucket" "dataflow_temp" {
-  name          = "${var.project_id}-dataflow-bucket" # Name must be globally unique
+  name          = "${var.project_id}-dataflow-bucket"
+  location      = var.region
+  force_destroy = true
+
+  uniform_bucket_level_access = true
+}
+
+resource "google_storage_bucket" "master_dataset_bucket" {
+  name          = "${var.project_id}-master-dataset"
   location      = var.region
   force_destroy = true
 

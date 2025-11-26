@@ -31,7 +31,6 @@ resource "google_project_service" "storage" {
   disable_on_destroy = false
 }
 
-# Enable BigQuery API
 resource "google_project_service" "bigquery" {
   project            = var.project_id
   service            = "bigquery.googleapis.com"
@@ -47,5 +46,12 @@ resource "google_project_service" "logging" {
 resource "google_project_service" "dataflow" {
   project            = var.project_id
   service            = "dataflow.googleapis.com"
+  disable_on_destroy = false
+}
+
+resource "google_project_service" "bq_dt_api" {
+  project = var.project_id
+  service = "bigquerydatatransfer.googleapis.com"
+
   disable_on_destroy = false
 }

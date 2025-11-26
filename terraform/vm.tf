@@ -1,5 +1,4 @@
 resource "google_service_account" "crypto_streamer_sa" {
-  project = var.project_id
   account_id   = "crypto-streamer-sa"
   display_name = "Crypto Streamer Service Account"
 }
@@ -39,17 +38,17 @@ resource "google_compute_instance" "vm" {
     ]
   }
 
-  # Simple startup script that runs a container in background
-  metadata_startup_script = <<EOT
+  metadata_startup_script = replace(<<EOT
 #!/bin/bash
 set -euo pipefail
 
 logger -t startup-script "Startup script: begin"
 
-IMAGE="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/crypto-simulation:latest"
+IMAGE_CRYPTO="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/coincap-simulation:latest"
+IMAGE_TWITTER="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/twitter-simulation-data:latest"
 REGISTRY_HOST="${var.region}-docker.pkg.dev"
 
-logger -t startup-script "Startup script: using image $IMAGE"
+logger -t startup-script "Startup script: using image $IMAGE_CRYPTO"
 
 # -----------------------------
 # Ensure Docker is installed
@@ -96,10 +95,10 @@ echo "$TOKEN" | docker login -u oauth2accesstoken --password-stdin "https://$REG
 # -----------------------------
 # Pull and run the container
 # -----------------------------
-logger -t startup-script "Pulling image $IMAGE"
+logger -t startup-script "Pulling image $IMAGE_CRYPTO"
 
-if docker pull "$IMAGE"; then
-  logger -t startup-script "Pulled image $IMAGE"
+if docker pull "$IMAGE_CRYPTO"; then
+  logger -t startup-script "Pulled image $IMAGE_CRYPTO"
 
   # Remove existing container if present
   if docker ps -a --format '{{.Names}}' | grep -q '^crypto-simulation$'; then
@@ -109,15 +108,34 @@ if docker pull "$IMAGE"; then
 
   # Run container
   logger -t startup-script "Starting container crypto-simulation"
-  docker run -d --name crypto-simulation -p 8080:8080 "$IMAGE" || \
+  docker run -d --name crypto-simulation -p 8080:8080 "$IMAGE_CRYPTO" || \
     logger -t startup-script "Failed to start container crypto-simulation"
 else
-  logger -t startup-script "Failed to pull image $IMAGE"
+  logger -t startup-script "Failed to pull image $IMAGE_CRYPTO"
+fi
+
+logger -t startup-script "Pulling image $IMAGE_TWITTER"
+
+if docker pull "$IMAGE_TWITTER"; then
+  logger -t startup-script "Pulled image $IMAGE_TWITTER"
+
+  # Remove existing container if present
+  if docker ps -a --format '{{.Names}}' | grep -q '^twitter-simulation$'; then
+    logger -t startup-script "Removing existing container twitter-simulation"
+    docker rm -f twitter-simulation || true
+  fi
+
+  # Run container
+  logger -t startup-script "Starting container twitter-simulation"
+  docker run -d --name twitter-simulation -e PROJECT_ID="${var.project_id}" -p 8081:8080 "$IMAGE_TWITTER" || \
+    logger -t startup-script "Failed to start container twitter-simulation"
+else
+  logger -t startup-script "Failed to pull image $IMAGE_TWITTER"
 fi
 
 logger -t startup-script "Startup script: end"
 EOT
-
+  , "\r", "")
   tags = ["big-data-crypto-vm"]
 }
 
