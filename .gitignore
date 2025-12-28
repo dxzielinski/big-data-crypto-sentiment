@@ -37,3 +37,6 @@ override.tf.json
 terraform.rc
 
 .env
+.python-version
+pyproject.toml
+uv.lock

@@ -1,0 +1,8 @@
+joblib
+google-cloud-bigquery
+google-cloud-storage
+pandas
+numpy
+pmdarima
+matplotlib
+db-dtypes
