@@ -1,1 +1,4 @@
 apache-beam[gcp]==2.69.0
+pmdarima
+joblib
+google-cloud-language
