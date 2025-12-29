@@ -2,7 +2,7 @@
 
 PROJECT_ID="big-data-crypto-sentiment-test"
 BUCKET_NAME="big-data-crypto-sentiment-test-dataflow-bucket"
-REGION="europe-central2"
+REGION="europe-west6"
 JOB_NAME="crypto-sentiment-stream"
 ARIMA_MODELS_GCS_URI="gs://big-data-crypto-sentiment-test-arima-models/models/arima_models.joblib"
 

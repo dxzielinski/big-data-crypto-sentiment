@@ -173,3 +173,50 @@ EOF
   clustering = ["symbol"]
   depends_on = [google_bigquery_dataset.crypto_analysis]
 }
+
+resource "google_bigquery_table" "tweet_sentiment" {
+  dataset_id = google_bigquery_dataset.crypto_analysis.dataset_id
+  table_id   = "tweet_sentiment"
+
+  schema = <<EOF
+[
+  { "name": "event_timestamp",      "type": "STRING",  "mode": "NULLABLE" },
+  { "name": "symbol",               "type": "STRING",  "mode": "NULLABLE" },
+  { "name": "text",                 "type": "STRING",  "mode": "NULLABLE" },
+  { "name": "sentiment_score",      "type": "FLOAT",   "mode": "NULLABLE" },
+  { "name": "sentiment_magnitude",  "type": "FLOAT",   "mode": "NULLABLE" },
+  { "name": "sentiment_label",      "type": "STRING",  "mode": "NULLABLE" }
+]
+EOF
+
+  time_partitioning {
+    type = "DAY"
+  }
+
+  clustering = ["symbol"]
+
+  depends_on = [google_bigquery_dataset.crypto_analysis]
+}
+
+resource "google_bigquery_table" "price_forecasts" {
+  dataset_id = google_bigquery_dataset.crypto_analysis.dataset_id
+  table_id   = "price_forecasts"
+
+  schema = <<EOF
+[
+  { "name": "event_timestamp",          "type": "STRING",  "mode": "NULLABLE" },
+  { "name": "symbol",                   "type": "STRING",  "mode": "NULLABLE" },
+  { "name": "price",                    "type": "FLOAT",   "mode": "NULLABLE" },
+  { "name": "price_timestamp",          "type": "INTEGER", "mode": "NULLABLE" },
+  { "name": "arima_next_price_forecast","type": "FLOAT",   "mode": "NULLABLE" }
+]
+EOF
+
+  time_partitioning {
+    type = "DAY"
+  }
+
+  clustering = ["symbol"]
+
+  depends_on = [google_bigquery_dataset.crypto_analysis]
+}

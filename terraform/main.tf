@@ -18,9 +18,3 @@ provider "google" {
   region  = var.region
   zone    = var.zone
 }
-
-# Container-Optimized OS image
-data "google_compute_image" "cos" {
-  family  = "cos-stable"
-  project = "cos-cloud"
-}
