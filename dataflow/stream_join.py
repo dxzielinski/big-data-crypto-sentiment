@@ -2,8 +2,6 @@ import argparse
 import json
 import logging
 import io
-import time
-import random
 from typing import Optional
 
 import apache_beam as beam
@@ -14,7 +12,7 @@ from apache_beam.io.filesystems import FileSystems
 import joblib
 import pmdarima as pm
 
-from google.cloud import language_v1
+from transformers import pipeline
 
 
 PROJECT_ID = "big-data-crypto-sentiment-test"
@@ -37,6 +35,7 @@ TARGET_SYMBOLS = ["ETH", "SOL", "FTM", "SHIB"]
 ARIMA_MODELS_GCS_URI = (
     "gs://big-data-crypto-sentiment-test-arima-models/models/arima_models.joblib"
 )
+HF_MODEL_NAME = "cardiffnlp/twitter-roberta-base-sentiment-latest"
 
 
 class ParseTweetFn(beam.DoFn):
@@ -74,39 +73,56 @@ class ParseAndExplodePriceFn(beam.DoFn):
             return
 
 
-class GcpNlpSentimentFn(beam.DoFn):
+class HfSentimentFn(beam.DoFn):
     """
-    Cloud Natural Language API sentiment per tweet.
+    Hugging Face CardiffNLP sentiment per tweet.
 
     Writes to NEW table only (does not alter existing join/analysis output).
-    Sentiment score is in [-1.0, 1.0], magnitude >= 0. :contentReference[oaicite:3]{index=3}
+    Sentiment score is in [-1.0, 1.0], magnitude in [0.0, 1.0].
     """
 
-    def __init__(
-        self,
-        language_hint: Optional[str] = None,
-        max_retries: int = 3,
-        timeout_s: float = 5.0,
-    ):
-        self._language_hint = language_hint
-        self._max_retries = max_retries
-        self._timeout_s = timeout_s
-        self._client = None
+    def __init__(self, model_name: str = HF_MODEL_NAME, max_length: int = 512):
+        self._model_name = model_name
+        self._max_length = max_length
+        self._pipeline = None
+        self._use_top_k = None
 
     def setup(self):
-        # Create client once per worker
-        self._client = (
-            language_v1.LanguageServiceClient()
-        )  # :contentReference[oaicite:4]{index=4}
+        # Load model/tokenizer once per worker
+        self._pipeline = pipeline(
+            "sentiment-analysis",
+            model=self._model_name,
+            tokenizer=self._model_name,
+            device=-1,
+        )
 
     @staticmethod
-    def _label_from_score(score: float) -> str:
-        # Simple thresholds; adjust if you want
-        if score <= -0.25:
+    def _normalize_label(label: str) -> Optional[str]:
+        key = (label or "").strip().lower()
+        if key in ("label_0", "negative"):
             return "NEGATIVE"
-        if score >= 0.25:
+        if key in ("label_1", "neutral"):
+            return "NEUTRAL"
+        if key in ("label_2", "positive"):
             return "POSITIVE"
-        return "NEUTRAL"
+        return None
+
+    def _extract_scores(self, result):
+        if isinstance(result, dict):
+            items = [result]
+        elif not result:
+            return {}
+        elif isinstance(result[0], list):
+            items = result[0]
+        else:
+            items = result
+
+        scores = {}
+        for item in items:
+            label = self._normalize_label(item.get("label", ""))
+            if label:
+                scores[label] = float(item.get("score", 0.0))
+        return scores
 
     def process(self, element, ts=beam.DoFn.TimestampParam):
         symbol, record = element
@@ -131,37 +147,67 @@ class GcpNlpSentimentFn(beam.DoFn):
             text = text[:10000]
             out["text"] = text
 
-        document = language_v1.Document(
-            content=text,
-            type_=language_v1.Document.Type.PLAIN_TEXT,
-            language=self._language_hint or "",
-        )
-
-        last_err = None
-        for attempt in range(self._max_retries + 1):
-            try:
-                response = self._client.analyze_sentiment(
-                    request={
-                        "document": document,
-                        "encoding_type": language_v1.EncodingType.UTF8,
-                    },
-                    timeout=self._timeout_s,
+        try:
+            if self._pipeline is None:
+                self.setup()
+            if self._use_top_k is None:
+                try:
+                    result = self._pipeline(
+                        text,
+                        truncation=True,
+                        max_length=self._max_length,
+                        top_k=None,
+                    )
+                    self._use_top_k = True
+                except TypeError:
+                    result = self._pipeline(
+                        text,
+                        truncation=True,
+                        max_length=self._max_length,
+                        return_all_scores=True,
+                    )
+                    self._use_top_k = False
+            elif self._use_top_k:
+                result = self._pipeline(
+                    text,
+                    truncation=True,
+                    max_length=self._max_length,
+                    top_k=None,
                 )
-                score = float(response.document_sentiment.score)
-                magnitude = float(response.document_sentiment.magnitude)
+            else:
+                result = self._pipeline(
+                    text,
+                    truncation=True,
+                    max_length=self._max_length,
+                    return_all_scores=True,
+                )
+        except Exception:
+            yield out
+            return
 
-                out["sentiment_score"] = score
-                out["sentiment_magnitude"] = magnitude
-                out["sentiment_label"] = self._label_from_score(score)
-                yield out
-                return
-            except Exception as e:
-                last_err = e
-                if attempt < self._max_retries:
-                    sleep_s = (2**attempt) * 0.2 + random.random() * 0.2
-                    time.sleep(sleep_s)
+        scores = self._extract_scores(result)
+        if not scores:
+            yield out
+            return
 
-        # On failure: emit row with null sentiment (pipeline continues)
+        neg = scores.get("NEGATIVE", 0.0)
+        neu = scores.get("NEUTRAL", 0.0)
+        pos = scores.get("POSITIVE", 0.0)
+        total = neg + neu + pos
+        if total <= 0:
+            yield out
+            return
+
+        neg /= total
+        neu /= total
+        pos /= total
+
+        out["sentiment_score"] = pos - neg
+        out["sentiment_magnitude"] = pos + neg
+
+        label_scores = {"NEGATIVE": neg, "NEUTRAL": neu, "POSITIVE": pos}
+        out["sentiment_label"] = max(label_scores, key=label_scores.get)
+
         yield out
 
 
@@ -287,7 +333,7 @@ def run():
         (
             tweets_kv
             | "TweetSentimentNLP"
-            >> beam.ParDo(GcpNlpSentimentFn(language_hint=known_args.nlp_language_hint))
+            >> beam.ParDo(HfSentimentFn())
             | "WriteTweetSentiment"
             >> beam.io.WriteToBigQuery(
                 BQ_TWEET_SENTIMENT,

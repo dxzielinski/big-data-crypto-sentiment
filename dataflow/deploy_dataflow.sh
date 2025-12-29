@@ -18,6 +18,6 @@ python3 stream_join.py \
   --job_name "$JOB_NAME" \
   --streaming \
   --experiments=use_runner_v2 \
-  --arima_models_gcs_uri "$ARIMA_MODELS_GCS_URI" \
+  --arima_models_gcs_uri "$ARIMA_MODELS_GCS_URI"
 
 echo "Job submitted. Check the Dataflow Console to monitor progress."
