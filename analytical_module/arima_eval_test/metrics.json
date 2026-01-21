@@ -1,0 +1,42 @@
+{
+  "ETH": {
+    "metrics": {
+      "mae": 83.30687696348014,
+      "mape": 3.0599514158210006,
+      "mse": 8470.099015500757
+    },
+    "train_points": 17830,
+    "test_points": 30,
+    "plot_path": "arima_eval_test2/ETH_forecast.png"
+  },
+  "FTM": {
+    "metrics": {
+      "mae": 0.002738278198745113,
+      "mape": 2.5578086669854567,
+      "mse": 1.0997933433834894e-05
+    },
+    "train_points": 17830,
+    "test_points": 30,
+    "plot_path": "arima_eval_test2/FTM_forecast.png"
+  },
+  "SHIB": {
+    "metrics": {
+      "mae": 3.177542827125678e-07,
+      "mape": 3.9723833925766305,
+      "mse": 1.5393423463308984e-13
+    },
+    "train_points": 17830,
+    "test_points": 30,
+    "plot_path": "arima_eval_test2/SHIB_forecast.png"
+  },
+  "SOL": {
+    "metrics": {
+      "mae": 3.0369751693465123,
+      "mape": 2.4120915884461547,
+      "mse": 13.828329868380765
+    },
+    "train_points": 17830,
+    "test_points": 30,
+    "plot_path": "arima_eval_test2/SOL_forecast.png"
+  }
+}
