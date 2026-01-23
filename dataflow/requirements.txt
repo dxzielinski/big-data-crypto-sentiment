@@ -3,3 +3,4 @@ pmdarima
 joblib
 transformers
 torch
+pymongo==4.7.2

@@ -77,6 +77,150 @@ if ! command -v python3 >/dev/null 2>&1; then
 fi
 
 # -----------------------------
+# Run MongoDB locally (Docker)
+# -----------------------------
+MONGO_CONTAINER="mongodb"
+MONGO_IMAGE="mongo:7.0"
+MONGO_DATA_DIR="/var/lib/mongo"
+
+logger -t startup-script "Preparing MongoDB data dir at $MONGO_DATA_DIR"
+mkdir -p "$MONGO_DATA_DIR"
+
+if docker ps -a --format '{{.Names}}' | grep -q "^${MONGO_CONTAINER}$"; then
+  logger -t startup-script "Removing existing container $MONGO_CONTAINER"
+  docker rm -f "$MONGO_CONTAINER" || true
+fi
+
+logger -t startup-script "Starting MongoDB container $MONGO_CONTAINER"
+docker run -d \
+  --name "$MONGO_CONTAINER" \
+  -p 27017:27017 \
+  -v "$MONGO_DATA_DIR:/data/db" \
+  --restart unless-stopped \
+  "$MONGO_IMAGE" || logger -t startup-script "Failed to start MongoDB container"
+
+# Wait briefly for MongoDB to accept connections
+for i in {1..20}; do
+  if docker exec "$MONGO_CONTAINER" mongosh --quiet --eval "db.runCommand({ ping: 1 })" >/dev/null 2>&1; then
+    break
+  fi
+  sleep 2
+done
+
+cat <<'EOF' >/tmp/mongo-init.js
+const dbName = "crypto_analysis";
+const database = db.getSiblingDB(dbName);
+
+function ensureCollection(name, schema) {
+  const options = {
+    validator: schema,
+    validationLevel: "strict",
+    validationAction: "error",
+  };
+
+  const exists = database.getCollectionNames().includes(name);
+  if (!exists) {
+    database.createCollection(name, options);
+  } else {
+    database.runCommand(Object.assign({ collMod: name }, options));
+  }
+}
+
+const rawTweetsSchema = {
+  $jsonSchema: {
+    bsonType: "object",
+    additionalProperties: false,
+    properties: {
+      _id: { bsonType: "objectId" },
+      id: { bsonType: ["string", "null"] },
+      text: { bsonType: ["string", "null"] },
+      author_id: { bsonType: ["string", "null"] },
+      crypto_key: { bsonType: ["string", "null"] },
+      created_at_raw: { bsonType: ["string", "null"] },
+      created_at_iso: { bsonType: ["date", "null"] },
+      timestamp_ms: { bsonType: ["long", "int", "null"] },
+      timestamp_sec: { bsonType: ["long", "int", "null"] },
+    },
+  },
+};
+
+const rawPricesSchema = {
+  $jsonSchema: {
+    bsonType: "object",
+    additionalProperties: false,
+    required: ["symbol"],
+    properties: {
+      _id: { bsonType: "objectId" },
+      symbol: { bsonType: "string" },
+      price: { bsonType: ["double", "null"] },
+      timestamp: { bsonType: ["long", "int", "null"] },
+    },
+  },
+};
+
+const windowedMetricsSchema = {
+  $jsonSchema: {
+    bsonType: "object",
+    additionalProperties: false,
+    required: ["event_timestamp", "symbol"],
+    properties: {
+      _id: { bsonType: "objectId" },
+      event_timestamp: { bsonType: "date" },
+      symbol: { bsonType: "string" },
+      tweet_volume: { bsonType: ["long", "int", "null"] },
+      avg_price: { bsonType: ["double", "null"] },
+      last_price: { bsonType: ["double", "null"] },
+      tweet_texts: {
+        bsonType: ["array", "null"],
+        items: { bsonType: ["string", "null"] },
+      },
+    },
+  },
+};
+
+const tweetSentimentSchema = {
+  $jsonSchema: {
+    bsonType: "object",
+    additionalProperties: false,
+    properties: {
+      _id: { bsonType: "objectId" },
+      event_timestamp: { bsonType: ["string", "null"] },
+      symbol: { bsonType: ["string", "null"] },
+      text: { bsonType: ["string", "null"] },
+      sentiment_score: { bsonType: ["double", "null"] },
+      sentiment_magnitude: { bsonType: ["double", "null"] },
+      sentiment_label: { bsonType: ["string", "null"] },
+    },
+  },
+};
+
+const priceForecastsSchema = {
+  $jsonSchema: {
+    bsonType: "object",
+    additionalProperties: false,
+    properties: {
+      _id: { bsonType: "objectId" },
+      event_timestamp: { bsonType: ["string", "null"] },
+      symbol: { bsonType: ["string", "null"] },
+      price: { bsonType: ["double", "null"] },
+      price_timestamp: { bsonType: ["long", "int", "null"] },
+      arima_next_price_forecast: { bsonType: ["double", "null"] },
+    },
+  },
+};
+
+ensureCollection("raw_tweets", rawTweetsSchema);
+ensureCollection("raw_prices", rawPricesSchema);
+ensureCollection("crypto_prices_with_tweets", windowedMetricsSchema);
+ensureCollection("tweet_sentiment", tweetSentimentSchema);
+ensureCollection("price_forecasts", priceForecastsSchema);
+EOF
+
+docker cp /tmp/mongo-init.js "$MONGO_CONTAINER":/tmp/mongo-init.js
+docker exec "$MONGO_CONTAINER" mongosh --quiet /tmp/mongo-init.js || \
+  logger -t startup-script "MongoDB init script failed"
+
+# -----------------------------
 # Authenticate to Artifact Registry using VM service account
 # -----------------------------
 logger -t startup-script "Fetching access token from metadata server"

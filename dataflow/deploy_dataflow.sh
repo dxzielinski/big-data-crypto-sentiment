@@ -5,8 +5,15 @@ BUCKET_NAME="big-data-crypto-sentiment-test-dataflow-bucket"
 REGION="europe-west6"
 JOB_NAME="crypto-sentiment-stream"
 ARIMA_MODELS_GCS_URI="gs://big-data-crypto-sentiment-test-arima-models/models/arima_models.joblib"
+MONGO_URI="${MONGO_URI:-}"
+MONGO_DB="${MONGO_DB:-crypto_analysis}"
 
 echo "Deploying Dataflow Job: $JOB_NAME"
+
+MONGO_ARGS=()
+if [[ -n "$MONGO_URI" ]]; then
+  MONGO_ARGS+=(--mongo_uri "$MONGO_URI" --mongo_db "$MONGO_DB")
+fi
 
 python3 stream_join.py \
   --runner DataflowRunner \
@@ -18,6 +25,7 @@ python3 stream_join.py \
   --job_name "$JOB_NAME" \
   --streaming \
   --experiments=use_runner_v2 \
-  --arima_models_gcs_uri "$ARIMA_MODELS_GCS_URI"
+  --arima_models_gcs_uri "$ARIMA_MODELS_GCS_URI" \
+  "${MONGO_ARGS[@]}"
 
 echo "Job submitted. Check the Dataflow Console to monitor progress."
