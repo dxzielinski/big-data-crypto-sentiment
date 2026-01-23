@@ -161,14 +161,15 @@ class MongoWriteFn(beam.DoFn):
             self._client.close()
 
     def process(self, doc):
-        if doc is None or not self._collection:
-            return
+        if doc is None or self._collection is None:
+            return []
         try:
             self._collection.insert_one(doc)
         except Exception:
             logging.exception(
                 "MongoDB insert failed for collection %s", self._collection_name
             )
+        return []
 
 
 class ParseTweetFn(beam.DoFn):

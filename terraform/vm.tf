@@ -86,7 +86,7 @@ MONGO_DATA_DIR="/var/lib/mongo"
 logger -t startup-script "Preparing MongoDB data dir at $MONGO_DATA_DIR"
 mkdir -p "$MONGO_DATA_DIR"
 
-if docker ps -a --format '{{.Names}}' | grep -q "^${MONGO_CONTAINER}$"; then
+if docker ps -a --format '{{.Names}}' | grep -q "^$${MONGO_CONTAINER}$"; then
   logger -t startup-script "Removing existing container $MONGO_CONTAINER"
   docker rm -f "$MONGO_CONTAINER" || true
 fi
@@ -216,8 +216,8 @@ ensureCollection("tweet_sentiment", tweetSentimentSchema);
 ensureCollection("price_forecasts", priceForecastsSchema);
 EOF
 
-docker cp /tmp/mongo-init.js "$MONGO_CONTAINER":/tmp/mongo-init.js
-docker exec "$MONGO_CONTAINER" mongosh --quiet /tmp/mongo-init.js || \
+docker cp /tmp/mongo-init.js "$$MONGO_CONTAINER":/tmp/mongo-init.js
+docker exec "$$MONGO_CONTAINER" mongosh --quiet /tmp/mongo-init.js || \
   logger -t startup-script "MongoDB init script failed"
 
 # -----------------------------
