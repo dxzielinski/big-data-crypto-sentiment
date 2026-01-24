@@ -2,23 +2,22 @@
 import requests
 from dotenv import load_dotenv
 import json
-from datetime import datetime, timedelta, timezone
-import time
+from datetime import datetime, timedelta
+import re
 
-# Wczytaj zmienne środowiskowe z pliku .env
 load_dotenv()
 
 API_KEY = os.getenv("API_KEY")
-
 if not API_KEY:
     raise ValueError("Brak klucza API! Dodaj go do pliku .env jako API_KEY=...")
 
 url = "https://api.twitterapi.io/twitter/tweet/advanced_search"
+crypto ="ETH"
+hours_ago = 48
 
-now_timestamp = int(time.time()) 
-
-window_size = 60
-since_timestamp = now_timestamp - window_size
+# obliczamy czas sprzed 24h w UTC
+since_dt = datetime.utcnow() - timedelta(hours=hours_ago)
+since_iso = since_dt.isoformat() + "Z"  # ISO format w UTC, np. "2026-01-24T15:30:00Z"
 
 
 headers = {
@@ -27,61 +26,53 @@ headers = {
 }
 
 payload = {
-    "query": f"($BTC or #BTC) since_time:{since_timestamp} -filter:retweets",
-    "limit": 10,
-    "include_user_data": False
+    "query": f"#{crypto} OR ${crypto} lang:en -filter:retweets",
+    "limit": 100,
+    "include_user_data": False,
+    #"since_time":since_iso  
+    "since":"2026-01-22"
 }
+
+
 times = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
-parse_format_string = "%a %b %d %H:%M:%S %z %Y"
 
 try:
     response = requests.get(url, params=payload, headers=headers, timeout=10)
     response.raise_for_status()
-    
-    print(f"Status Code: {response.status_code}")
+
     data = response.json()
-    
-    processed_tweets = []
+    tweets = data.get("tweets", [])
 
+    print(f"Pobrano {len(tweets)} tweetów.")
 
-    tweets_list = data.get("tweets", [])
-    
-    if not tweets_list:
-        print("No tweets found in this window.")
-    
-    for tweet in tweets_list:
-        tweet_created_at = tweet.get("createdAt")
-        
-        try:
-            dt_object = datetime.strptime(tweet_created_at, parse_format_string)
-            tweet_timestamp = int(dt_object.timestamp())
-        except (ValueError, TypeError):
-            tweet_timestamp = None
+    transformed = []
 
-        processed_tweets.append({
-            "id": tweet.get("id"),
-            "text": tweet.get("text"),
-            "created_at": tweet_created_at,
-            "timestamp": tweet_timestamp,
-            "crypto_key": "BTC"
+    for t in tweets:
+        text = t.get("text", "")
+        created_raw = t.get("createdAt")
+
+        # parsowanie daty z Twittera
+        dt = datetime.strptime(created_raw, "%a %b %d %H:%M:%S %z %Y")
+
+        transformed.append({
+            "id": t.get("id"),
+            "text": text,
+            "author_id": t.get("authorId"),  
+            "crypto_key": crypto,
+            "created_at_raw": created_raw,
+            "created_at_iso": dt.isoformat().replace("+00:00", "Z"),
+            "timestamp_ms": int(dt.timestamp() * 1000),
+            "timestamp_sec": int(dt.timestamp())
         })
 
-    output_data = {
-        "tweets": processed_tweets,
-        "query_info": {
-            "since": since_timestamp,
-            "query_time": now_timestamp
-        }
-    }
-    
-    filename = f"data/BTC_{times}_time_limited.json"
-    
-    with open(filename, "w", encoding="utf-8") as f:
-        json.dump(output_data, f, indent=4, ensure_ascii=False)
+    os.makedirs("data", exist_ok=True)
+    output_path = f"data/{crypto}_{times}.json"
 
-    print(f"Success! {len(processed_tweets)} tweets saved to {filename}")
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(transformed, f, indent=4, ensure_ascii=False)
+
+    print(f"Wyniki zapisane w {output_path}")
 
 except requests.exceptions.RequestException as e:
-    print(f"Network/API Error: {e}")
-except Exception as e:
-    print(f"Unexpected Error: {e}")
+    print("Błąd połączenia:")
+    print(e)
