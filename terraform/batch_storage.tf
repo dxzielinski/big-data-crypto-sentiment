@@ -17,6 +17,12 @@ resource "google_storage_bucket_iam_member" "pubsub_object_creator" {
   member = "serviceAccount:service-${data.google_project.current.number}@gcp-sa-pubsub.iam.gserviceaccount.com"
 }
 
+resource "google_storage_bucket_iam_member" "crypto_streamer_batch_reader" {
+  bucket = google_storage_bucket.batch_storage.name
+  role   = "roles/storage.objectViewer"
+  member = "serviceAccount:${google_service_account.crypto_streamer_sa.email}"
+}
+
 
 # Pub/Sub → GCS: Prices (Avro)
 resource "google_pubsub_subscription" "prices_to_gcs" {
