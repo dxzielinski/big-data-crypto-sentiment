@@ -77,6 +77,39 @@ if ! command -v python3 >/dev/null 2>&1; then
 fi
 
 # -----------------------------
+# Batch loader dependencies + cron
+# -----------------------------
+logger -t startup-script "Installing batch loader dependencies"
+export DEBIAN_FRONTEND=noninteractive
+apt-get update
+apt-get install -y openjdk-17-jre-headless python3-pip cron
+
+logger -t startup-script "Installing batch loader Python packages"
+pip3 install --no-cache-dir pyspark==3.5.1 pymongo==4.7.2 google-cloud-storage==2.17.0
+
+BATCH_DIR="/opt/batch"
+mkdir -p "$BATCH_DIR"
+
+cat <<'PYEOF' | base64 -d > "$BATCH_DIR/batch_to_mongo.py"
+${base64encode(file("${path.module}/scripts/batch_to_mongo.py"))}
+PYEOF
+chmod 755 "$BATCH_DIR/batch_to_mongo.py"
+
+cat <<'SHEOF' | base64 -d > "$BATCH_DIR/run_batch_to_mongo.sh"
+${base64encode(file("${path.module}/scripts/run_batch_to_mongo.sh"))}
+SHEOF
+chmod 755 "$BATCH_DIR/run_batch_to_mongo.sh"
+
+cat <<'EOF' >/etc/cron.d/batch-to-mongo
+SHELL=/bin/bash
+PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+*/30 * * * * root /opt/batch/run_batch_to_mongo.sh >> /var/log/batch_to_mongo.log 2>&1
+EOF
+chmod 0644 /etc/cron.d/batch-to-mongo
+
+systemctl restart cron || service cron restart || true
+
+# -----------------------------
 # Run MongoDB locally (Docker)
 # -----------------------------
 MONGO_CONTAINER="mongodb"
@@ -86,7 +119,7 @@ MONGO_DATA_DIR="/var/lib/mongo"
 logger -t startup-script "Preparing MongoDB data dir at $MONGO_DATA_DIR"
 mkdir -p "$MONGO_DATA_DIR"
 
-if docker ps -a --format '{{.Names}}' | grep -q "^${MONGO_CONTAINER}$"; then
+if docker ps -a --format '{{.Names}}' | grep -q "^$${MONGO_CONTAINER}$"; then
   logger -t startup-script "Removing existing container $MONGO_CONTAINER"
   docker rm -f "$MONGO_CONTAINER" || true
 fi
@@ -216,8 +249,8 @@ ensureCollection("tweet_sentiment", tweetSentimentSchema);
 ensureCollection("price_forecasts", priceForecastsSchema);
 EOF
 
-docker cp /tmp/mongo-init.js "$MONGO_CONTAINER":/tmp/mongo-init.js
-docker exec "$MONGO_CONTAINER" mongosh --quiet /tmp/mongo-init.js || \
+docker cp /tmp/mongo-init.js "$$MONGO_CONTAINER":/tmp/mongo-init.js
+docker exec "$$MONGO_CONTAINER" mongosh --quiet /tmp/mongo-init.js || \
   logger -t startup-script "MongoDB init script failed"
 
 # -----------------------------
