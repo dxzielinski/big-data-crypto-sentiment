@@ -45,7 +45,7 @@ set -euo pipefail
 logger -t startup-script "Startup script: begin"
 
 IMAGE_CRYPTO="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/coincap-simulation:latest"
-IMAGE_TWITTER="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/twitter-simulation-data:latest"
+IMAGE_TWITTER="${var.region}-docker.pkg.dev/${var.project_id}/${google_artifact_registry_repository.docker_repo.repository_id}/twitter-simulation:latest"
 REGISTRY_HOST="${var.region}-docker.pkg.dev"
 
 logger -t startup-script "Startup script: using image $IMAGE_CRYPTO"
@@ -112,6 +112,8 @@ systemctl restart cron || service cron restart || true
 # -----------------------------
 # Run MongoDB locally (Docker)
 # -----------------------------
+docker network create crypto-network || true
+
 MONGO_CONTAINER="mongodb"
 MONGO_IMAGE="mongo:7.0"
 MONGO_DATA_DIR="/var/lib/mongo"
@@ -119,18 +121,14 @@ MONGO_DATA_DIR="/var/lib/mongo"
 logger -t startup-script "Preparing MongoDB data dir at $MONGO_DATA_DIR"
 mkdir -p "$MONGO_DATA_DIR"
 
-if docker ps -a --format '{{.Names}}' | grep -q "^$${MONGO_CONTAINER}$"; then
-  logger -t startup-script "Removing existing container $MONGO_CONTAINER"
-  docker rm -f "$MONGO_CONTAINER" || true
-fi
-
 logger -t startup-script "Starting MongoDB container $MONGO_CONTAINER"
 docker run -d \
   --name "$MONGO_CONTAINER" \
+  --network crypto-network \
   -p 27017:27017 \
   -v "$MONGO_DATA_DIR:/data/db" \
   --restart unless-stopped \
-  "$MONGO_IMAGE" || logger -t startup-script "Failed to start MongoDB container"
+  "$MONGO_IMAGE"
 
 # Wait briefly for MongoDB to accept connections
 for i in {1..20}; do
@@ -249,8 +247,8 @@ ensureCollection("tweet_sentiment", tweetSentimentSchema);
 ensureCollection("price_forecasts", priceForecastsSchema);
 EOF
 
-docker cp /tmp/mongo-init.js "$$MONGO_CONTAINER":/tmp/mongo-init.js
-docker exec "$$MONGO_CONTAINER" mongosh --quiet /tmp/mongo-init.js || \
+docker cp /tmp/mongo-init.js "$MONGO_CONTAINER":/tmp/mongo-init.js
+docker exec "$MONGO_CONTAINER" mongosh --quiet /tmp/mongo-init.js || \
   logger -t startup-script "MongoDB init script failed"
 
 # -----------------------------
@@ -304,11 +302,33 @@ if docker pull "$IMAGE_TWITTER"; then
 
   # Run container
   logger -t startup-script "Starting container twitter-simulation"
-  docker run -d --name twitter-simulation -e PROJECT_ID="${var.project_id}" -p 8081:8080 "$IMAGE_TWITTER" || \
+  docker run -d --name twitter-simulation -e GCP_PROJECT_ID="${var.project_id}" -e PUBSUB_TOPIC_ID="crypto-tweets-stream" -p 8081:8080 "$IMAGE_TWITTER" || \
     logger -t startup-script "Failed to start container twitter-simulation"
 else
   logger -t startup-script "Failed to pull image $IMAGE_TWITTER"
 fi
+
+GRAFANA_CONTAINER="grafana"
+GRAFANA_IMAGE="grafana/grafana-oss:latest"
+GRAFANA_DATA_DIR="/var/lib/grafana"
+
+# 1. Directory and permission management
+mkdir -p "$GRAFANA_DATA_DIR"
+chown -R 472:472 "$GRAFANA_DATA_DIR"
+docker rm -f "$GRAFANA_CONTAINER" || true
+
+# 2. Start container with documentation-specific URL
+logger -t startup-script "Starting Grafana with stable MongoDB plugin v0.4.1"
+
+docker run -d \
+  --name "$GRAFANA_CONTAINER" \
+  --network crypto-network \
+  -p 3000:3000 \
+  -v "$GRAFANA_DATA_DIR:/var/lib/grafana" \
+  --restart unless-stopped \
+  -e "GF_INSTALL_PLUGINS=https://github.com/haohanyang/mongodb-datasource/releases/download/v0.4.1/haohanyang-mongodb-datasource-0.4.1.zip;haohanyang-mongodb-datasource" \
+  -e "GF_PLUGINS_ALLOW_LOADING_UNSIGNED_PLUGINS=haohanyang-mongodb-datasource" \
+  "$GRAFANA_IMAGE" || logger -t startup-script "Failed to start Grafana"
 
 logger -t startup-script "Startup script: end"
 EOT
