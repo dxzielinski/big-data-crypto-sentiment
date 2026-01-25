@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
 import argparse
+import gzip
 import json
 import logging
 import os
 import operator
+import shutil
 from functools import reduce
 from typing import Dict, List, Tuple
 
@@ -13,6 +15,8 @@ from pyspark.sql import SparkSession, functions as F, types as T
 
 
 LOG_FORMAT = "%(asctime)s %(levelname)s %(message)s"
+AVRO_MAGIC = b"Obj\x01"
+GZIP_MAGIC = b"\x1f\x8b"
 
 
 def load_state(path: str) -> Dict[str, Dict[str, List[str]]]:
@@ -53,9 +57,64 @@ def download_blobs(blobs, staging_dir: str) -> Tuple[List[str], List[str]]:
     return local_paths, processed_names
 
 
+def _ensure_avro_file(path: str) -> Tuple[bool, str, List[str]]:
+    """
+    Returns (is_valid, avro_path, extra_paths).
+    If the file is gzipped, it will be decompressed to a temp path.
+    """
+    try:
+        with open(path, "rb") as handle:
+            header = handle.read(4)
+    except OSError:
+        logging.exception("Failed to read file header: %s", path)
+        return False, path, []
+
+    if header == AVRO_MAGIC:
+        return True, path, []
+
+    if header.startswith(GZIP_MAGIC):
+        decompressed = f"{path}.ungz"
+        try:
+            with gzip.open(path, "rb") as src, open(decompressed, "wb") as dst:
+                shutil.copyfileobj(src, dst)
+            with open(decompressed, "rb") as handle:
+                if handle.read(4) != AVRO_MAGIC:
+                    logging.warning("Gzip file is not Avro: %s", path)
+                    return False, path, [decompressed]
+            return True, decompressed, [decompressed]
+        except OSError:
+            logging.exception("Failed to decompress gzip file: %s", path)
+            return False, path, [decompressed]
+
+    logging.warning("Skipping non-Avro file: %s", path)
+    return False, path, []
+
+
+def prepare_avro_paths(
+    local_paths: List[str], staging_dir: str
+) -> Tuple[List[str], List[str], List[str]]:
+    valid_paths = []
+    invalid_names = []
+    extra_paths = []
+    for path in local_paths:
+        is_valid, avro_path, extras = _ensure_avro_file(path)
+        if is_valid:
+            valid_paths.append(avro_path)
+        else:
+            invalid_names.append(os.path.relpath(path, staging_dir))
+        extra_paths.extend(extras)
+    return valid_paths, invalid_names, extra_paths
+
+
 def build_spark() -> SparkSession:
+    packages = os.getenv(
+        "SPARK_PACKAGES", "org.apache.spark:spark-avro_2.12:3.5.1"
+    )
+    ivy_dir = os.getenv("SPARK_IVY_DIR", "/var/lib/batch_to_mongo/ivy")
     spark = (
         SparkSession.builder.appName("batch-to-mongo")
+        .config("spark.jars.packages", packages)
+        .config("spark.jars.ivy", ivy_dir)
         .config("spark.sql.session.timeZone", "UTC")
         .getOrCreate()
     )
@@ -263,6 +322,7 @@ def main() -> None:
 
     state = load_state(state_path)
     processed_objects = state.get("processed_objects", {})
+    invalid_objects = state.get("invalid_objects", {})
 
     prefixes = [p.strip() for p in args.prefixes.split(",") if p.strip()]
     symbols = [s.strip() for s in args.symbols.split(",") if s.strip()]
@@ -272,6 +332,8 @@ def main() -> None:
 
     local_paths = []
     newly_processed: Dict[str, List[str]] = {}
+    invalid_names_by_prefix: Dict[str, List[str]] = {}
+    extra_paths: List[str] = []
 
     for prefix in prefixes:
         processed = set(processed_objects.get(prefix, []))
@@ -286,32 +348,43 @@ def main() -> None:
         logging.info("No new avro files found.")
         return
 
+    valid_paths, invalid_names, extra_paths = prepare_avro_paths(
+        local_paths, args.staging_dir
+    )
+    if invalid_names:
+        for name in invalid_names:
+            prefix = name.split("/", 1)[0]
+            invalid_names_by_prefix.setdefault(prefix, []).append(name)
+
     spark = None
     success = False
     try:
-        spark = build_spark()
-        df = spark.read.format("avro").load(local_paths)
-        df = parse_pubsub_df(df)
+        if valid_paths:
+            spark = build_spark()
+            df = spark.read.format("avro").load(valid_paths)
+            df = parse_pubsub_df(df)
 
-        tweets = extract_tweets(df)
-        prices = extract_prices(df, symbols)
+            tweets = extract_tweets(df)
+            prices = extract_prices(df, symbols)
 
-        raw_tweets = prepare_raw_tweets(tweets)
-        raw_prices = prepare_raw_prices(prices)
-        metrics = build_windowed_metrics(tweets, prices, args.window_minutes)
+            raw_tweets = prepare_raw_tweets(tweets)
+            raw_prices = prepare_raw_prices(prices)
+            metrics = build_windowed_metrics(tweets, prices, args.window_minutes)
 
-        write_df_to_mongo(
-            raw_tweets, args.mongo_uri, args.mongo_db, "raw_batch_tweets"
-        )
-        write_df_to_mongo(
-            raw_prices, args.mongo_uri, args.mongo_db, "raw_batch_prices"
-        )
-        write_df_to_mongo(
-            metrics,
-            args.mongo_uri,
-            args.mongo_db,
-            "raw_batch_prices_with_tweets",
-        )
+            write_df_to_mongo(
+                raw_tweets, args.mongo_uri, args.mongo_db, "raw_batch_tweets"
+            )
+            write_df_to_mongo(
+                raw_prices, args.mongo_uri, args.mongo_db, "raw_batch_prices"
+            )
+            write_df_to_mongo(
+                metrics,
+                args.mongo_uri,
+                args.mongo_db,
+                "raw_batch_prices_with_tweets",
+            )
+        else:
+            logging.warning("No valid Avro files found. Skipping Spark processing.")
 
         success = True
     finally:
@@ -323,9 +396,15 @@ def main() -> None:
             existing = set(processed_objects.get(prefix, []))
             existing.update(names)
             processed_objects[prefix] = sorted(existing)
+        for prefix, names in invalid_names_by_prefix.items():
+            existing = set(invalid_objects.get(prefix, []))
+            existing.update(names)
+            invalid_objects[prefix] = sorted(existing)
         state["processed_objects"] = processed_objects
+        if invalid_objects:
+            state["invalid_objects"] = invalid_objects
         save_state(state_path, state)
-        cleanup_files(local_paths)
+        cleanup_files(local_paths + extra_paths)
 
 
 if __name__ == "__main__":

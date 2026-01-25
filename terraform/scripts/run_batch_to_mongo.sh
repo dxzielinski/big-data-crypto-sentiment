@@ -18,11 +18,15 @@ STATE_DIR="${STATE_DIR:-/var/lib/batch_to_mongo}"
 STAGING_DIR="${STAGING_DIR:-$STATE_DIR/staging}"
 WINDOW_MINUTES="${WINDOW_MINUTES:-30}"
 SYMBOLS="${SYMBOLS:-ETH,SOL,FTM,SHIB}"
+SPARK_PACKAGES="${SPARK_PACKAGES:-org.apache.spark:spark-avro_2.12:3.5.1}"
+SPARK_IVY_DIR="${SPARK_IVY_DIR:-$STATE_DIR/ivy}"
 
 mkdir -p "$STATE_DIR" "$STAGING_DIR"
 
 export JAVA_HOME="/usr/lib/jvm/java-17-openjdk-amd64"
 export PYSPARK_PYTHON=python3
+export SPARK_PACKAGES
+export SPARK_IVY_DIR
 
 python3 /opt/batch/batch_to_mongo.py \
   --bucket "$BATCH_BUCKET" \
