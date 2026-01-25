@@ -37,7 +37,7 @@ TARGET_SYMBOLS = ["ETH", "SOL", "FTM", "SHIB"]
 ARIMA_MODELS_GCS_URI = (
     "gs://big-data-crypto-sentiment-test-arima-models/models/arima_models.joblib"
 )
-HF_MODEL_NAME = "cardiffnlp/twitter-roberta-base-sentiment-latest"
+HF_MODEL_NAME = "Harsha901/tinybert-imdb-sentiment-analysis-model"
 
 
 def _parse_rfc3339_timestamp(value: Optional[str]) -> Optional[datetime]:
