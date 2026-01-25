@@ -1,162 +1,204 @@
-﻿import os
+﻿# coding=utf-8
+
+import os
 import json
 import time
+import datetime
 import requests
-from datetime import datetime, timezone
 from dotenv import load_dotenv
 from google.cloud import pubsub_v1
-from google.cloud import secretmanager
+import random
 
-PROJECT_ID = os.getenv("GCP_PROJECT_ID")
-TOPIC_ID = os.getenv("PUBSUB_TOPIC_ID")
-SECRET_ID = "twitter_api_key"
+# Wczytanie zmiennych z .env (działa lokalnie; w Dockerze możesz użyć env albo env-file)
+load_dotenv()
 
-def get_secret(project_id: str, secret_id: str, version_id: str = "latest") -> str:
-    """
-    Accesses the Secret Manager to retrieve the API Key.
-    """
-    
-    client = secretmanager.SecretManagerServiceClient()
-    name = f"projects/{project_id}/secrets/{secret_id}/versions/{version_id}"
+# --- GCP CONFIGURATION (z ENV, z sensownymi domyślnymi wartościami) ---
+PROJECT_ID = os.getenv("PROJECT_ID", "big-data-crypto-sentiment-test")
+TOPIC_ID = os.getenv("TOPIC_ID", "crypto-tweets-stream")
 
-    try:
-        response = client.access_secret_version(request={"name": name})
-        payload = response.payload.data.decode("UTF-8")
-        print("Successfully loaded Secret Manager secret")
-        return payload
-    except Exception as e:
-        raise RuntimeError(f"Failed to fetch secret {secret_id}: {e}")
-
-API_KEY = get_secret(PROJECT_ID, SECRET_ID)
-
-if not all([API_KEY, PROJECT_ID, TOPIC_ID]):
-    raise ValueError("Missing environment variables. Check your .env file.")
+# --- TWITTER API CONFIGURATION ---
+API_KEY = os.getenv("API_KEY")
+if not API_KEY:
+    raise ValueError("Missing API_KEY! Set it as an environment variable API_KEY=...")
 
 TWITTER_URL = "https://api.twitterapi.io/twitter/tweet/advanced_search"
-TWITTER_DATE_FORMAT = "%a %b %d %H:%M:%S %z %Y"
+
+# --- PUB/SUB CLIENT (global, wykorzysta GOOGLE_APPLICATION_CREDENTIALS z ENV) ---
 
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(PROJECT_ID, TOPIC_ID)
 
-def normalize_tweet_data(tweet: dict, crypto_symbol: str) -> dict:
+def load_all_tweets(folder_path: str, symbols):
     """
-    Cleans the tweet data and generates time formats for downstream systems
+    Wczytuje WSZYSTKIE tweety ze wszystkich plików JSON w folderze.
+    Zwraca listę tweetów, gdzie każdy tweet ma dodane simulated_crypto.
     """
-    raw_date = tweet.get("createdAt")
-    
-    # Initialize default times (now) in case parsing fails
-    now = datetime.now(timezone.utc)
-    dt_obj = now
 
-    try:
-        if raw_date:
-            dt_obj = datetime.strptime(raw_date, TWITTER_DATE_FORMAT)
-    except (ValueError, TypeError):
-        print(f"[WARN] Could not parse date: {raw_date}. Using current time.")
-        dt_obj = now
+    all_tweets = []
 
-    # Flexible time format
-    # 1. For BigQuery (likes ISO strings) & Dataflow Attributes (RFC 3339)
-    iso_format = dt_obj.astimezone(timezone.utc).isoformat().replace("+00:00", "Z")
-    
-    # 2. For MongoDB (likes Int64 milliseconds)
-    timestamp_ms = int(dt_obj.timestamp() * 1000)
-    timestamp_sec = int(dt_obj.timestamp())
+    print(f"\n--- Ładowanie danych JSON z folderu: {folder_path} ---")
 
-    return {
-        # IDs & Content
-        "id": tweet.get("id"),
-        "text": tweet.get("text"),
-        "author_id": tweet.get("author", {}).get("id"), # Safe access if author missing
-        "crypto_key": crypto_symbol, # Partition key for Dataflow
-        
-        # Universal Time Formats
-        "created_at_raw": raw_date,
-        "created_at_iso": iso_format,  # <--- Use this for BigQuery
-        "timestamp_ms": timestamp_ms,  # <--- Use this for MongoDB
-        "timestamp_sec": timestamp_sec 
-    }
+    for filename in os.listdir(folder_path):
+        if not filename.endswith(".json"):
+            continue
 
-def fetch_tweets_for_symbol(symbol: str, limit: int = 20) -> list:
+        crypto = filename[:3].upper()     # np. ETH_2025.json → "ETH"
+        if(crypto == "SHI"): crypto = "SHIB"
+        if(crypto in symbols):
+            file_path = os.path.join(folder_path, filename)
+
+            print(f"→ Czytam plik: {filename}")
+
+            try:
+                with open(file_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+
+            except Exception as e:
+                print(f"[ERROR] Nie można odczytać pliku {filename}: {e}")
+                continue
+
+            # Obsługa formatu list lub dict
+            if isinstance(data, dict):
+                tweets = data.get("tweets", [])
+            elif isinstance(data, list):
+                tweets = data
+            else:
+                print(f"[WARNING] Nieznany format pliku {filename}, pomijam.")
+                continue
+
+            # Każdy tweet → dict + simulated_crypto
+            for tw in tweets:
+                if isinstance(tw, str):
+                    tw = {"text": tw}
+                tw["simulated_crypto"] = crypto
+                all_tweets.append(tw)
+
+    print(f"✓ Załadowano łącznie {len(all_tweets)} tweetów.\n")
+    return all_tweets
+
+
+def fetch_tweets_for_symbol(symbol: str, limit: int = 50):
     """
-    Fetches tweets specifically for one cryptocurrency symbol.
+    Pobiera tweety dla danej kryptowaluty z API (np. 'SHIB', 'ETH').
     """
-    # Time Window Logic (Last 60 seconds)
-    now_ts = int(time.time())
-    window_size = 60
-    since_ts = now_ts - window_size
-
-    # Query: symbol OR hashtag, English only, no retweets
-    query = f"(${symbol} OR #{symbol}) lang:en since_time:{since_ts} -filter:retweets"
+    query = f"#{symbol} lang:en -filter:retweets"
 
     headers = {
         "X-API-Key": API_KEY,
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
     }
 
     params = {
         "query": query,
         "limit": limit,
-        "include_user_data": "true" 
+        "include_user_data": False,
     }
-
-    print(f"[{symbol}] Fetching tweets since {since_ts}...")
 
     try:
         response = requests.get(TWITTER_URL, params=params, headers=headers, timeout=10)
         response.raise_for_status()
-        
-        data = response.json()
-        raw_tweets = data.get("tweets", [])
-        
-        if not raw_tweets:
-            print(f"[{symbol}] No new tweets found.")
-            return []
-
-        # Process tweets using the normalizer function
-        processed_tweets = [normalize_tweet_data(t, symbol) for t in raw_tweets]
-        print(f"[{symbol}] Found {len(processed_tweets)} valid tweets.")
-        return processed_tweets
-
     except requests.exceptions.RequestException as e:
-        print(f"[ERROR] API request failed for {symbol}: {e}")
-        return []
-    except Exception as e:
-        print(f"[ERROR] Unexpected error processing {symbol}: {e}")
+        print(f"[API ERROR] Failed to fetch tweets for {symbol}: {e}")
         return []
 
-def publish_to_pubsub(tweet: dict):
+    data = response.json()
+    tweets = data.get("tweets", [])
+    print(f"Fetched {len(tweets)} tweets for {symbol}")
+    return tweets
+
+
+def publish_tweet_to_pubsub(tweet: dict, crypto: str):
     """
-    Publishes a single tweet to Pub/Sub with strict attributes for Dataflow.
+    Publikuje pojedynczy tweet do Pub/Sub.
+    Dodaje simulated_crypto i timestamp jako atrybuty.
     """
+    tweet["simulated_crypto"] = crypto
+
     try:
         message_data = json.dumps(tweet).encode("utf-8")
-        
+    except Exception as e:
+        print(f"[SERIALIZATION ERROR] Could not serialize tweet: {e}")
+        return
+
+    current_time = datetime.datetime.now(datetime.timezone.utc).isoformat()
+    attributes = {
+        "timestamp": current_time,
+        "simulated_crypto": crypto,
+    }
+
+    future = publisher.publish(topic_path, message_data, **attributes)
+    try:
+        msg_id = future.result(timeout=10)
+        print(f"Published tweet ({crypto}). Message ID: {msg_id}")
+    except Exception as e:
+        print(f"[PUBSUB ERROR] Failed to publish tweet: {e}")
+
+
+def fetch_and_publish_once(crypto: str, limit: int = 50):
+    """
+    Jeden cykl:
+      1. pobierz tweety dla danej kryptowaluty
+      2. od razu opublikuj każdy tweet do Pub/Sub
+    """
+    tweets = fetch_tweets_for_symbol(crypto, limit=limit)
+
+    for tweet in tweets:
+        if isinstance(tweet, str):
+            tweet = {"text": tweet}
+        publish_tweet_to_pubsub(tweet, crypto)
+
+
+def publish_stream(all_tweets, INTERVAL_SECONDS: float, limit:int):
+    """
+    Publikuje tweety jeden po drugim z opóźnieniem INTERVAL_SECONDS.
+    """
+
+    print(f"--- Start publikowania do Pub/Sub co {INTERVAL_SECONDS} sekund ---\n")
+
+    i = 0
+    
+
+    random.shuffle(all_tweets)
+
+    for idx, tweet in enumerate(all_tweets, start=1):
+
+        try:
+            message_data = json.dumps(tweet).encode("utf-8")
+        except Exception as e:
+            print(f"[ERROR] Serializacja tweeta nieudana: {e}")
+            continue
+
+        timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
+
         attributes = {
-            "crypto_key": tweet["crypto_key"],
-            "event_timestamp": tweet["created_at_iso"]
+            "timestamp": timestamp,
+            "simulated_crypto": tweet["simulated_crypto"]
         }
 
         future = publisher.publish(topic_path, message_data, **attributes)
-        
-    except Exception as e:
-        print(f"[PUBSUB ERROR] Could not publish tweet {tweet.get('id')}: {e}")
+        msg_id = future.result()
 
-def run_pipeline(cryptos_list: list):
+        print(f"[{timestamp}] Opublikowano {idx}/{limit} → {tweet['simulated_crypto']} "
+              f"(message_id={msg_id})")
+        i+=1
+        if(i >= limit): break
+        time.sleep(INTERVAL_SECONDS)
 
-    print(f"--- Starting Cycle: {datetime.now().isoformat()} ---")
-    for crypto in cryptos_list:
-        tweets = fetch_tweets_for_symbol(crypto)
-        
-        for tweet in tweets:
-            publish_to_pubsub(tweet)
-            
-    print("--- Cycle Finished ---\n")
-
-
-if __name__ == "__main__":
-    crypto_list = ["ETH", "SOL", "FTM", "SHIB"]
+    print("\n--- Publikacja zakończona. ---")
     
+def main():
+    # Możesz też czytać listę symboli z ENV, np. SYMBOLS="SHIB,ETH,SOL"
+    symbols_env = os.getenv("SYMBOLS")
 
-    run_pipeline(crypto_list)
-    time.sleep(30)
+    if symbols_env:
+        symbols = [s.strip() for s in symbols_env.split(",") if s.strip()]
+    else:
+        symbols = ["SHIB", "ETH", "SOL", "FTM", "BTC"]
+    DATA_FOLDER = "data"
+    
+    tweets = load_all_tweets(DATA_FOLDER, symbols)
+    publish_stream(tweets,5,5)
+    
+if __name__ == "__main__":
+    main()
+
