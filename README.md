@@ -47,6 +47,25 @@ To stop vm:
 gcloud compute instances stop big-data-crypto-vm --zone=europe-central2-a
 ```
 
+Running dataflow job:
+
+```bash
+PIPELINE_SCRIPT=stream_join.py \
+MONGO_URI="mongodb://10.186.0.37:27017" \
+MONGO_DB="crypto_analysis" \
+bash deploy_dataflow.sh
+```
+
+Running batch model:
+
+```bash
+gcloud compute ssh big-data-crypto-vm --zone=europe-central2-a -- -L 27017:localhost:27017
+MONGO_URI="mongodb://localhost:27017" \
+      MONGO_DB="crypto_analysis" \
+      MONGO_COLLECTION="raw_prices" \
+      bash arima_train.sh
+```
+
 ## Coincap API
 
 Price API call

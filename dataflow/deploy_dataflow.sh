@@ -16,10 +16,7 @@ if [[ -n "$MONGO_URI" ]]; then
   MONGO_ARGS+=(--mongo_uri "$MONGO_URI" --mongo_db "$MONGO_DB")
 fi
 
-ARIMA_ARGS=()
-if [[ "$PIPELINE_SCRIPT" == "stream_join_old.py" ]]; then
-  ARIMA_ARGS+=(--arima_models_gcs_uri "$ARIMA_MODELS_GCS_URI")
-fi
+ARIMA_ARGS=(--arima_models_gcs_uri "$ARIMA_MODELS_GCS_URI")
 
 python3 "$PIPELINE_SCRIPT" \
   --runner DataflowRunner \

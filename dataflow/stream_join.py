@@ -1,9 +1,9 @@
 """
-Dataflow with ML models (Sentiment Analysis) - MongoDB output version.
-ARIMA forecasting removed, but argument retained for compatibility.
+Dataflow with ML models (Sentiment Analysis + ARIMA forecasts) - MongoDB output version.
 """
 
 import argparse
+import io
 import json
 import logging
 from datetime import datetime, timezone
@@ -12,7 +12,9 @@ from typing import Optional
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions, StandardOptions
 from apache_beam import window
+from apache_beam.io.filesystems import FileSystems
 
+import joblib
 import pymongo
 from transformers import pipeline
 
@@ -131,6 +133,18 @@ def _tweet_sentiment_to_mongo(record: dict) -> dict:
         "sentiment_magnitude": _coerce_float(record.get("sentiment_magnitude")),
         "sentiment_label": record.get("sentiment_label"),
         "action_signal": record.get("action_signal"),
+    }
+
+
+def _price_forecast_to_mongo(record: dict) -> dict:
+    return {
+        "event_timestamp": record.get("event_timestamp"),
+        "symbol": record.get("symbol"),
+        "price": _coerce_float(record.get("price")),
+        "price_timestamp": _coerce_int(record.get("price_timestamp")),
+        "arima_next_price_forecast": _coerce_float(
+            record.get("arima_next_price_forecast")
+        ),
     }
 
 
@@ -332,6 +346,58 @@ class HfSentimentFn(beam.DoFn):
         yield out
 
 
+class ArimaForecastFn(beam.DoFn):
+    def __init__(self, model_uri: str):
+        self._model_uri = model_uri
+        self._models = None
+        self._load_error = None
+
+    def setup(self):
+        if not self._model_uri:
+            self._models = {}
+            return
+        try:
+            with FileSystems.open(self._model_uri) as handle:
+                data = handle.read()
+            self._models = joblib.load(io.BytesIO(data))
+            if not isinstance(self._models, dict):
+                raise ValueError("Expected a dict of models in joblib bundle.")
+        except Exception as exc:
+            self._models = {}
+            self._load_error = str(exc)
+            logging.exception("Failed to load ARIMA models from %s", self._model_uri)
+
+    def process(self, element, ts=beam.DoFn.TimestampParam):
+        symbol, price_data = element
+        out = {
+            "event_timestamp": ts.to_utc_datetime().strftime("%Y-%m-%d %H:%M:%S"),
+            "symbol": symbol,
+            "price": price_data.get("price"),
+            "price_timestamp": price_data.get("timestamp"),
+            "arima_next_price_forecast": None,
+        }
+
+        if not self._models:
+            if self._load_error:
+                out["arima_next_price_forecast"] = None
+            yield out
+            return
+
+        model = self._models.get(symbol)
+        price = _coerce_float(price_data.get("price"))
+        if model is None or price is None:
+            yield out
+            return
+
+        try:
+            model.update([price])
+            forecast = model.predict(n_periods=1)[0]
+            out["arima_next_price_forecast"] = float(forecast)
+        except Exception:
+            logging.exception("ARIMA forecast failed for %s", symbol)
+        yield out
+
+
 class AnalyzeBatchFn(beam.DoFn):
     def process(self, element, window=beam.DoFn.WindowParam):
         symbol, data = element
@@ -431,6 +497,19 @@ def run():
             mongo_uri,
             mongo_db,
             _raw_price_kv_to_mongo,
+        )
+
+        price_forecasts = prices_kv | "ArimaForecasts" >> beam.ParDo(
+            ArimaForecastFn(known_args.arima_models_gcs_uri)
+        )
+
+        _write_to_mongo(
+            price_forecasts,
+            "PriceForecastsMongo",
+            "price_forecasts",
+            mongo_uri,
+            mongo_db,
+            _price_forecast_to_mongo,
         )
 
         windowed_prices = prices_kv | "WindowPrices" >> beam.WindowInto(
