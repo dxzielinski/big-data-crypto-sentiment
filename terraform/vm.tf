@@ -244,6 +244,18 @@ const priceForecastsSchema = {
 ensureCollection("raw_tweets", rawTweetsSchema);
 ensureCollection("raw_prices", rawPricesSchema);
 ensureCollection("crypto_prices_with_tweets", windowedMetricsSchema);
+
+database.getCollection("raw_tweets").createIndex(
+  { "created_at_iso": 1 }, 
+  { expireAfterSeconds: 9800 }
+);
+
+database.getCollection("crypto_prices_with_tweets").createIndex(
+  { "event_timestamp": 1 }, 
+  { expireAfterSeconds: 9800 }
+);
+
+
 ensureCollection("tweet_sentiment", tweetSentimentSchema);
 ensureCollection("price_forecasts", priceForecastsSchema);
 EOF
