@@ -221,6 +221,7 @@ const tweetSentimentSchema = {
       sentiment_score: { bsonType: ["double", "null"] },
       sentiment_magnitude: { bsonType: ["double", "null"] },
       sentiment_label: { bsonType: ["string", "null"] },
+      action_signal: { bsonType: ["string", "null"] },
     },
   },
 };

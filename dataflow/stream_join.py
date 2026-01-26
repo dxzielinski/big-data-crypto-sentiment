@@ -130,6 +130,7 @@ def _tweet_sentiment_to_mongo(record: dict) -> dict:
         "sentiment_score": _coerce_float(record.get("sentiment_score")),
         "sentiment_magnitude": _coerce_float(record.get("sentiment_magnitude")),
         "sentiment_label": record.get("sentiment_label"),
+        "action_signal": record.get("action_signal"),
     }
 
 
@@ -267,6 +268,7 @@ class HfSentimentFn(beam.DoFn):
             "sentiment_score": None,
             "sentiment_magnitude": None,
             "sentiment_label": None,
+            "action_signal": None,
         }
 
         if not text:
@@ -325,6 +327,7 @@ class HfSentimentFn(beam.DoFn):
 
         label_scores = {"NEGATIVE": neg, "NEUTRAL": neu, "POSITIVE": pos}
         out["sentiment_label"] = max(label_scores, key=label_scores.get)
+        out["action_signal"] = "buy" if out["sentiment_score"] > 0 else "sell"
 
         yield out
 
