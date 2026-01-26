@@ -1,6 +1,7 @@
 ﻿# coding=utf-8
 
 import os
+import re
 import json
 import time
 import datetime
@@ -27,6 +28,12 @@ TWITTER_URL = "https://api.twitterapi.io/twitter/tweet/advanced_search"
 
 publisher = pubsub_v1.PublisherClient()
 topic_path = publisher.topic_path(PROJECT_ID, TOPIC_ID)
+JAPANESE_REGEX = re.compile(r'[\u3040-\u30FF\u4E00-\u9FFF]')
+
+def contains_japanese(text: str) -> bool:
+    if not text:
+        return False
+    return bool(JAPANESE_REGEX.search(text))
 
 def load_all_tweets(folder_path: str, symbols):
     """
@@ -35,8 +42,6 @@ def load_all_tweets(folder_path: str, symbols):
     """
 
     all_tweets = []
-
-    print(f"\n--- Ładowanie danych JSON z folderu: {folder_path} ---")
 
     for filename in os.listdir(folder_path):
         if not filename.endswith(".json"):
@@ -47,14 +52,14 @@ def load_all_tweets(folder_path: str, symbols):
         if(crypto in symbols):
             file_path = os.path.join(folder_path, filename)
 
-            print(f"→ Czytam plik: {filename}")
+            print(f"→ I read file: {filename}")
 
             try:
                 with open(file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
 
             except Exception as e:
-                print(f"[ERROR] Nie można odczytać pliku {filename}: {e}")
+                print(f"[ERROR] Error {filename}: {e}")
                 continue
 
             # Obsługa formatu list lub dict
@@ -63,17 +68,17 @@ def load_all_tweets(folder_path: str, symbols):
             elif isinstance(data, list):
                 tweets = data
             else:
-                print(f"[WARNING] Nieznany format pliku {filename}, pomijam.")
+                print(f"[WARNING] Unknown file format {filename}.")
                 continue
 
-            # Każdy tweet → dict + simulated_crypto
+            # Każdy tweet → dict + crypto_key
             for tw in tweets:
                 if isinstance(tw, str):
                     tw = {"text": tw}
-                tw["simulated_crypto"] = crypto
+                tw["crypto_key"] = crypto
                 all_tweets.append(tw)
 
-    print(f"✓ Załadowano łącznie {len(all_tweets)} tweetów.\n")
+    print(f" Number of tweets {len(all_tweets)}.\n")
     return all_tweets
 
 
@@ -110,20 +115,25 @@ def fetch_tweets_for_symbol(symbol: str, limit: int = 50):
 def publish_tweet_to_pubsub(tweet: dict, crypto: str):
     """
     Publikuje pojedynczy tweet do Pub/Sub.
-    Dodaje simulated_crypto i timestamp jako atrybuty.
+    Dodaje crypto_key i timestamp jako atrybuty.
     """
-    tweet["simulated_crypto"] = crypto
+    tweet["crypto_key"] = crypto
 
     try:
         message_data = json.dumps(tweet).encode("utf-8")
     except Exception as e:
         print(f"[SERIALIZATION ERROR] Could not serialize tweet: {e}")
         return
+    
 
+    raw_json = json.dumps(tweet, ensure_ascii=False)
+    if contains_japanese(raw_json):
+        print(f"[SKIPPED] Japanese characters detected → not publishing ({crypto})")
+        return
     current_time = datetime.datetime.now(datetime.timezone.utc).isoformat()
     attributes = {
         "timestamp": current_time,
-        "simulated_crypto": crypto,
+        "crypto_key": crypto,
     }
 
     future = publisher.publish(topic_path, message_data, **attributes)
@@ -153,7 +163,7 @@ def publish_stream(all_tweets, INTERVAL_SECONDS: float, limit:int):
     Publikuje tweety jeden po drugim z opóźnieniem INTERVAL_SECONDS.
     """
 
-    print(f"--- Start publikowania do Pub/Sub co {INTERVAL_SECONDS} sekund ---\n")
+    print(f"--- Start stream, interval: {INTERVAL_SECONDS} seconds ---\n")
 
     i = 0
     
@@ -165,39 +175,39 @@ def publish_stream(all_tweets, INTERVAL_SECONDS: float, limit:int):
         try:
             message_data = json.dumps(tweet).encode("utf-8")
         except Exception as e:
-            print(f"[ERROR] Serializacja tweeta nieudana: {e}")
+            print(f"[ERROR] {e}")
             continue
 
         timestamp = datetime.datetime.now(datetime.timezone.utc).isoformat()
 
         attributes = {
-            "timestamp": timestamp,
-            "simulated_crypto": tweet["simulated_crypto"]
+            "event_timestamp": timestamp,
+            "crypto_key": tweet["crypto_key"]
         }
 
         future = publisher.publish(topic_path, message_data, **attributes)
         msg_id = future.result()
 
-        print(f"[{timestamp}] Opublikowano {idx}/{limit} → {tweet['simulated_crypto']} "
+        print(f"[{timestamp}] Published {idx}/{limit} → {tweet['crypto_key']} "
               f"(message_id={msg_id})")
+
         i+=1
         if(i >= limit): break
         time.sleep(INTERVAL_SECONDS)
 
-    print("\n--- Publikacja zakończona. ---")
     
 def main():
-    # Możesz też czytać listę symboli z ENV, np. SYMBOLS="SHIB,ETH,SOL"
-    symbols_env = os.getenv("SYMBOLS")
+    while True:
+        symbols_env = os.getenv("SYMBOLS")
 
-    if symbols_env:
-        symbols = [s.strip() for s in symbols_env.split(",") if s.strip()]
-    else:
-        symbols = ["SHIB", "ETH", "SOL", "FTM", "BTC"]
-    DATA_FOLDER = "data"
-    
-    tweets = load_all_tweets(DATA_FOLDER, symbols)
-    publish_stream(tweets,5,5)
+        if symbols_env:
+            symbols = [s.strip() for s in symbols_env.split(",") if s.strip()]
+        else:
+            symbols = ["SHIB", "ETH", "SOL", "FTM", "BTC"]
+        DATA_FOLDER = "data"
+        
+        tweets = load_all_tweets(DATA_FOLDER, symbols)
+        publish_stream(tweets,4,20)
     
 if __name__ == "__main__":
     main()
