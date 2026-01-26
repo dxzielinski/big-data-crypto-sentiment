@@ -1,19 +1,19 @@
+"""
+Dataflow with ML models (Sentiment Analysis) - MongoDB output version.
+ARIMA forecasting removed, but argument retained for compatibility.
+"""
+
 import argparse
 import json
 import logging
-import io
 from datetime import datetime, timezone
 from typing import Optional
 
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions, StandardOptions
 from apache_beam import window
-from apache_beam.io.filesystems import FileSystems
 
-import joblib
 import pymongo
-import pmdarima as pm
-
 from transformers import pipeline
 
 
@@ -21,19 +21,8 @@ PROJECT_ID = "big-data-crypto-sentiment-test"
 SUBSCRIPTION_TWEETS = f"projects/{PROJECT_ID}/subscriptions/crypto-tweets-stream-sub"
 SUBSCRIPTION_PRICES = f"projects/{PROJECT_ID}/subscriptions/crypto-prices-stream-sub"
 
-# EXISTING TABLES (DO NOT CHANGE)
-BQ_TABLE_ANALYSIS = f"{PROJECT_ID}:crypto_analysis.crypto_prices_with_tweets"
-BQ_RAW_TWEETS = f"{PROJECT_ID}:crypto_analysis.raw_tweets"
-BQ_RAW_PRICES = f"{PROJECT_ID}:crypto_analysis.raw_prices"
-
-# NEW TABLES (SAFE: do not affect existing schemas)
-BQ_TWEET_SENTIMENT = f"{PROJECT_ID}:crypto_analysis.tweet_sentiment"
-BQ_PRICE_FORECASTS = f"{PROJECT_ID}:crypto_analysis.price_forecasts"
-
 TARGET_SYMBOLS = ["ETH", "SOL", "FTM", "SHIB"]
-
-# ARIMA model bundle stored in GCS
-# Bundle format: joblib dict like {"ETH": <pmdarima model>, "SOL": <pmdarima model>, ...}
+# ARIMA model bundle stored in GCS (re-added constant)
 ARIMA_MODELS_GCS_URI = (
     "gs://big-data-crypto-sentiment-test-arima-models/models/arima_models.joblib"
 )
@@ -144,18 +133,6 @@ def _tweet_sentiment_to_mongo(record: dict) -> dict:
     }
 
 
-def _price_forecast_to_mongo(record: dict) -> dict:
-    return {
-        "event_timestamp": record.get("event_timestamp"),
-        "symbol": record.get("symbol"),
-        "price": _coerce_float(record.get("price")),
-        "price_timestamp": _coerce_int(record.get("price_timestamp")),
-        "arima_next_price_forecast": _coerce_float(
-            record.get("arima_next_price_forecast")
-        ),
-    }
-
-
 def _is_not_none(value) -> bool:
     return value is not None
 
@@ -212,11 +189,6 @@ class MongoWriteFn(beam.DoFn):
 
 
 class ParseTweetFn(beam.DoFn):
-    """
-    Parses raw Tweet Pub/Sub messages.
-    Output: (Symbol, TweetDict)
-    """
-
     def process(self, element):
         try:
             record = json.loads(element.decode("utf-8"))
@@ -228,11 +200,6 @@ class ParseTweetFn(beam.DoFn):
 
 
 class ParseAndExplodePriceFn(beam.DoFn):
-    """
-    Parses Price Pub/Sub messages and SPLITS them.
-    Output: (Symbol, {'price': 123.45, 'timestamp': 17000...})
-    """
-
     def process(self, element):
         try:
             record = json.loads(element.decode("utf-8"))
@@ -247,13 +214,6 @@ class ParseAndExplodePriceFn(beam.DoFn):
 
 
 class HfSentimentFn(beam.DoFn):
-    """
-    Hugging Face CardiffNLP sentiment per tweet.
-
-    Writes to NEW table only (does not alter existing join/analysis output).
-    Sentiment score is in [-1.0, 1.0], magnitude in [0.0, 1.0].
-    """
-
     def __init__(self, model_name: str = HF_MODEL_NAME, max_length: int = 512):
         self._model_name = model_name
         self._max_length = max_length
@@ -261,7 +221,6 @@ class HfSentimentFn(beam.DoFn):
         self._use_top_k = None
 
     def setup(self):
-        # Load model/tokenizer once per worker
         self._pipeline = pipeline(
             "sentiment-analysis",
             model=self._model_name,
@@ -301,7 +260,6 @@ class HfSentimentFn(beam.DoFn):
         symbol, record = element
         text = (record.get("text") or "").strip()
 
-        # Keep it minimal; don’t mutate the original record (used elsewhere).
         out = {
             "event_timestamp": ts.to_utc_datetime().strftime("%Y-%m-%d %H:%M:%S"),
             "symbol": symbol,
@@ -315,7 +273,6 @@ class HfSentimentFn(beam.DoFn):
             yield out
             return
 
-        # Defensive truncation for very long text
         if len(text) > 10000:
             text = text[:10000]
             out["text"] = text
@@ -326,33 +283,21 @@ class HfSentimentFn(beam.DoFn):
             if self._use_top_k is None:
                 try:
                     result = self._pipeline(
-                        text,
-                        truncation=True,
-                        max_length=self._max_length,
-                        top_k=None,
+                        text, truncation=True, max_length=self._max_length, top_k=None
                     )
                     self._use_top_k = True
                 except TypeError:
                     result = self._pipeline(
-                        text,
-                        truncation=True,
-                        max_length=self._max_length,
-                        return_all_scores=True,
+                        text, truncation=True, max_length=self._max_length, return_all_scores=True
                     )
                     self._use_top_k = False
             elif self._use_top_k:
                 result = self._pipeline(
-                    text,
-                    truncation=True,
-                    max_length=self._max_length,
-                    top_k=None,
+                    text, truncation=True, max_length=self._max_length, top_k=None
                 )
             else:
                 result = self._pipeline(
-                    text,
-                    truncation=True,
-                    max_length=self._max_length,
-                    return_all_scores=True,
+                    text, truncation=True, max_length=self._max_length, return_all_scores=True
                 )
         except Exception:
             yield out
@@ -384,57 +329,7 @@ class HfSentimentFn(beam.DoFn):
         yield out
 
 
-class ArimaForecastFn(beam.DoFn):
-    """
-    Loads pre-trained pmdarima models from GCS once per worker.
-    Maintains a per-symbol model in-memory in this DoFn instance and updates it per observation.
-    (No Beam state APIs used -> avoids ValueStateSpec import issues.)
-    """
-
-    def __init__(self, model_bundle_gcs_uri: str):
-        self._model_bundle_gcs_uri = model_bundle_gcs_uri
-        self._models_by_symbol = {}
-
-    def setup(self):
-        # Load dict(symbol -> model) from GCS
-        with FileSystems.open(self._model_bundle_gcs_uri) as f:
-            data = f.read()
-        self._models_by_symbol = joblib.load(io.BytesIO(data))
-
-    def process(self, element, ts=beam.DoFn.TimestampParam):
-        symbol, price_data = element
-        price = float(price_data["price"])
-
-        model = self._models_by_symbol.get(symbol)
-        forecast = None
-
-        if model is not None:
-            try:
-                # Update model with the new observation
-                model.update([price])
-            except Exception:
-                pass
-
-            try:
-                # One-step ahead forecast
-                forecast = float(model.predict(n_periods=1)[0])
-            except Exception:
-                forecast = None
-
-            # Keep the updated model in memory for next elements
-            self._models_by_symbol[symbol] = model
-
-        yield {
-            "event_timestamp": ts.to_utc_datetime().strftime("%Y-%m-%d %H:%M:%S"),
-            "symbol": symbol,
-            "price": price,
-            "price_timestamp": price_data.get("timestamp"),
-            "arima_next_price_forecast": forecast,
-        }
-
-
 class AnalyzeBatchFn(beam.DoFn):
-    # IMPORTANT: UNCHANGED OUTPUT SCHEMA (no new columns)
     def process(self, element, window=beam.DoFn.WindowParam):
         symbol, data = element
         tweets = data["tweets"]
@@ -452,7 +347,6 @@ class AnalyzeBatchFn(beam.DoFn):
             avg_price = float(total_val / len(prices))
 
         tweet_count = len(tweets)
-
         tweet_texts = [t.get("text") for t in tweets]
 
         yield {
@@ -467,22 +361,10 @@ class AnalyzeBatchFn(beam.DoFn):
 
 def run():
     parser = argparse.ArgumentParser()
+    # Re-added the ARIMA models GCS URI argument
     parser.add_argument("--arima_models_gcs_uri", default=ARIMA_MODELS_GCS_URI)
-    parser.add_argument(
-        "--mongo_uri",
-        default=None,
-        help="MongoDB connection string, e.g. mongodb://10.128.0.5:27017",
-    )
-    parser.add_argument(
-        "--mongo_db",
-        default="crypto_analysis",
-        help="MongoDB database name to store the mirrored collections",
-    )
-    parser.add_argument(
-        "--nlp_language_hint",
-        default=None,
-        help="Optional BCP-47 language code, e.g. en",
-    )
+    parser.add_argument("--mongo_uri", default=None)
+    parser.add_argument("--mongo_db", default="crypto_analysis")
     known_args, pipeline_args = parser.parse_known_args()
 
     pipeline_options = PipelineOptions(pipeline_args)
@@ -501,19 +383,6 @@ def run():
             | "ParseTweets" >> beam.ParDo(ParseTweetFn())
         )
 
-        # Path A: Write Raw Archive (UNCHANGED)
-        (
-            tweets_kv
-            | "ExtractTweetRecord" >> beam.Map(lambda x: x[1])
-            | "WriteRawTweets"
-            >> beam.io.WriteToBigQuery(
-                BQ_RAW_TWEETS,
-                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
-                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
-                method="STREAMING_INSERTS",
-            )
-        )
-
         _write_to_mongo(
             tweets_kv,
             "RawTweetsMongo",
@@ -523,23 +392,12 @@ def run():
             _raw_tweet_kv_to_mongo,
         )
 
-        # NEW: Sentiment branch -> NEW table only
+        # Sentiment ML Branch
         tweet_sentiment = (
             tweets_kv
-            | "TweetSentimentNLP"
-            >> beam.ParDo(HfSentimentFn())
+            | "TweetSentimentNLP" >> beam.ParDo(HfSentimentFn())
         )
-        (
-            tweet_sentiment
-            | "WriteTweetSentiment"
-            >> beam.io.WriteToBigQuery(
-                BQ_TWEET_SENTIMENT,
-                schema="event_timestamp:STRING,symbol:STRING,text:STRING,sentiment_score:FLOAT,sentiment_magnitude:FLOAT,sentiment_label:STRING",
-                create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
-                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
-                method="STREAMING_INSERTS",
-            )
-        )
+        
         _write_to_mongo(
             tweet_sentiment,
             "TweetSentimentMongo",
@@ -549,7 +407,6 @@ def run():
             _tweet_sentiment_to_mongo,
         )
 
-        # Path B: Window for Analysis (UNCHANGED logic: uses original tweets_kv)
         windowed_tweets = tweets_kv | "WindowTweets" >> beam.WindowInto(
             window.FixedWindows(30)
         )
@@ -564,19 +421,6 @@ def run():
             | "ExplodePrices" >> beam.ParDo(ParseAndExplodePriceFn())
         )
 
-        # Raw archive (UNCHANGED)
-        (
-            prices_kv
-            | "FlattenPriceRecord" >> beam.Map(lambda x: {"symbol": x[0], **x[1]})
-            | "WriteRawPrices"
-            >> beam.io.WriteToBigQuery(
-                BQ_RAW_PRICES,
-                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
-                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
-                method="STREAMING_INSERTS",
-            )
-        )
-
         _write_to_mongo(
             prices_kv,
             "RawPricesMongo",
@@ -586,56 +430,17 @@ def run():
             _raw_price_kv_to_mongo,
         )
 
-        # NEW: ARIMA forecast branch -> NEW table only
-        price_forecasts = (
-            prices_kv
-            | "ARIMAForecast"
-            >> beam.ParDo(
-                ArimaForecastFn(model_bundle_gcs_uri=known_args.arima_models_gcs_uri)
-            )
-        )
-        (
-            price_forecasts
-            | "WritePriceForecasts"
-            >> beam.io.WriteToBigQuery(
-                BQ_PRICE_FORECASTS,
-                schema="event_timestamp:STRING,symbol:STRING,price:FLOAT,price_timestamp:INTEGER,arima_next_price_forecast:FLOAT",
-                create_disposition=beam.io.BigQueryDisposition.CREATE_IF_NEEDED,
-                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
-                method="STREAMING_INSERTS",
-            )
-        )
-        _write_to_mongo(
-            price_forecasts,
-            "PriceForecastsMongo",
-            "price_forecasts",
-            mongo_uri,
-            mongo_db,
-            _price_forecast_to_mongo,
-        )
-
-        # Window for Join/Analysis (UNCHANGED logic: uses original prices_kv)
         windowed_prices = prices_kv | "WindowPrices" >> beam.WindowInto(
             window.FixedWindows(30)
         )
 
-        # JOIN + ANALYZE (UNCHANGED output schema -> writes to EXISTING table safely)
+        # --- JOIN & ANALYSIS ---
         joined_data = (
             {"tweets": windowed_tweets, "prices": windowed_prices}
             | "JoinStreams" >> beam.CoGroupByKey()
             | "Analyze" >> beam.ParDo(AnalyzeBatchFn())
         )
 
-        (
-            joined_data
-            | "WriteAnalysisToBQ"
-            >> beam.io.WriteToBigQuery(
-                BQ_TABLE_ANALYSIS,
-                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
-                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
-                method="STREAMING_INSERTS",
-            )
-        )
         _write_to_mongo(
             joined_data,
             "WindowedMetricsMongo",
