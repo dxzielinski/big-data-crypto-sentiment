@@ -6,3 +6,5 @@ numpy
 pmdarima
 matplotlib
 db-dtypes
+pymongo==4.7.2
+pyspark

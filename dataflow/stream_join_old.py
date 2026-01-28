@@ -1,34 +1,27 @@
 """
-Dataflow with ML models (Sentiment Analysis + ARIMA forecasts) - MongoDB output version.
+Dataflow without online ML - helper for MongoDB sanity checking.
 """
 
 import argparse
-import io
 import json
 import logging
-from datetime import datetime, timezone
-from typing import Optional
-
 import apache_beam as beam
 from apache_beam.options.pipeline_options import PipelineOptions, StandardOptions
 from apache_beam import window
-from apache_beam.io.filesystems import FileSystems
+from datetime import datetime, timezone
+from typing import Optional
 
-import joblib
 import pymongo
-from transformers import pipeline
 
 
 PROJECT_ID = "big-data-crypto-sentiment-test"
 SUBSCRIPTION_TWEETS = f"projects/{PROJECT_ID}/subscriptions/crypto-tweets-stream-sub"
 SUBSCRIPTION_PRICES = f"projects/{PROJECT_ID}/subscriptions/crypto-prices-stream-sub"
 
-TARGET_SYMBOLS = ["ETH", "SOL", "FTM", "SHIB"]
-# ARIMA model bundle stored in GCS (re-added constant)
-ARIMA_MODELS_GCS_URI = (
-    "gs://big-data-crypto-sentiment-test-arima-models/models/arima_models.joblib"
-)
-HF_MODEL_NAME = "Harsha901/tinybert-imdb-sentiment-analysis-model"
+
+BQ_TABLE_ANALYSIS = f"{PROJECT_ID}:crypto_analysis.crypto_prices_with_tweets"
+BQ_RAW_TWEETS = f"{PROJECT_ID}:crypto_analysis.raw_tweets"
+BQ_RAW_PRICES = f"{PROJECT_ID}:crypto_analysis.raw_prices"
 
 
 def _parse_rfc3339_timestamp(value: Optional[str]) -> Optional[datetime]:
@@ -124,30 +117,6 @@ def _windowed_metrics_to_mongo(record: dict) -> Optional[dict]:
     }
 
 
-def _tweet_sentiment_to_mongo(record: dict) -> dict:
-    return {
-        "event_timestamp": record.get("event_timestamp"),
-        "symbol": record.get("symbol"),
-        "text": record.get("text"),
-        "sentiment_score": _coerce_float(record.get("sentiment_score")),
-        "sentiment_magnitude": _coerce_float(record.get("sentiment_magnitude")),
-        "sentiment_label": record.get("sentiment_label"),
-        "action_signal": record.get("action_signal"),
-    }
-
-
-def _price_forecast_to_mongo(record: dict) -> dict:
-    return {
-        "event_timestamp": record.get("event_timestamp"),
-        "symbol": record.get("symbol"),
-        "price": _coerce_float(record.get("price")),
-        "price_timestamp": _coerce_int(record.get("price_timestamp")),
-        "arima_next_price_forecast": _coerce_float(
-            record.get("arima_next_price_forecast")
-        ),
-    }
-
-
 def _is_not_none(value) -> bool:
     return value is not None
 
@@ -204,198 +173,40 @@ class MongoWriteFn(beam.DoFn):
 
 
 class ParseTweetFn(beam.DoFn):
+    """
+    Parses raw Tweet Pub/Sub messages.
+    Output: (Symbol, TweetDict)
+    """
+
     def process(self, element):
         try:
             record = json.loads(element.decode("utf-8"))
             symbol = record.get("crypto_key")
-            if symbol:
-                yield (symbol, record)
+            yield (symbol, record)
         except Exception:
-            return
+            pass
 
 
 class ParseAndExplodePriceFn(beam.DoFn):
+    """
+    Parses Price Pub/Sub messages and SPLITS them.
+    Output: (Symbol, {'price': 123.45, 'timestamp': 17000...})
+    """
+
     def process(self, element):
         try:
             record = json.loads(element.decode("utf-8"))
             ts = record.get("timestamp", 0)
 
-            for symbol in TARGET_SYMBOLS:
+            target_symbols = ["ETH", "SOL", "FTM", "SHIB"]
+
+            for symbol in target_symbols:
                 if symbol in record:
-                    price_data = {"price": float(record[symbol]), "timestamp": ts}
+                    price_data = {"price": record[symbol], "timestamp": ts}
                     yield (symbol, price_data)
+
         except Exception:
-            return
-
-
-class HfSentimentFn(beam.DoFn):
-    def __init__(self, model_name: str = HF_MODEL_NAME, max_length: int = 512):
-        self._model_name = model_name
-        self._max_length = max_length
-        self._pipeline = None
-        self._use_top_k = None
-
-    def setup(self):
-        self._pipeline = pipeline(
-            "sentiment-analysis",
-            model=self._model_name,
-            tokenizer=self._model_name,
-            device=-1,
-        )
-
-    @staticmethod
-    def _normalize_label(label: str) -> Optional[str]:
-        key = (label or "").strip().lower()
-        if key in ("label_0", "negative"):
-            return "NEGATIVE"
-        if key in ("label_1", "neutral"):
-            return "NEUTRAL"
-        if key in ("label_2", "positive"):
-            return "POSITIVE"
-        return None
-
-    def _extract_scores(self, result):
-        if isinstance(result, dict):
-            items = [result]
-        elif not result:
-            return {}
-        elif isinstance(result[0], list):
-            items = result[0]
-        else:
-            items = result
-
-        scores = {}
-        for item in items:
-            label = self._normalize_label(item.get("label", ""))
-            if label:
-                scores[label] = float(item.get("score", 0.0))
-        return scores
-
-    def process(self, element, ts=beam.DoFn.TimestampParam):
-        symbol, record = element
-        text = (record.get("text") or "").strip()
-
-        out = {
-            "event_timestamp": ts.to_utc_datetime().strftime("%Y-%m-%d %H:%M:%S"),
-            "symbol": symbol,
-            "text": text,
-            "sentiment_score": None,
-            "sentiment_magnitude": None,
-            "sentiment_label": None,
-            "action_signal": None,
-        }
-
-        if not text:
-            yield out
-            return
-
-        if len(text) > 10000:
-            text = text[:10000]
-            out["text"] = text
-
-        try:
-            if self._pipeline is None:
-                self.setup()
-            if self._use_top_k is None:
-                try:
-                    result = self._pipeline(
-                        text, truncation=True, max_length=self._max_length, top_k=None
-                    )
-                    self._use_top_k = True
-                except TypeError:
-                    result = self._pipeline(
-                        text, truncation=True, max_length=self._max_length, return_all_scores=True
-                    )
-                    self._use_top_k = False
-            elif self._use_top_k:
-                result = self._pipeline(
-                    text, truncation=True, max_length=self._max_length, top_k=None
-                )
-            else:
-                result = self._pipeline(
-                    text, truncation=True, max_length=self._max_length, return_all_scores=True
-                )
-        except Exception:
-            yield out
-            return
-
-        scores = self._extract_scores(result)
-        if not scores:
-            yield out
-            return
-
-        neg = scores.get("NEGATIVE", 0.0)
-        neu = scores.get("NEUTRAL", 0.0)
-        pos = scores.get("POSITIVE", 0.0)
-        total = neg + neu + pos
-        if total <= 0:
-            yield out
-            return
-
-        neg /= total
-        neu /= total
-        pos /= total
-
-        out["sentiment_score"] = pos - neg
-        out["sentiment_magnitude"] = pos + neg
-
-        label_scores = {"NEGATIVE": neg, "NEUTRAL": neu, "POSITIVE": pos}
-        out["sentiment_label"] = max(label_scores, key=label_scores.get)
-        out["action_signal"] = "buy" if out["sentiment_score"] > 0 else "sell"
-
-        yield out
-
-
-class ArimaForecastFn(beam.DoFn):
-    def __init__(self, model_uri: str):
-        self._model_uri = model_uri
-        self._models = None
-        self._load_error = None
-
-    def setup(self):
-        if not self._model_uri:
-            self._models = {}
-            return
-        try:
-            with FileSystems.open(self._model_uri) as handle:
-                data = handle.read()
-            self._models = joblib.load(io.BytesIO(data))
-            if not isinstance(self._models, dict):
-                raise ValueError("Expected a dict of models in joblib bundle.")
-        except Exception as exc:
-            self._models = {}
-            self._load_error = str(exc)
-            logging.exception("Failed to load ARIMA models from %s", self._model_uri)
-
-    def process(self, element, ts=beam.DoFn.TimestampParam):
-        symbol, price_data = element
-        out = {
-            "event_timestamp": ts.to_utc_datetime().strftime("%Y-%m-%d %H:%M:%S"),
-            "symbol": symbol,
-            "price": price_data.get("price"),
-            "price_timestamp": price_data.get("timestamp"),
-            "arima_next_price_forecast": None,
-        }
-
-        if not self._models:
-            if self._load_error:
-                out["arima_next_price_forecast"] = None
-            yield out
-            return
-
-        model = self._models.get(symbol)
-        price = _coerce_float(price_data.get("price"))
-        if model is None or price is None:
-            yield out
-            return
-
-        try:
-            model.update([price])
-            forecast = model.predict(n_periods=1)[0]
-            out["arima_next_price_forecast"] = float(forecast)
-        except Exception:
-            logging.exception("ARIMA forecast failed for %s", symbol)
-        yield out
+            pass
 
 
 class AnalyzeBatchFn(beam.DoFn):
@@ -416,6 +227,7 @@ class AnalyzeBatchFn(beam.DoFn):
             avg_price = float(total_val / len(prices))
 
         tweet_count = len(tweets)
+
         tweet_texts = [t.get("text") for t in tweets]
 
         yield {
@@ -430,10 +242,16 @@ class AnalyzeBatchFn(beam.DoFn):
 
 def run():
     parser = argparse.ArgumentParser()
-    # Re-added the ARIMA models GCS URI argument
-    parser.add_argument("--arima_models_gcs_uri", default=ARIMA_MODELS_GCS_URI)
-    parser.add_argument("--mongo_uri", default=None)
-    parser.add_argument("--mongo_db", default="crypto_analysis")
+    parser.add_argument(
+        "--mongo_uri",
+        default=None,
+        help="MongoDB connection string, e.g. mongodb://10.128.0.5:27017",
+    )
+    parser.add_argument(
+        "--mongo_db",
+        default="crypto_analysis",
+        help="MongoDB database name to store the mirrored collections",
+    )
     known_args, pipeline_args = parser.parse_known_args()
 
     pipeline_options = PipelineOptions(pipeline_args)
@@ -452,6 +270,21 @@ def run():
             | "ParseTweets" >> beam.ParDo(ParseTweetFn())
         )
 
+        # Path A: Write Raw Archive
+        # We extract just the Dict (record) from the Tuple (Symbol, Record)
+        (
+            tweets_kv
+            | "ExtractTweetRecord" >> beam.Map(lambda x: x[1])
+            | "WriteRawTweets"
+            >> beam.io.WriteToBigQuery(
+                BQ_RAW_TWEETS,
+                # No Schema needed -> Terraform manages it
+                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
+                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
+                method="STREAMING_INSERTS",
+            )
+        )
+
         _write_to_mongo(
             tweets_kv,
             "RawTweetsMongo",
@@ -461,21 +294,7 @@ def run():
             _raw_tweet_kv_to_mongo,
         )
 
-        # Sentiment ML Branch
-        tweet_sentiment = (
-            tweets_kv
-            | "TweetSentimentNLP" >> beam.ParDo(HfSentimentFn())
-        )
-        
-        _write_to_mongo(
-            tweet_sentiment,
-            "TweetSentimentMongo",
-            "tweet_sentiment",
-            mongo_uri,
-            mongo_db,
-            _tweet_sentiment_to_mongo,
-        )
-
+        # Path B: Window for Analysis
         windowed_tweets = tweets_kv | "WindowTweets" >> beam.WindowInto(
             window.FixedWindows(30)
         )
@@ -490,6 +309,18 @@ def run():
             | "ExplodePrices" >> beam.ParDo(ParseAndExplodePriceFn())
         )
 
+        (
+            prices_kv
+            | "FlattenPriceRecord" >> beam.Map(lambda x: {"symbol": x[0], **x[1]})
+            | "WriteRawPrices"
+            >> beam.io.WriteToBigQuery(
+                BQ_RAW_PRICES,
+                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
+                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
+                method="STREAMING_INSERTS",
+            )
+        )
+
         _write_to_mongo(
             prices_kv,
             "RawPricesMongo",
@@ -499,30 +330,26 @@ def run():
             _raw_price_kv_to_mongo,
         )
 
-        price_forecasts = prices_kv | "ArimaForecasts" >> beam.ParDo(
-            ArimaForecastFn(known_args.arima_models_gcs_uri)
-        )
-
-        _write_to_mongo(
-            price_forecasts,
-            "PriceForecastsMongo",
-            "price_forecasts",
-            mongo_uri,
-            mongo_db,
-            _price_forecast_to_mongo,
-        )
-
         windowed_prices = prices_kv | "WindowPrices" >> beam.WindowInto(
             window.FixedWindows(30)
         )
 
-        # --- JOIN & ANALYSIS ---
         joined_data = (
             {"tweets": windowed_tweets, "prices": windowed_prices}
             | "JoinStreams" >> beam.CoGroupByKey()
             | "Analyze" >> beam.ParDo(AnalyzeBatchFn())
         )
 
+        (
+            joined_data
+            | "WriteAnalysisToBQ"
+            >> beam.io.WriteToBigQuery(
+                BQ_TABLE_ANALYSIS,
+                create_disposition=beam.io.BigQueryDisposition.CREATE_NEVER,
+                write_disposition=beam.io.BigQueryDisposition.WRITE_APPEND,
+                method="STREAMING_INSERTS",
+            )
+        )
         _write_to_mongo(
             joined_data,
             "WindowedMetricsMongo",
@@ -534,5 +361,4 @@ def run():
 
 
 if __name__ == "__main__":
-    logging.getLogger().setLevel(logging.INFO)
     run()
